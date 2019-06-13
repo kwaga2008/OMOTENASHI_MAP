@@ -28,7 +28,8 @@
     <div class="right_content">
         <div class="information">
         <h2>CONTENTS</h2>
-        <p>Place:{{ $place->place }}</p>
+        <p>Place:{{ $place->place_ja }}</p>
+        <p>{{ $place->place_en }}</p>
         <hr>
         <h2>Infomation</h2>
         <p></p>
