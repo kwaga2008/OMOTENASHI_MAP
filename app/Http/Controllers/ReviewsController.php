@@ -8,5 +8,8 @@ use App\Http\Requests;
 
 class ReviewsController extends Controller
 {
-    //
+  public function create()
+  {
+    return view('reviews.create');
+  }
 }

@@ -4,7 +4,9 @@
 <body td align="center">
 
 <h1>Kinkaku-ji</h1>
-
+<div class="contents row">
+    <div class="container">
+        {{ Form::open(['url' => '/tweets', 'method' => 'post']) }}
 <p>
 <form method="POST" action="<?php print($_SERVER['PHP_SELF']) ?>">
 <p>Nick name
@@ -35,9 +37,11 @@
 </select>
 </p>
 <p>Review</p>
-<textarea name="contents" rows="8" cols="100">
-</textarea><br><br>
-<input type="submit" name="btn3" value="send">
+<textarea cols="100" name="text" placeholder="text" rows="10"></textarea><br>
+<input type="submit" value="SENT">
+{{ Form::close() }}
+</div>
+</div>
 </form>
 </td>
 </body>
