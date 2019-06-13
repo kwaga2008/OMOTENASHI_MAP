@@ -6,15 +6,15 @@
 <h1>Kinkaku-ji</h1>
 <div class="contents row">
     <div class="container">
-        {{ Form::open(['url' => '/tweets', 'method' => 'post']) }}
+        {{ Form::open(['url' => '/reviews', 'method' => 'post']) }}
 <p>
 <form method="POST" action="<?php print($_SERVER['PHP_SELF']) ?>">
 <p>Nick name
-<input type="text" name="personal_name"></p>
+<input type="text" name="nickname"></p>
 <p>
-<input type="radio" name="q1" value="Good"> Good
-<input type="radio" name="q1" value="Bad"> Bad
-<input type="radio" name="q1" value="Omotenashi"> Omotenashi
+<input type="radio" name="feeling" value="Good"> Good
+<input type="radio" name="feeling" value="Bad"> Bad
+<input type="radio" name="feeling" value="Omotenashi"> Omotenashi
 </p>
 <p>Country<br>
 <select name="country">

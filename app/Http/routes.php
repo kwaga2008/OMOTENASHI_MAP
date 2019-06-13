@@ -30,4 +30,6 @@ Route::group(['middleware' => ['web']], function () {
 
     Route::get('/posts', 'ReviewsController@create');
 
+    Route::post('/reviews', 'ReviewsController@store');
+
 });

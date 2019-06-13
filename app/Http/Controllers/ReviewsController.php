@@ -12,4 +12,16 @@ class ReviewsController extends Controller
   {
     return view('reviews.create');
   }
+
+  public function store(Request $request)
+  {
+    Review::create(
+      array(
+        'nickname' => $request->nickname,
+        'text' => $request->text,
+      )
+    );
+
+    return view('reviews.store');
+  }
 }
