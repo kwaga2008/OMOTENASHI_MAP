@@ -4,22 +4,18 @@
 
 <div class="content">
     <div class="left_content">
-        <form>
-        <p>Area:
-        <input type="checkbox" name="riyu" value="1" checked="checked">嵐山
-        <input type="checkbox" name="riyu" value="2">京都駅
-        <input type="checkbox" name="riyu" value="3">哲学の道
-        </p>
+        <label>Search sites</label>
+        {{Form::input('text', 'name')}}
         <hr>
-            <p>検索：<input type="text"></p> 
-            <a href="/">清水寺</a><br>
-            <a href="/">金閣</a><br>
-            <a href="/">銀閣</a><br>
-            <a href="/">嵐山</a><br>
-            <a href="/">伏見</a><br>
-            <input type="submit" value="search">
+        <h2>KYOTO sites</h2>
+        <a href="">Kinkaku-ji</a><br>
+        <a href="">Kiyomizu-dera</a><br>
+        <a href="">Gion</a><br>
+        <a href="">Arashiyama</a><br>
+        <a href="">Byodo-in</a><br>
+        <a href="">Fushimi</a><br>
 
-        </form>
+    
     </div>
     <div class="center_content">
         <div id="map"></div>
@@ -32,21 +28,19 @@
         <p>{{ $place->place_en }}</p>
         <hr>
         <h2>Infomation</h2>
-        <p></p>
+        <p>{{ $info->information }}</p>
         <hr>
         <h2>Review</h2>
         <div class="scroll">
-            <p>User:Mr.A</p>
-            <p>very good place!</p>
+        @foreach($reviews as $review)
+            <p>User: {{ $review->nickname }}</p>
+            <p>From: {{ $review->country }}</p>
+            <p>Feel: {{ $review->feeling }}</p>
+            <p>{{ $review->text }}</p>
             <hr>
-            <p>User:Mrs.B</p>
-            <p>hot place!</p>
-            <hr>
-            <p>User:Ms.C</p>
-            <p>Cool place!</p>
-            <hr>
+        @endforeach
         </div>
-        <button type="button">Read More Review</button>
+        <button type="button" onclick="location.href=''">Read More Review</button>
         </div>
     </div>
   </div>
