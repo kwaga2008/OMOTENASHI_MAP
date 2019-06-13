@@ -1,0 +1,182 @@
+body, html {
+  height: 100%;
+  background-color: #ddd;
+}
+
+.box1 {
+  width: 300px;
+  height: 50px;
+  margin: 0px auto;
+  background-color: white;
+  opacity: 5;
+  text-align: center;
+  font-size: 30px;
+}
+
+.cp_ipselect {
+  overflow: hidden;
+  width: 30%;
+  margin: 2em auto;
+  text-align: center;
+}
+.cp_ipselect select {
+  width: 100%;
+  padding-right: 1em;
+  cursor: pointer;
+  text-indent: 0.01px;
+  text-overflow: ellipsis;
+  border: none;
+  outline: none;
+  background: transparent;
+  background-image: none;
+  box-shadow: none;
+  -webkit-appearance: none;
+  appearance: none;
+}
+.cp_ipselect select::-ms-expand {
+    display: none;
+}
+.cp_ipselect.cp_sl01 {
+  position: relative;
+  border: 1px solid #bbbbbb;
+  border-radius: 2px;
+  background: #ffffff;
+}
+.cp_ipselect.cp_sl01::before {
+  position: absolute;
+  top: 0.8em;
+  right: 0.9em;
+  width: 0;
+  height: 0;
+  padding: 0;
+  content: '';
+  border-left: 6px solid transparent;
+  border-right: 6px solid transparent;
+  border-top: 6px solid #666666;
+  pointer-events: none;
+}
+.cp_ipselect.cp_sl01 select {
+  padding: 8px 38px 8px 8px;
+  color: #666666;
+}
+
+h1, h2, h3, h4, h5, h6, p, body {
+  font-size: 14px;
+  color: #4a4a4a;
+  font-family: sans-serif;
+  margin: 10px auto;
+  padding: 5px;
+}
+
+.clearfix:after{
+  display: block;
+  content: "";
+  clear: both;
+}
+
+.wrapper{
+  min-width: 960px;
+  }
+
+header{
+  height: 50px;
+  background-color: white;
+  /*border-bottom: 2px solid #bbb;*/
+}
+
+h1{
+  height: 46px;
+  line-height: 46px;
+  font-size: 18px;
+  text-align: center;
+}
+
+h2{
+  height: 40px;
+  line-height: 40px;
+  font-size: 14px;
+  text-align: center;
+}
+
+.contents{
+  height: 100%;
+  width: 600px;
+  margin: 5px auto 0;
+  background-color: white;
+}
+
+form{
+  width: 600px;
+  background-color: white;
+  padding: 5px 0 0;
+}
+
+.input-box{
+  float: left;
+  width: 500px;
+}
+
+.input-box input{
+  width: 100%;
+  margin: 0 0 10px 0;
+}
+
+form img{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  float: left;
+  height: 24px;
+  margin: 0 5px 5px 34px;
+}
+
+.submit-button{
+  width: 70px;
+  margin: 10px 25px 0 0;
+}
+
+form textarea{
+  width: 500px;
+  border: 1px solid #ccc;
+}
+
+.button-box{
+  float: right;
+  height: 70px;
+}
+
+.message{
+  min-height: 100px;
+  width: 598px;
+  margin: 0 auto;
+  background-color: #fff;
+  border: 1px solid #bbb;
+  border-bottom: none;
+}
+
+.message img{
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  float: left;
+  height: 48px;
+  margin: 10px;
+}
+
+.message_box{
+  float: left;
+  height: 150px;
+  width: 550px;
+  padding: 9px 0 10px;
+}
+
+.user_name{
+  font-weight: bold;
+  line-height: 18px;
+}
+
+.time{
+  color: #bbb;
+}
+
+.text{
+  line-height: 18px;
+}
