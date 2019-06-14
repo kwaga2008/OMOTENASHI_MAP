@@ -1,49 +1,67 @@
-<!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="stylesheet" type="text/css" href="/assets/stylesheets/style.css">
-    <title>レビュー一覧</title>
-  </head>
+@extends('layout')
+
+@section("content")
   <body>
-    <header>
-      <h1>レビュー一覧</h1>
+    <header class="header_review">
+      <h1>REVIEW</h1>
     </header>
     <div class="box1">
-      スポット名
+      SPOT_NAME
     </div>
       <div class="cp_ipselect cp_sl01">
 <select required>
-  <option value="" hidden>Choose</option>
-  <option value="1">中国</option>
-  <option value="2">韓国</option>
-  <option value="3">台湾</option>
-  <option value="4">香港</option>
+  <option value="" hidden>Country</option>
+  <option value="Japan">🇯🇵Japan</option>
+  <option value="Chine">🇨🇳China</option>
+  <option value="Korea">🇰🇷Korea</option>
+  <option value="Taiwan">🇨🇳Taiwan</option>
+  <option value="Hongkong">🇨🇳Hongkong</option>
+  <option value="America">🇺🇸America</option>
+  <option value="Thailand">🇹🇭Thailand</option>
+  <option value="Australia">🇦🇺Australia</option>
+  <option value="Philippine">🇵🇭Philippine</option>
+  <option value="malaysia">🇲🇾malaysia</option>
+  <option value="Singapore">🇸🇬Singapore</option>
+  <option value="Indonesia">🇮🇩Indonesia</option>
+  <option value="Vietham">🇻🇳Vietnam</option>
+  <option value="England">🇬🇧England</option>
+  <option value="Canada">🇨🇦Canada</option>
+  <option value="France">🇫🇷France</option>
+  <opiton value="Germany">🇩🇪Germany</opiton>
+  <option value="India">🇮🇳India</option>
+  <option value="Itary">🇮🇹Italy</option>
+  <option value="Spain">🇪🇸Spain</option>
+  <option value="Rossiya">🇷🇺Rossiya</option>
+  <option value="Other">Other</option>
 </select>
 </div>
-    </div>
+    <div class="checkbox_01">
+  <label>
+    <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+    <span class="checkbox01-parts">Good</span>
+  </label>
+  <label>
+    <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+    <span class="checkbox01-parts">Bad</span>
+  </label>
+  <label>
+    <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+    <span class="checkbox01-parts">OMOTENASHI</span>
+  </label>
+</div>
     <div class="contents">
+    @foreach ($reviews as $review)
       <div class="message clearfix">
         <div class="message_box">
           <p class="user_name">
-            アダム
+            {{ $review->nickname }}
           </p>
           <p class="text">
-            富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山
-            富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山
-            富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山・富士山
+            {{ $review->text }}
           </p>
         </div>
       </div>
-      <div class="message clearfix">
-        <div class="message_box">
-          <p class="user_name">たま
-          </p>
-          <p class="text">
-            鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川・鴨川
-          </p>
-        </div>
-      </div>
+    @endforeach
       <div class="message clearfix">
         <div class="message_box">
         </div>
@@ -65,5 +83,4 @@
         </div>
       </div>
     </div>
-  </body>
-</html>
+@endsection

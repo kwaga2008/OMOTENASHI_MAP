@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Review;
 
 class ReviewsController extends Controller
 {
@@ -23,5 +24,11 @@ class ReviewsController extends Controller
     );
 
     return view('reviews.store');
+  }
+
+  public function index(){
+    $reviews = Review::all();
+
+    return view('reviews.index')->with(["reviews" => $reviews]);
   }
 }
