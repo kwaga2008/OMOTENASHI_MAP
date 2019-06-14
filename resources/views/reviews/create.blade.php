@@ -3,6 +3,7 @@
 @section('content')
 <body td align="center">
 
+<h1>{{ $spot }}</h1>
 <h1>Kinkaku-ji</h1>
 <div class="contents row">
     <div class="container">
@@ -20,7 +21,7 @@
 <select name="country">
 <option value="country1">Japan</option>
 <option value="country2">Korea</option>
-<option value="country3">Chine</option>
+<option value="country3">China</option>
 <option value="country4">Taiwan</option>
 <option value="country5">Hongkong</option>
 <option value="country6">Thailand</option>

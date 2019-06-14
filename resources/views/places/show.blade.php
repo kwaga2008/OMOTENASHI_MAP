@@ -9,7 +9,7 @@
         <hr>
         <h2>KYOTO sites</h2>
         @foreach($places as $a_place)
-        <input type="button" id="mybutton" value="{{ $a_place->place_en }}"><br>
+        <button type="button" onclick="location.href='/places/show'">{{ $a_place->place_en }}</button><br>
         @endforeach
 
     

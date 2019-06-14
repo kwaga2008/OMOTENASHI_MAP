@@ -8,9 +8,11 @@ use App\Http\Requests;
 
 class ReviewsController extends Controller
 {
-  public function create()
-  {
-    return view('reviews.create');
+  public function create(Request $request)
+  {   
+    $spot = $request->place_en;
+    echo $spot;
+    return view('reviews.create')->with(["spot" => $spot]);
   }
 
   public function store(Request $request)
