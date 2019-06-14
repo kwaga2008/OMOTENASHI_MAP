@@ -5,16 +5,16 @@
 
 <h1>Kinkaku-ji</h1>
 <div class="contents row">
-    <div class="container">
-        {{ Form::open(['url' => '/reviews', 'method' => 'post']) }}
+<div class="container">
+{{ Form::open(['url' => '/reviews', 'method' => 'post']) }}
 <p>
 <form method="POST" action="<?php print($_SERVER['PHP_SELF']) ?>">
 <p>Nick name
 <input type="text" name="nickname"></p>
 <p>
-<input type="radio" name="feeling" value="Good"> Good
-<input type="radio" name="feeling" value="Bad"> Bad
-<input type="radio" name="feeling" value="Omotenashi"> Omotenashi
+Good<br><input type="radio" name="feeling" value="Good">
+Bad<br><input type="radio" name="feeling" value="Bad">
+Omotenashi<br><input type="radio" name="feeling" value="Omotenashi">
 </p>
 <p>Country<br>
 <select name="country">
