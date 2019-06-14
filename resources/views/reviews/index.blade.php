@@ -49,6 +49,9 @@
     <span class="checkbox01-parts">OMOTENASHI</span>
   </label>
 </div>
+<div class="container">
+<a href="#" class="btn-gradation">narrow down</a>
+</div>
     <div class="contents">
     @foreach ($reviews as $review)
       <div class="message clearfix">
