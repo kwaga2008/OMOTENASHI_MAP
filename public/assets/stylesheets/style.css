@@ -4,7 +4,7 @@
 
 body, html {
   height: 100%;
-  background-color: #ddd;
+  background-color: #f5f5f3;
 }
 
 .box1 {
@@ -64,6 +64,42 @@ body, html {
   color: #666666;
 }
 
+.checkbox01-input{
+  display: none;
+}
+.checkbox01-parts{
+  padding-left: 20px;
+  position:relative;
+  margin-right: 20px;
+}
+.checkbox01-parts::before{
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 15px;
+  height: 15px;
+  border: 1px solid #999;
+  border-radius: 4px;
+}
+.checkbox01-input:checked + .checkbox01-parts{
+  color: #009a9a;
+}
+.checkbox01-input:checked + .checkbox01-parts::after{
+  content: "";
+  display: block;
+  position: absolute;
+  top: -5px;
+  left: 5px;
+  width: 7px;
+  height: 14px;
+  transform: rotate(40deg);
+  border-bottom: 3px solid #95483f;
+  border-right: 3px solid #009a9a;
+}
+
+
 h1, h2, h3, h4, h5, h6, p, body {
   font-size: 14px;
   color: #4a4a4a;
@@ -85,8 +121,8 @@ h1, h2, h3, h4, h5, h6, p, body {
 header{
   height: 100px;
   text-align: center;
-  background-color: white;
-  margin: 50px auto 0;
+  background-color: #95483f;
+  margin: 0px auto 0;
   padding: 50px 30px 80px;
   /*border-bottom: 2px solid #bbb;*/
 }
@@ -186,4 +222,8 @@ form textarea{
 
 .text{
   line-height: 18px;
+}
+
+.checkbox_01{
+  text-align: center;
 }
