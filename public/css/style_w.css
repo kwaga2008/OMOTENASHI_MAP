@@ -258,7 +258,7 @@
     color: #aaa;
   }
   div.contents.row div.content_post span.name a:hover {
-    text-decoration: underline;
+    text-decoration: none;
     color: #aaa;
   }
   div.contents.row div.content_post span.name span {
@@ -321,7 +321,7 @@
     color: #57c3e9;
   }
   .comments a:hover {
-    text-decoration: underline;
+    text-decoration: none;
   }
   footer {
     margin: 30px auto;
