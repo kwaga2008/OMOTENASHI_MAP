@@ -19,6 +19,25 @@
   opacity: 5;
   text-align: center;
   font-size: 30px;
+  border-top: solid 2px black;
+  border-bottom: solid 2px black;
+}
+
+}
+.box1:before, .box1:after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  width: 2px;
+  height: -webkit-calc(100% + 14px);
+  height: calc(100% + 14px);
+  background-color: black;
+}
+.box:before {
+  left: 7px;
+}
+.box:after {
+  right: 7px;
 }
 
 .cp_ipselect {
@@ -131,7 +150,7 @@
     margin: 0;
   }
   a {
-   
+
     color: #666;
   }
   a:hover {
@@ -156,7 +175,7 @@
     position: relative;
     top: -5px;
   }
-  
+
   .btn, header.header div.header__bar.row div.grid-6 a.post {
     padding: 8px 20px;
     font-size: 14px;
@@ -870,7 +889,7 @@
     }
   }
   /* min-width 641px and max-width 1024px, use when QAing tablet-only issues*/
-  
+
   .pagination li {
       display: inline-block;
   }
@@ -881,7 +900,7 @@
     margin: 40px auto 0;
     display: flex;
   }
- 
+
   .left_content {
     width: 200px;
     padding: 5px;
@@ -890,12 +909,12 @@
   .center_content {
     width: 750px;
   }
- 
+
   .right_content {
     width: 300px;
     padding: 5px;
   }
-  
+
   #map {
     margin: 0 auto 0;
     height: 600px; 
@@ -928,7 +947,7 @@
   text-align: center;
   background-color: #95483f;
   margin: 0px auto 0;
-  padding: 30px 30px 80px;
+  padding: 15px 30px 80px;
   /*border-bottom: 2px solid #bbb;*/
 }
 
