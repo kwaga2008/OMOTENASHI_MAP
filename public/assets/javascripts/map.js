@@ -24,7 +24,7 @@ map.addListener("click",function(e){
       animation: google.maps.Animation.DROP // マーカーを立つときのアニメーション
     });
 
-    var contents = '<h2>清水寺</h2><a href="/reviews/create">レビューを書く</a><br><button class="get">コンテンツ取得</button>';
+    var contents = '<h2>清水寺</h2><a href="/reviews/create">レビューを書く</a><br><a href="/reviews/{{ $place->id }}">get information</a>';
 
     infoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
         content: contents // 吹き出しに表示する内容

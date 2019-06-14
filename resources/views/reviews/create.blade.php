@@ -7,6 +7,7 @@
 <div class="contents row">
 <div class="container">
   <h1>Kinkaku-ji</h1>
+  <h1>{{ $spot->place_en }}</h1>
 {{ Form::open(['url' => '/reviews', 'method' => 'post']) }}
 <p>
 <img src="https://kinukake.com/img/sights-th/kinkakuji.jpg" alt="金閣寺1">
@@ -36,7 +37,7 @@ Omotenashi<br><input type="radio" name="feeling" value="Omotenashi">
 <option value="England">🇬🇧England</option>
 <option value="Canada">🇨🇦Canada</option>
 <option value="France">🇫🇷France</option>
-<opiton value="Germany">🇩🇪Germany</opiton>
+<option value="Germany">🇩🇪Germany</option>
 <option value="India">🇮🇳India</option>
 <option value="Itary">🇮🇹Italy</option>
 <option value="Spain">🇪🇸Spain</option>

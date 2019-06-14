@@ -6,13 +6,12 @@ use Illuminate\Http\Request;
 
 use App\Http\Requests;
 use App\Review;
+use App\Place;
 
 class ReviewsController extends Controller
 {
   public function create(Request $request)
   {   
-    $spot = $request->place_en;
-    echo $spot;
     return view('reviews.create')->with(["spot" => $spot]);
   }
 
