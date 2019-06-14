@@ -8,7 +8,7 @@
         {{Form::input('text', 'name')}}
         <hr>
         <h2>famous area</h2>
-        <a href="/places/show">KYOTO</a><br>
+        <a href="/places/0">KYOTO</a><br>
         <a href="">TOKYO</a><br>
         <a href="">KAMAKURA</a><br>
 
