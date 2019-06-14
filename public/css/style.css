@@ -1,0 +1,107 @@
+header {
+  height: 70px;
+}
+.header__bar h1 a {
+  position: relative;
+  top: -5px;
+}
+
+.btn, header.header div.header__bar.row div.grid-6 a.post {
+  padding: 8px 20px;
+  font-size: 14px;
+  border: 2px solid #57c3e9;
+  color: #57c3e9;
+  font-weight: bold;
+  text-align: center;
+  border-radius: 3px;
+  display: inline-block;
+}
+.btn:hover, header.header div.header__bar.row div.grid-6 a.post:hover {
+  border-color: #9bdbf2;
+  color: #9bdbf2;
+}
+.title {
+  font-weight: bold;
+}
+.title--big {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+.title--big i {
+  font-style: italic;
+  font-size: 1.8em;
+}
+header.header {
+  padding: 10px;
+  border-bottom: 1px solid #d8d8d8;
+  background-color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 5;
+}
+header.header div.header__bar.row {
+  position: relative;
+}
+header.header div.header__bar.row h1.grid-6 {
+  font-size: 20px;
+  line-height: 41px;
+  float: left;
+}
+header.header div.header__bar.row h1.grid-6 a {
+  display: block;
+}
+header.header div.header__bar.row div.grid-6 {
+  float: right;
+  text-align: right;
+}
+header.header div.header__bar.row div.grid-6 a.post {
+  width: 120px;
+  display: inline-left;
+  margin-left: 10px;
+}
+header.header .user_nav {
+  position: relative;
+  height: 100px;
+  position: absolute;
+  right: 0;
+}
+header.header .user_nav span {
+  top: 5px;
+  display: block;
+  float: left;
+  margin-left: 30px;
+  width: 150px;
+  height: 50px;
+  font-size: 1em;
+  cursor: pointer;
+  position: relative;
+}
+header.header .user_nav span:after {
+  content: '▼';
+  font-size: 0.7em;
+  margin-left: -4px;
+}
+header.header .user_nav span:hover ul {
+  color: #57c3e9;
+  display: block;
+}
+header.header .user_nav ul {
+  display: none;
+  position: absolute;
+  top: 46px;
+  right: 0;
+  border-left: 1px solid #d8d8d8;
+  border-right: 1px solid #d8d8d8;
+  box-shadow: 1px 2px 5px rgba(0, 0, 0, 0.1);
+}
+header.header .user_nav ul li {
+  background-color: #f0f0f0;
+}
+header.header .user_nav ul li a {
+  display: block;
+  padding: 10px 20px;
+  text-align: left;
+  border-bottom: 1px solid #d8d8d8;
+}
