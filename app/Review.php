@@ -6,5 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Review extends Model
 {
-    protected $fillable = array('nickname', 'text');
+    //
+    public function place(){
+        return $this->belongsTo(Review::class);
+    }
 }
