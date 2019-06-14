@@ -24,4 +24,9 @@ class ReviewsController extends Controller
 
     return view('reviews.store');
   }
+
+  public function index()
+  {
+    return view('reviews.index');
+  }
 }

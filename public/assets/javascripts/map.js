@@ -37,7 +37,5 @@ map.addListener("click",function(e){
       this.setMap(null);
     });
 
-
-
 });
   

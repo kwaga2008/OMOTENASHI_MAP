@@ -12,4 +12,8 @@ class AreasController extends Controller
     public function show(){
         return view("areas.show");
     }
+
+    public function index(){
+        return view("areas.index");
+    }
 }
