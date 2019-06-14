@@ -3,37 +3,45 @@
 @section('content')
 <body td align="center">
 
-<h1>Kinkaku-ji</h1>
+
 <div class="contents row">
-    <div class="container">
-        {{ Form::open(['url' => '/reviews', 'method' => 'post']) }}
+<div class="container">
+  <h1>Kinkaku-ji</h1>
+{{ Form::open(['url' => '/reviews', 'method' => 'post']) }}
 <p>
+<img src="https://kinukake.com/img/sights-th/kinkakuji.jpg" alt="金閣寺1">
 <form method="POST" action="<?php print($_SERVER['PHP_SELF']) ?>">
 <p>Nick name
 <input type="text" name="nickname"></p>
 <p>
-<input type="radio" name="feeling" value="Good"> Good
-<input type="radio" name="feeling" value="Bad"> Bad
-<input type="radio" name="feeling" value="Omotenashi"> Omotenashi
+Good<br><input type="radio" name="feeling" value="Good">
+Bad<br><input type="radio" name="feeling" value="Bad">
+Omotenashi<br><input type="radio" name="feeling" value="Omotenashi">
 </p>
 <p>Country<br>
 <select name="country">
-<option value="country1">Japan</option>
-<option value="country2">Korea</option>
-<option value="country3">Chine</option>
-<option value="country4">Taiwan</option>
-<option value="country5">Hongkong</option>
-<option value="country6">Thailand</option>
-<option value="country7">America</option>
-<option value="country8">Singapore</option>
-<option value="country9">malaysia</option>
-<option value="country10">Indonesia</option>
-<option value="country11">Philippine</option>
-<option value="country12">Vietnam</option>
-<option value="country13">India</option>
-<option value="country14">England</option>
-<option value="country15">France</option>
-<option value="country16">Germany</option>
+<option value="Japan">🇯🇵Japan</option>
+<option value="Chine">🇨🇳China</option>
+<option value="Korea">🇰🇷Korea</option>
+<option value="Taiwan">🇨🇳Taiwan</option>
+<option value="Hongkong">🇨🇳Hongkong</option>
+<option value="America">🇺🇸America</option>
+<option value="Thailand">🇹🇭Thailand</option>
+<option value="Australia">🇦🇺Australia</option>
+<option value="Philippine">🇵🇭Philippine</option>
+<option value="malaysia">🇲🇾malaysia</option>
+<option value="Singapore">🇸🇬Singapore</option>
+<option value="Indonesia">🇮🇩Indonesia</option>
+<option value="Vietham">🇻🇳Vietnam</option>
+<option value="England">🇬🇧England</option>
+<option value="Canada">🇨🇦Canada</option>
+<option value="France">🇫🇷France</option>
+<opiton value="Germany">🇩🇪Germany</opiton>
+<option value="India">🇮🇳India</option>
+<option value="Itary">🇮🇹Italy</option>
+<option value="Spain">🇪🇸Spain</option>
+<option value="Rossiya">🇷🇺Rossiya</option>
+<option value="Other">Other</option>
 </select>
 </p>
 <p>Review</p>

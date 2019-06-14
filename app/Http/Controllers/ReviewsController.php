@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 
 use App\Http\Requests;
+use App\Review;
 
 class ReviewsController extends Controller
 {
@@ -19,6 +20,8 @@ class ReviewsController extends Controller
       array(
         'nickname' => $request->nickname,
         'text' => $request->text,
+        'country' => $request->country,
+        'feeling' => $request->feeling
       )
     );
 
