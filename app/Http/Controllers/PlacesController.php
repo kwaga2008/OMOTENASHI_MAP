@@ -13,12 +13,13 @@ use App\Info;
 class PlacesController extends Controller
 {
     //
-    public function show(){
-        $place = Place::find(1);
+    public function show($id){
+        $place = Place::find($id);
         $places = Place::all();
-        $info = Info::find(1);
-        $reviews = Review::where("place_id",1)->get();
-        return view("places.show")->with(array("place" => $place,"places" => $places,"info" => $info, "reviews" => $reviews));
+        $info = Info::find($id);
+        $reviews = Review::where("place_id",$id)->get();
+
+        return view("places.show")->with(array("place" => $place,"places" => $places,"info" => $info, "reviews" => $reviews,"id" => $id));
     }
 
     public function index(){
