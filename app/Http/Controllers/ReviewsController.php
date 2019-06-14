@@ -10,12 +10,13 @@ use App\Place;
 
 class ReviewsController extends Controller
 {
-  public function create(Request $request)
-  {   
+  public function create($id)
+  {  
+    $spot = Place::find($id);
     return view('reviews.create')->with(["spot" => $spot]);
   }
 
-  public function store(Request $request)
+  public function store(Request $request,$id)
   {
     Review::create(
       array(
@@ -26,7 +27,7 @@ class ReviewsController extends Controller
       )
     );
 
-    return view('reviews.store');
+    return view('reviews.store')->with(array("id" => $id));
   }
 
   public function index()

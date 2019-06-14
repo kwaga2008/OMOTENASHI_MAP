@@ -11,7 +11,7 @@
   <body>
     <header class="header">
       <div class="header__bar row">
-        <a href="/"><img src="images/logo/logo.jpg" width="300" height="300" alt="">
+        <a href="/"><img src="images/logo/logo.jpg" width="300" height="300" alt=""></a>
       </div>
     </header>
     @yield('content')

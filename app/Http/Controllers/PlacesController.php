@@ -18,8 +18,8 @@ class PlacesController extends Controller
         $places = Place::all();
         $info = Info::find($id);
         $reviews = Review::where("place_id",$id)->get();
-        return view("places.show")->with(array("place" => $place,"places" => $places,"info" => $info, "reviews" => $reviews));
-        
+
+        return view("places.show")->with(array("place" => $place,"places" => $places,"info" => $info, "reviews" => $reviews,"id" => $id));
     }
 
     public function index(){

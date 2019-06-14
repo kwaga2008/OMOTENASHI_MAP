@@ -6,24 +6,25 @@
     <div class="left_content">
         <label>Search sites</label>
         {{Form::input('text', 'name')}}
+        <input type="submit" value="search">
+        {{Form::close()}}
         <hr>
         <h2>KYOTO sites</h2>
         @foreach($places as $a_place)
         <button type="button" onclick="location.href='/places/{{ $a_place->id }}'">{{ $a_place->place_en }}</button><br>
         @endforeach
-
-    
     </div>
     <div class="center_content">
         <div id="map"></div>
         <script src="{{ asset('assets/javascripts/map.js') }}"></script>
+        <a href="/">トップに戻る</a>
     </div>
     <div class="right_content">
         <div class="information">
         <h1>CONTENTS</h1>
         <hr>
         <h2>Place</h2>
-        @if(!empty($place))
+        @if($place!=NULL)
         <p>{{ $place->place_ja }}</p>
         <p>{{ $place->place_en }}</p>
         <hr>
@@ -43,7 +44,7 @@
         
         <h2>Review</h2>
         
-        @if(count($reviews) > 0)
+        @if(count($reviews) > 0 && $id != 0)
         <div class="scroll">
         @foreach($reviews as $review)
             <p>User: {{ $review->nickname }}</p>
@@ -59,12 +60,12 @@
         </div>
         <hr>
         @if(count($reviews) > 3)
-        <button type="button" onclick="location.href='/reviews'">Read More Review</button>
+        <a class="btn" href="/places/{{ $id }}/reviews">Read More Review</a>
         @endif
-        <button type="button" onclick="location.href='/reviews/create'">Write New Review</button>
+        @if($id != 0)
+        <a class="btn" href="/places/{{ $id }}/reviews/create">Write New Review</a>
+        @endif
     </div>
-  </div>
-
-
+</div>
 
 @endsection
