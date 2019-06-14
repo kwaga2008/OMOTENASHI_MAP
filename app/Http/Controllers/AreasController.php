@@ -9,4 +9,7 @@ use App\Http\Requests;
 class AreasController extends Controller
 {
     //
+    public function show(){
+        return view("areas.show");
+    }
 }

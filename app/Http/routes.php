@@ -16,7 +16,9 @@ Route::get('/', function () {
 });
 
 Route::group(['middleware' => ['web']], function () {
-
-    Route::get('/reviews', 'ReviewsController@index');
-
+    Route::resource('reviews', 'ReviewsController', ['only' => ['index','create','store']]);
+    Route::resource('places','PlacesController', ['only' => ['index','show']]);
+    Route::auth();
+    Route::resource('areas', 'AreasController', ['only' => ['index','show']]);
 });
+

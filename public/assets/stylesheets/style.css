@@ -1,3 +1,7 @@
+* {
+    box-sizing: border-box;
+}
+
 body, html {
   height: 100%;
   background-color: #ddd;
@@ -6,7 +10,7 @@ body, html {
 .box1 {
   width: 300px;
   height: 50px;
-  margin: 0px auto;
+  margin: 50px auto;
   background-color: white;
   opacity: 5;
   text-align: center;
@@ -64,8 +68,8 @@ h1, h2, h3, h4, h5, h6, p, body {
   font-size: 14px;
   color: #4a4a4a;
   font-family: sans-serif;
-  margin: 10px auto;
-  padding: 5px;
+  margin: 0px auto;
+  padding: 0px;
 }
 
 .clearfix:after{
@@ -79,15 +83,18 @@ h1, h2, h3, h4, h5, h6, p, body {
   }
 
 header{
-  height: 50px;
+  height: 100px;
+  text-align: center;
   background-color: white;
+  margin: 50px auto 0;
+  padding: 50px 30px 80px;
   /*border-bottom: 2px solid #bbb;*/
 }
 
 h1{
   height: 46px;
   line-height: 46px;
-  font-size: 18px;
+  font-size: 30px;
   text-align: center;
 }
 
