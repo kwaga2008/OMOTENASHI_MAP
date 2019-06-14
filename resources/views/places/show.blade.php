@@ -14,11 +14,13 @@
         <button type="button" onclick="location.href='/places/{{ $a_place->id }}'">{{ $a_place->place_en }}</button><br>
         @endforeach
     </div>
+
     <div class="center_content">
         <div id="map"></div>
         <script src="{{ asset('assets/javascripts/map.js') }}"></script>
         <a href="/">トップに戻る</a>
     </div>
+    
     <div class="right_content">
         <div class="information">
         <h1>CONTENTS</h1>
@@ -42,7 +44,7 @@
         <hr>
         @endif
         
-        <h2>Review</h2>
+        <h2>Latest Review</h2>
         
         @if(count($reviews) > 0 && $id != 0)
         <div class="scroll">
@@ -52,14 +54,14 @@
             <p>Feel: {{ $review->feeling }}</p>
             <p>{{ $review->text }}</p>
             <hr>
-        @endforeach
+       @endforeach
         </div>
         @else
         <p>No Review</p>
         @endif
         </div>
         <hr>
-        @if(count($reviews) > 3)
+        @if(count($reviews) > 1)
         <a class="btn" href="/places/{{ $id }}/reviews">Read More Review</a>
         @endif
         @if($id != 0)
