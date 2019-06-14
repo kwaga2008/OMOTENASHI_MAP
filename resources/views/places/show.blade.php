@@ -8,12 +8,9 @@
         {{Form::input('text', 'name')}}
         <hr>
         <h2>KYOTO sites</h2>
-        <a href="">Kinkaku-ji</a><br>
-        <a href="">Kiyomizu-dera</a><br>
-        <a href="">Gion</a><br>
-        <a href="">Arashiyama</a><br>
-        <a href="">Byodo-in</a><br>
-        <a href="">Fushimi</a><br>
+        @foreach($places as $a_place)
+        <input type="button" id="mybutton" value="{{ $a_place->place_en }}"><br>
+        @endforeach
 
     
     </div>
@@ -40,8 +37,9 @@
             <hr>
         @endforeach
         </div>
-        <button type="button" onclick="location.href=''">Read More Review</button>
+        <button type="button" onclick="location.href='/reviews'">Read More Review</button>
         </div>
+        <button type="button" onclick="location.href='/reviews/create'">Write New Review</button>
     </div>
   </div>
 
