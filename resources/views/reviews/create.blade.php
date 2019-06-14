@@ -2,8 +2,6 @@
 
 @section('content')
 <body td align="center">
-
-
 <div class="contents row">
 <div class="container">
   <h1>Kinkaku-ji</h1>
@@ -21,7 +19,7 @@ Omotenashi<br><input type="radio" name="feeling" value="Omotenashi">
 <p>Country<br>
 <select name="country">
 <option value="Japan">🇯🇵Japan</option>
-<option value="Chine">🇨🇳China</option>
+<option value="China">🇨🇳China</option>
 <option value="Korea">🇰🇷Korea</option>
 <option value="Taiwan">🇨🇳Taiwan</option>
 <option value="Hongkong">🇨🇳Hongkong</option>
