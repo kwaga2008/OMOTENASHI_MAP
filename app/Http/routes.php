@@ -11,14 +11,15 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 Route::group(['middleware' => ['web']], function () {
-    Route::resource('reviews', 'ReviewsController', ['only' => ['index','create','store']]);
+    Route::resource('places.reviews', 'ReviewsController', ['only' => ['index','create','store']]);
     Route::resource('places','PlacesController', ['only' => ['index','show']]);
     Route::auth();
     Route::resource('areas', 'AreasController', ['only' => ['index','show']]);
+    Route::get("/","PlacesController@index");
 });
 

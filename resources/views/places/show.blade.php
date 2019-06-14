@@ -6,31 +6,45 @@
     <div class="left_content">
         <label>Search sites</label>
         {{Form::input('text', 'name')}}
+        <input type="submit" value="search">
+        {{Form::close()}}
         <hr>
         <h2>KYOTO sites</h2>
-        <a href="">Kinkaku-ji</a><br>
-        <a href="">Kiyomizu-dera</a><br>
-        <a href="">Gion</a><br>
-        <a href="">Arashiyama</a><br>
-        <a href="">Byodo-in</a><br>
-        <a href="">Fushimi</a><br>
-
-    
+        @foreach($places as $a_place)
+        <button type="button" onclick="location.href='/places/{{ $a_place->id }}'">{{ $a_place->place_en }}</button><br>
+        @endforeach
     </div>
     <div class="center_content">
         <div id="map"></div>
         <script src="{{ asset('assets/javascripts/map.js') }}"></script>
+        <a href="/">トップに戻る</a>
     </div>
     <div class="right_content">
         <div class="information">
-        <h2>CONTENTS</h2>
-        <p>Place:{{ $place->place_ja }}</p>
+        <h1>CONTENTS</h1>
+        <hr>
+        <h2>Place</h2>
+        @if($place!=NULL)
+        <p>{{ $place->place_ja }}</p>
         <p>{{ $place->place_en }}</p>
         <hr>
+        @else
+        <p>No Place data</p>
+        <hr>
+        @endif
+        
         <h2>Infomation</h2>
+        @if(!empty($info))
         <p>{{ $info->information }}</p>
         <hr>
+        @else
+        <p>No information</p>
+        <hr>
+        @endif
+        
         <h2>Review</h2>
+        
+        @if(count($reviews) > 0 && $id != 0)
         <div class="scroll">
         @foreach($reviews as $review)
             <p>User: {{ $review->nickname }}</p>
@@ -40,11 +54,18 @@
             <hr>
         @endforeach
         </div>
-        <button type="button" onclick="location.href=''">Read More Review</button>
+        @else
+        <p>No Review</p>
+        @endif
         </div>
+        <hr>
+        @if(count($reviews) > 3)
+        <a class="btn" href="/places/{{ $id }}/reviews">Read More Review</a>
+        @endif
+        @if($id != 0)
+        <a class="btn" href="/places/{{ $id }}/reviews/create">Write New Review</a>
+        @endif
     </div>
-  </div>
-
-
+</div>
 
 @endsection

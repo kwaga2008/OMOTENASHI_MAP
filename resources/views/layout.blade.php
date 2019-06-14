@@ -11,7 +11,7 @@
   <body>
     <header class="header">
       <div class="header__bar row">
-        <h1 class="grid-6"><a href="/">OMOTENASHI MAP</a></h1>
+        <a href="/"><img src="{{ asset('assets/images/logo/logo.jpg') }}" width="300" height="300" alt=""></a>
       </div>
     </header>
     @yield('content')
