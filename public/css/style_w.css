@@ -39,7 +39,7 @@
     background: #d8d8d8;
   }
   header {
-    height: 70px;
+    height: 80px;
   }
   .header__bar h1 a {
     position: relative;
@@ -564,7 +564,7 @@
   }
   img, object, embed {
     max-width: 100%;
-    height: auto;
+    height: 100%;
   }
   object, embed {
     height: 100%;
