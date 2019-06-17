@@ -3,7 +3,9 @@
 @section("content")
   <body>
     <header class="header_review">
-      <h1>REVIEW</h1>
+      <div class="review_title">
+        REVIEW
+      </div>
     </header>
     <div class="box1">
       {{ $spot }}
@@ -64,7 +66,7 @@
             {{ $review->country }}
           </p>
           <p class="feeling_show">
-            {{ $review->feeling }}
+            {{$review->feeling}}
           </p>
           <p class="text_show">
             {{ $review->text }}
