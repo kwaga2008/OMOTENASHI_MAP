@@ -23,6 +23,15 @@
   border-bottom: solid 2px black;
 }
 
+.box1:before, .box1:after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  width: 2px;
+  height: -webkit-calc(100% + 14px);
+  height: calc(100% + 14px);
+  background-color: black;
+}
 .box:before {
   left: 7px;
 }
@@ -964,11 +973,12 @@ h2{
 .contents{
   height: 100%;
   width: 600px;
-  margin: 0 auto 0;
+  margin: 5px auto 0;
   background-color: white;
 }
 
 form{
+  width: 600px;
   background-color: white;
   padding: 5px 0 0;
 }
@@ -1008,7 +1018,7 @@ form textarea{
 
 .message{
   min-height: 100px;
-  width: 628px;
+  width: 598px;
   margin: 0 auto;
   background-color: #fff;
   border: 1px solid #bbb;
@@ -1024,10 +1034,10 @@ form textarea{
 }
 
 .message_box{
-  float: right;
-  height: auto;
-  width: 590px;
-  padding: 10px 0 10px;
+  float: left;
+  height: 150px;
+  width: 550px;
+  padding: 9px 0 10px;
 }
 
 .user_name{
@@ -1047,13 +1057,6 @@ form textarea{
   text-align: center;
 }
 
-.review_title{
-  color: #f6bfbc;
-  font-size: 2.5em;
-  margin: 13px;
-}
-
-.post_view{
+.img_show{
   text-align: center;
 }
-

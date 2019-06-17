@@ -9,7 +9,7 @@
         <input type="submit" value="search">
         {{Form::close()}}
         <hr>
-        <h2>{{ $place->area->area }} sites</h2>
+        <h2>{{ $place->area->area_en }} sites</h2>
         @foreach($places as $a_place)
         <a href='/places/{{ $a_place->id }}'>{{ $a_place->place_en }}</a><br>
         @endforeach
@@ -33,6 +33,14 @@
     <div class="right_content">
         <div class="information">
         <h1>CONTENTS</h1>
+        <hr>
+        <div class="img_show">
+        @if($place->img_src !="")
+        <img src='{{ asset("assets/images/" . $place->img_src) }}' width="300" height="300" alt="" >
+        @else
+        <img src='{{ asset("assets/images/no_image.png") }}' width="300" height="300" alt="" >
+        @endif
+        </div>
         <hr>
         <h2>Place</h2>
         @if($place!=NULL)
