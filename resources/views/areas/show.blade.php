@@ -18,9 +18,9 @@
 </head>
 <body>
 <div class="slider">
-<img src="{{ asset('assets/images/kyoto/Gion.jpeg') }}" width="0" height="0" alt="">
-<img src="{{ asset('assets/images/kyoto/Fushimi.jpg') }}" width="0" height="0" alt="">
-<img src="{{ asset('assets/images/kyoto/Kiyomizu.jpg') }}" width="0" height="0" alt="">
+@for($n = 1; $n < 4; $n++)
+<img src='{{ asset("assets/images/" . $area->area_en . "/slide" . $n . ".jpg") }}' width="0" height="0" alt="">
+@endfor
 </div>
 
 <div td align="center">
