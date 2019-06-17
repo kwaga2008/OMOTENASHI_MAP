@@ -27,13 +27,13 @@
 <h1>Select Area</h1>
 <div class="area_selects">
 <ul>
-<li><img src="images/toppage/tokyo_menu.jpg" width="300" height="300" alt="" align=""><p>Tokyo</p></li>
-<li><a href="/areas"><img src="images/toppage/kyoto_menu.jpg" width="300" height="300" alt=""><p>Kyoto</a></li>
-<li><img src="images/toppage/osaka_menu.jpg" width="300" height="300" alt=""><p>Osaka</p></li>
+<li><a href="/areas/1"><img src="images/toppage/tokyo_menu.jpg" width="300" height="300" alt="" align=""><p>Tokyo</p></li>
+<li><a href="/areas/2"><img src="images/toppage/kyoto_menu.jpg" width="300" height="300" alt=""><p>Kyoto</a></li>
+<li><a href="/areas/3"><img src="images/toppage/osaka_menu.jpg" width="300" height="300" alt=""><p>Osaka</p></li>
 <br><br>
-<li><img src="images/toppage/hokkaido_menu.jpg" width="300" height="300" alt=""><p>Hokkaido</p></li>
-<li><img src="images/toppage/okinawa_menu.jpg" width="300" height="300" alt=""><p>Okinawa</p></li>
-<li><img src="images/toppage/nagoya_menu.png" width="300" height="300" alt=""><p>Nagoya</p></li>
+<li><a href="/areas/4"><img src="images/toppage/hokkaido_menu.jpg" width="300" height="300" alt=""><p>Hokkaido</p></li>
+<li><a href="/areas/5"><img src="images/toppage/okinawa_menu.jpg" width="300" height="300" alt=""><p>Okinawa</p></li>
+<li><a href="/areas/6"><img src="images/toppage/nagoya_menu.png" width="300" height="300" alt=""><p>Nagoya</p></li>
 </ul>
 </div>
 <br><br>
