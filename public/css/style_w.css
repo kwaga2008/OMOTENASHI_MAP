@@ -23,6 +23,22 @@
   border-bottom: solid 2px black;
 }
 
+.box1:before, .box1:after {
+  content: '';
+  position: absolute;
+  top: -7px;
+  width: 2px;
+  height: -webkit-calc(100% + 14px);
+  height: calc(100% + 14px);
+  background-color: black;
+}
+.box:before {
+  left: 7px;
+}
+.box:after {
+  right: 7px;
+}
+
 .cp_ipselect {
   overflow: hidden;
   width: 30%;
@@ -946,7 +962,7 @@ h1{
   height: 46px;
   line-height: 46px;
   font-size: 30px;
-  color: #666;
+  color: black;
   text-align: center;
 }
 
@@ -1021,10 +1037,15 @@ form textarea{
 }
 
 .message_box{
-  float: right;
-  height: baseline;
+  float: left;
+  height: 150px;
   width: 550px;
   padding: 9px 0 10px;
+}
+
+.user_name{
+  font-weight: bold;
+  line-height: 18px;
 }
 
 .time{
@@ -1037,19 +1058,4 @@ form textarea{
 
 .checkbox_01{
   text-align: center;
-}
-
-.user_name_show{
-  font-weight: bold;
-  font-size: 1.3em;
-  line-height: 18px;
-}
-.feeling_show{
-  
-}
-
-.review_title{
-  color: #f6bfbc;
-  font-size: 2.3em;
-  margin: 16px;
 }

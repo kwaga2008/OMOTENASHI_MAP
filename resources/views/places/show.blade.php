@@ -9,7 +9,7 @@
         <input type="submit" value="search">
         {{Form::close()}}
         <hr>
-        <h2>KYOTO sites</h2>
+        <h2>{{ $place->area->area }} sites</h2>
         @foreach($places as $a_place)
         <button type="button" onclick="location.href='/places/{{ $a_place->id }}'">{{ $a_place->place_en }}</button><br>
         @endforeach

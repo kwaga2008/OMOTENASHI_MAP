@@ -1,12 +1,3 @@
-/*
-var latitude = "{{ $place->latitude }}";
-var longitude = "{{ $place->longitude }}";
-console.log(latitude);
-console.log(longitude);
-var MyLatLng = new google.maps.LatLng(latitude, longitude);
-*/
-// var test1 = {{ $place-> latitude }};
-// console.log(test1);
 var MyLatLng = new google.maps.LatLng(latitude,longitude);
 var infoWindow;
 var Options = {
@@ -47,13 +38,13 @@ map.addListener("click", function (e) {
     animation: google.maps.Animation.DROP // マーカーを立つときのアニメーション
   });
 
-  var contents = '<h2>' + place_en + '</h2><a href="/places/' + place_id + '/reviews/create">Write New Review</a><br><a href="/places/'+ place_id +'/reviews/">Get Information</a>';
+   // var contents = '<h2>' + place_en + '</h2><a href="/places/' + place_id + '/reviews/create">Write New Review</a><br><a href="/places/'+ place_id +'/reviews/">Get Information</a>';
 
-  infoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
-    content: contents // 吹き出しに表示する内容
-  });
+  // infoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
+  // content: contents // 吹き出しに表示する内容
+  // });
 
-  infoWindow.open(map, click_marker); // 吹き出しの表示
+ // infoWindow.open(map, click_marker); // 吹き出しの表示
 
   // 上で立てたマーカーをもう一度クリックするとマーカーを削除
   click_marker.addListener("click", function () {
@@ -61,11 +52,3 @@ map.addListener("click", function (e) {
   });
 
 });
-
-
-/*
-var btn = document.getElementById('mybutton');
-  btn.addEventListener("click", function () {
-  map.panTo(new google.maps.LatLng(35.03937,135.7292431));
-},false);
-*/
