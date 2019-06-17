@@ -60,16 +60,17 @@
       <div class="message clearfix">
         <div class="message_box">
           <p class="user_name_show">
-            {{ $review->nickname }}
+            <b>Name:</b> {{ $review->nickname }}
           </p>
           <p class="country_show">
-            {{ $review->country }}
+            <b>Country:</b> {{ $review->country }}
           </p>
           <p class="feeling_show">
-            {{$review->feeling}}
+            <b>Feeling:</b> {{$review->feeling}}
           </p>
+            -------------------------------------------------------------------------
           <p class="text_show">
-            {{ $review->text }}
+            <b>Text:</b> {{ $review->text }}
           </p>
 
         </div>
