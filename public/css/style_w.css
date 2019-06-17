@@ -1038,15 +1038,10 @@ form textarea{
 }
 
 .message_box{
-  float: left;
-  height: 150px;
+  float: right;
+  height: baseline;
   width: 550px;
   padding: 9px 0 10px;
-}
-
-.user_name{
-  font-weight: bold;
-  line-height: 18px;
 }
 
 .time{
@@ -1059,4 +1054,13 @@ form textarea{
 
 .checkbox_01{
   text-align: center;
+}
+
+.user_name_show{
+  font-weight: bold;
+  font-size: 1.3em;
+  line-height: 18px;
+}
+.feeling_show{
+  
 }

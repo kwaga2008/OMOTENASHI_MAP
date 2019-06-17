@@ -57,12 +57,19 @@
     @foreach ($reviews as $review)
       <div class="message clearfix">
         <div class="message_box">
-          <p class="user_name">
+          <p class="user_name_show">
             {{ $review->nickname }}
           </p>
-          <p class="text">
+          <p class="country_show">
+            {{ $review->country }}
+          </p>
+          <p class="feeling_show">
+            {{ $review->feeling }}
+          </p>
+          <p class="text_show">
             {{ $review->text }}
           </p>
+
         </div>
       </div>
     @endforeach
