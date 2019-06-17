@@ -23,7 +23,8 @@ class ReviewsController extends Controller
         'nickname' => $request->nickname,
         'text' => $request->text,
         'country' => $request->country,
-        'feeling' => $request->feeling
+        'feeling' => $request->feeling,
+        'place_id' => $id
       )
     );
 
