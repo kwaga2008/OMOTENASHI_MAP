@@ -24,7 +24,7 @@
 </div>
 
 <div td align="center">
-<p><h1>{{ $area->area }}</h1></p>
+<p><h1>{{ $area->area_en }}</h1></p>
 <div class="info">
 @if( $area->area_info != "")
 <p>{{ $area->area_info }}</p>
@@ -36,18 +36,23 @@
 <h1>Select Area</h1>
 <div class="area_selects">
 <ul>
-<li><a href="/places/1"><img src="{{ asset('assets/images/kyoto/Kinkaku_menu.jpg') }}" width="300" height="300" alt="" align=""><p>Kinkaku-ji</p></a></li>
-<li><a href="/places/2"><img src="{{ asset('assets/images/kyoto/Kiyomizu_menu.jpg') }}" width="300" height="300" alt=""><p>Kiyomizu-dera</p></a></li>
-<li><a href="/places/3"><img src="{{ asset('assets/images/kyoto/Gion_menu.jpg') }}" width="300" height="300" alt=""><p>Gion</p></a></li>
+@foreach($top_places as $place)
+{{-- */$i = 1/* --}}
+@if($place->img_src !="")
+<li><a href="/places/{{ $place->id }}"><img src='{{ asset("assets/images/" . $place->img_src) }}' width="300" height="300" alt="" ><p>{{ $place->place_en }}</p></a></li>
+@else
+<li><a href="/places/{{ $place->id }}"><img src='{{ asset("assets/images/no_image.png") }}' width="300" height="300" alt="" ><p>{{ $place->place_en }}</p></a></li>
+@endif
+@if( $i == 3 )
 <br><br>
-<li><a href="/places/4"><img src="{{ asset('assets/images/kyoto/Arashiyama_menu.jpg') }}" width="300" height="300" alt=""><p>Arashiyama</p></a></li>
-<li><a href="/places/5"><img src="{{ asset('assets/images/kyoto/Byodo_menu.jpg') }}" width="300" height="300" alt=""><p>Byodo-in</p></a></li>
-<li><a href="/places/6"><img src="{{ asset('assets/images/kyoto/Fushimi_menu.jpeg') }}" width="300" height="300" alt=""><p>Fushimi</p></a></li>
+@endif
+{{-- */$i++/* --}}
+@endforeach
 </ul>
 </div>
-<a href="/places/0">その他の観光地を探す</a>
+<a href="/places/0">Find other place</a>
 <br>
-<a href="/">トップに戻る</a>
+<a href="/">Top Page</a>
 </body>
 
 @endsection
