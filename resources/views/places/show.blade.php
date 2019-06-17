@@ -6,7 +6,8 @@
     <div class="left_content">
         <label>Search sites</label>
         {{Form::input('text', 'name')}}
-        <input type="submit" value="search">
+        <input type="button" value="search" onclick="test1()">
+        <script src="{{ asset('assets/javascripts/get_content.js') }}"></script>
         {{Form::close()}}
         <hr>
         <h2>{{ $place->area->area_en }} sites</h2>
@@ -22,11 +23,9 @@
             var longitude = {{ $place->longitude }};
             var place_en = "{{ $place->place_en }}";
             var place_id = {{ $place->id }};
-            console.log(place_en);
-            console.log(id);
         </script>
         <script src="{{ asset('assets/javascripts/map.js') }}"></script>
-        <a href="/">トップに戻る</a>
+        <a class="btn" href="/">Top page</a>
         
     </div>
     
