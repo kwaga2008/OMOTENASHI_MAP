@@ -23,15 +23,6 @@
   border-bottom: solid 2px black;
 }
 
-.box1:before, .box1:after {
-  content: '';
-  position: absolute;
-  top: -7px;
-  width: 2px;
-  height: -webkit-calc(100% + 14px);
-  height: calc(100% + 14px);
-  background-color: black;
-}
 .box:before {
   left: 7px;
 }
@@ -978,7 +969,7 @@ h2{
 }
 
 form{
-  width: 600px;
+  width: center;
   background-color: white;
   padding: 5px 0 0;
 }
@@ -1018,7 +1009,7 @@ form textarea{
 
 .message{
   min-height: 100px;
-  width: 598px;
+  width: 628px;
   margin: 0 auto;
   background-color: #fff;
   border: 1px solid #bbb;
@@ -1034,9 +1025,10 @@ form textarea{
 }
 
 .message_box{
-  float: left;
-  height: 150px;
-  width: 550px;
+  float: auto;
+  height: auto;
+  margin-left: 35px;
+  width: 570px;
   padding: 9px 0 10px;
 }
 
