@@ -905,7 +905,7 @@
 
   }
   .center_content {
-    width: 750px;
+    width: 750px; text-align: center;
   }
 
   .right_content {
