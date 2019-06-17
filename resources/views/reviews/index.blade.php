@@ -38,15 +38,15 @@
     <div class="checkbox_01">
   <label>
     <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
-    <span class="checkbox01-parts">Good</span>
+    <span class="checkbox01-parts">Good👍</span>
   </label>
   <label>
     <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
-    <span class="checkbox01-parts">Bad</span>
+    <span class="checkbox01-parts">Bad👎</span>
   </label>
   <label>
     <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
-    <span class="checkbox01-parts">OMOTENASHI</span>
+    <span class="checkbox01-parts">OMOTENASHI🙏</span>
   </label>
 </div>
 <div class="container">
