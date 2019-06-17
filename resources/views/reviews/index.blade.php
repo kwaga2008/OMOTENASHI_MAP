@@ -3,7 +3,9 @@
 @section("content")
   <body>
     <header class="header_review">
-      <h1>REVIEW</h1>
+      <div class="review_title">
+        REVIEW
+      </div>
     </header>
     <div class="box1">
       {{ $spot }}
@@ -38,15 +40,15 @@
     <div class="checkbox_01">
   <label>
     <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
-    <span class="checkbox01-parts">Good</span>
+    <span class="checkbox01-parts">Good👍</span>
   </label>
   <label>
     <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
-    <span class="checkbox01-parts">Bad</span>
+    <span class="checkbox01-parts">Bad👎</span>
   </label>
   <label>
     <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
-    <span class="checkbox01-parts">OMOTENASHI</span>
+    <span class="checkbox01-parts">OMOTENASHI🙏</span>
   </label>
 </div>
 <div class="container">
@@ -57,12 +59,19 @@
     @foreach ($reviews as $review)
       <div class="message clearfix">
         <div class="message_box">
-          <p class="user_name">
+          <p class="user_name_show">
             {{ $review->nickname }}
           </p>
-          <p class="text">
+          <p class="country_show">
+            {{ $review->country }}
+          </p>
+          <p class="feeling_show">
+            {{$review->feeling}}
+          </p>
+          <p class="text_show">
             {{ $review->text }}
           </p>
+
         </div>
       </div>
     @endforeach
