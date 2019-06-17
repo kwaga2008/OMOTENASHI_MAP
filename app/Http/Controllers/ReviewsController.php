@@ -30,8 +30,10 @@ class ReviewsController extends Controller
     return view('reviews.store')->with(array("id" => $id));
   }
 
-  public function index()
+  public function index($id)
   {
-    return view('reviews.index');
+    $reviews = Review::where("place_id",$id)->get();
+    $spot = Place::find($id)->place_en;
+    return view('reviews.index')->with(array("reviews" => $reviews,"spot" => $spot));
   }
 }

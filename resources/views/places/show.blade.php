@@ -17,8 +17,17 @@
 
     <div class="center_content">
         <div id="map"></div>
+        <script>
+            var latitude = {{ $place->latitude }};
+            var longitude = {{ $place->longitude }};
+            var place_en = "{{ $place->place_en }}";
+            var place_id = {{ $place->id }};
+            console.log(place_en);
+            console.log(id);
+        </script>
         <script src="{{ asset('assets/javascripts/map.js') }}"></script>
         <a href="/">トップに戻る</a>
+        
     </div>
     
     <div class="right_content">

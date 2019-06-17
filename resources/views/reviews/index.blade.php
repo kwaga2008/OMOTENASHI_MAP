@@ -6,7 +6,7 @@
       <h1>REVIEW</h1>
     </header>
     <div class="box1">
-      SPOT_NAME
+      {{ $spot }}
     </div>
       <div class="cp_ipselect cp_sl01">
 <select required>
@@ -27,7 +27,7 @@
   <option value="England">🇬🇧England</option>
   <option value="Canada">🇨🇦Canada</option>
   <option value="France">🇫🇷France</option>
-  <opiton value="Germany">🇩🇪Germany</opiton>
+  <option value="Germany">🇩🇪Germany</option>
   <option value="India">🇮🇳India</option>
   <option value="Itary">🇮🇹Italy</option>
   <option value="Spain">🇪🇸Spain</option>
@@ -53,6 +53,7 @@
 <a href="#" class="btn-gradation">narrow down</a>
 </div>
     <div class="contents">
+    @if(count($reviews) > 0)
     @foreach ($reviews as $review)
       <div class="message clearfix">
         <div class="message_box">
@@ -65,25 +66,14 @@
         </div>
       </div>
     @endforeach
-      <div class="message clearfix">
+    @else
+    <div class="message clearfix">
         <div class="message_box">
+          <p class="text">
+            No review exists.
+          </p>
         </div>
       </div>
-      <div class="message clearfix">
-        <div class="message_box">
-        </div>
-      </div>
-      <div class="message clearfix">
-        <div class="message_box">
-        </div>
-      </div>
-      <div class="message clearfix">
-        <div class="message_box">
-        </div>
-      </div>
-      <div class="message clearfix">
-        <div class="message_box">
-        </div>
-      </div>
+    @endif
     </div>
 @endsection
