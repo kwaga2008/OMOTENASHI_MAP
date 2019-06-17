@@ -1009,7 +1009,7 @@ form textarea{
 
 .message{
   min-height: 100px;
-  width: 598px;
+  width: 628px;
   margin: 0 auto;
   background-color: #fff;
   border: 1px solid #bbb;
@@ -1027,7 +1027,7 @@ form textarea{
 .message_box{
   float: right;
   height: auto;
-  width: 550px;
+  width: 590px;
   padding: 10px 0 10px;
 }
 
