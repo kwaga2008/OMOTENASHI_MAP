@@ -5,7 +5,9 @@ console.log(latitude);
 console.log(longitude);
 var MyLatLng = new google.maps.LatLng(latitude, longitude);
 */
-var MyLatLng = new google.maps.LatLng(35.03937,135.7292431);
+// var test1 = {{ $place-> latitude }};
+// console.log(test1);
+var MyLatLng = new google.maps.LatLng(latitude,longitude);
 var infoWindow;
 var Options = {
   zoom: 15, //地図の縮尺値
@@ -20,9 +22,9 @@ var marker = new google.maps.Marker({
   animation: google.maps.Animation.DROP // マーカーを立つときのアニメーション
 });
 
-var contents1 = '<h2>金閣寺</h2><a href="/reviews/create">レビューを書く</a><br><a href="/reviews/{{ $place->id }}">get information</a>';
+var contents1 = '<h2>' + place_en + '</h2><a href="/places/' + place_id + '/reviews/create">Write New Review</a><br><a href="/places/'+ place_id +'/reviews/">Get Information</a>';
 
-  infoWindow1 = new google.maps.InfoWindow({ // 吹き出しの追加
+var infoWindow1 = new google.maps.InfoWindow({ // 吹き出しの追加
     content: contents1 // 吹き出しに表示する内容
   });
 
@@ -45,7 +47,7 @@ map.addListener("click", function (e) {
     animation: google.maps.Animation.DROP // マーカーを立つときのアニメーション
   });
 
-  var contents = '<h2>清水寺</h2><a href="/reviews/create">レビューを書く</a><br><a href="/reviews/{{ $place->id }}">get information</a>';
+  var contents = '<h2>' + place_en + '</h2><a href="/places/' + place_id + '/reviews/create">Write New Review</a><br><a href="/places/'+ place_id +'/reviews/">Get Information</a>';
 
   infoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
     content: contents // 吹き出しに表示する内容
