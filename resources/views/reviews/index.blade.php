@@ -68,6 +68,7 @@
           <p class="feeling_show">
             {{$review->feeling}}
           </p>
+            --------------------------------------------------------------------
           <p class="text_show">
             {{ $review->text }}
           </p>
