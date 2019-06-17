@@ -902,7 +902,7 @@
   }
 
   .content {
-    width: 1200px;
+    width: 1400px;
     height: 1000px;
     margin: 40px auto 0;
     display: flex;
@@ -918,7 +918,7 @@
   }
 
   .right_content {
-    width: 300px;
+    width: 550px;
     padding: 5px;
   }
 
@@ -929,10 +929,7 @@
     }
     div.scroll {
         padding: 5px;
-        border-width: 5px;
-        border-color: white;
-        border-style: solid;
-        width: 300px;
+        width: 500px;
         height: 200px;
         background-color: #f5f5f3;
         overflow: scroll;

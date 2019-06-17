@@ -46,7 +46,9 @@
         
         <h2>Infomation</h2>
         @if(!empty($info))
+        <div class="scroll">
         <p>{{ $info->information }}</p>
+        </div>
         <hr>
         @else
         <p>No information</p>
