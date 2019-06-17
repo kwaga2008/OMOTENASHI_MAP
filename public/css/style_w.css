@@ -964,12 +964,11 @@ h2{
 .contents{
   height: 100%;
   width: 600px;
-  margin: 5px auto 0;
+  margin: 0 auto 0;
   background-color: white;
 }
 
 form{
-  width: 600px;
   background-color: white;
   padding: 5px 0 0;
 }
@@ -1053,3 +1052,8 @@ form textarea{
   font-size: 2.5em;
   margin: 13px;
 }
+
+.post_view{
+  text-align: center;
+}
+
