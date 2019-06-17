@@ -11,7 +11,7 @@
         <hr>
         <h2>{{ $place->area->area }} sites</h2>
         @foreach($places as $a_place)
-        <button type="button" onclick="location.href='/places/{{ $a_place->id }}'">{{ $a_place->place_en }}</button><br>
+        <a href='/places/{{ $a_place->id }}'>{{ $a_place->place_en }}</a><br>
         @endforeach
     </div>
 

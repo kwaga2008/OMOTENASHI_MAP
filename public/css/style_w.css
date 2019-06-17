@@ -930,7 +930,7 @@
     div.scroll {
         padding: 5px;
         width: 500px;
-        height: 200px;
+        max-height: 200px;
         background-color: #f5f5f3;
         overflow: scroll;
       }

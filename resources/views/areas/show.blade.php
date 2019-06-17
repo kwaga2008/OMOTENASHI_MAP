@@ -45,9 +45,9 @@
 <li><a href="/places/6"><img src="{{ asset('assets/images/kyoto/Fushimi_menu.jpeg') }}" width="300" height="300" alt=""><p>Fushimi</p></a></li>
 </ul>
 </div>
-<a href="/places/0">その他の観光地を探す</a>
+<a href="/places/0">Find other place</a>
 <br>
-<a href="/">トップに戻る</a>
+<a href="/">Top Page</a>
 </body>
 
 @endsection
