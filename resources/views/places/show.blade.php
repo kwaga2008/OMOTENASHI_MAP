@@ -5,12 +5,19 @@
 <div class="content">
     <div class="left_content">
         <label>Search sites</label>
-        {{Form::input('text', 'name')}}
-        <input type="button" value="search" onclick="test1()">
+        {{Form::open()}}
+        <input type="text" id="query">
+        <select name="area">
+        <option value="1" selected>This area</option>
+        <option value="2" >All area</option>
+        </select>
+        <input type="button" value="search" id="search">
         <script src="{{ asset('assets/javascripts/get_content.js') }}"></script>
         {{Form::close()}}
         <hr>
         <label>Search Results</label>
+        <div class="search_results">
+        </div>
         <hr>
         @if($area != NULL)
             <h2>{{ $area->area_en }} sites</h2>
