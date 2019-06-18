@@ -85,5 +85,7 @@
         </div>
       </div>
     @endif
-    </div>
+    <br>
+    <center><a class="btn" href="/places/{{ $id }}">back</a></center>
+  </div>
 @endsection

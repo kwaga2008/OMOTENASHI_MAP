@@ -1052,3 +1052,9 @@ form textarea{
 .img_show{
   text-align: center;
 }
+
+.review_title{
+  color: #fdeff2;
+  margin: 14px;
+  font-size: 2.4em;
+}
