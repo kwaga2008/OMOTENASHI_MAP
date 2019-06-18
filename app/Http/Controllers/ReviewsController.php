@@ -10,13 +10,13 @@ use App\Place;
 
 class ReviewsController extends Controller
 {
-  public function create($id)
+  public function create($area_id,$place_id)
   {
-    $spot = Place::find($id);
+    $spot = Place::find($place_id);
     return view('reviews.create')->with(["spot" => $spot]);
   }
 
-  public function store(Request $request,$id)
+  public function store(Request $request,$area_id,$place_id)
   {
     Review::create(
       array(
@@ -26,15 +26,15 @@ class ReviewsController extends Controller
         'feeling' => $request->feeling,
       )
     );
+    $spot = Place::find($area_id,$place_id);
 
-    return view('reviews.store')->with(array("id" => $id));
+    return view('reviews.store')->with(array("spot" => $spot));
   }
 
-  public function index($id)
+  public function index($area_id,$place_id)
   {
-    $reviews = Review::where("place_id",$id)->get();
-    $reviews = Review::orderBy('id','DESC')->get();
-    $spot = Place::find($id)->place_en;
+    $reviews = Review::where("place_id",$place_id)->orderBy('id','DESC')->get();
+    $spot = Place::find($place_id);
     return view('reviews.index')->with(array("reviews" => $reviews,"spot" => $spot));
   }
 }

@@ -11,11 +11,11 @@
         {{Form::close()}}
         <hr>
         <label>Search Results</label>
-        
+
         <hr>
         <h2>{{ $place->area->area_en }} sites</h2>
         @foreach($places as $a_place)
-        <a href='/places/{{ $a_place->id }}'>{{ $a_place->place_en }}</a><br>
+        <a href='/areas/{{ $a_place->area->id }}/places/{{ $a_place->id }}'>{{ $a_place->place_en }}</a><br>
         @endforeach
     </div>
 
@@ -83,10 +83,10 @@
         </div>
         <hr>
         @if(count($reviews) > 1)
-        <a class="btn" href="/places/{{ $id }}/reviews">Read More Review</a>
+        <a class="btn" href="/areas/{{ $place->area->id }}/places/{{ $id }}/reviews">Read More Review</a>
         @endif
         @if($id != 0)
-        <a class="btn" href="/places/{{ $id }}/reviews/create">Write New Review</a>
+        <a class="btn" href="/areas/{{ $place->area->id }}/places/{{ $id }}/reviews/create">Write New Review</a>
         @endif
     </div>
 </div>
