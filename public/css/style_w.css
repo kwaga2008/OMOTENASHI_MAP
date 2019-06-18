@@ -410,7 +410,7 @@
   }
   form input, form textarea {
     width: 100%;
-    margin: 5px 0 15px;
+    margin: 5px 0 5px;
     padding: 10px;
     border: 1px solid #d8d8d8;
     border-radius: 5px;
@@ -1057,4 +1057,8 @@ form textarea{
   color: #fdeff2;
   margin: 14px;
   font-size: 2.4em;
+}
+
+.check_box_form{
+  text-align : center
 }

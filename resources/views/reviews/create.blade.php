@@ -13,9 +13,9 @@
 <p>Nick name
 <input type="text" name="nickname"></p>
 <p class="check_box_form">
-Good👍<input type="radio" name="feeling" value="Good">
-Bad👎<input type="radio" name="feeling" value="Bad">
-Omotenashi🙏<input type="radio" name="feeling" value="Omotenashi">
+Good👍<br><input type="radio" name="feeling" value="Good">
+Bad👎<br><input type="radio" name="feeling" value="Bad">
+Omotenashi🙏<br><input type="radio" name="feeling" value="Omotenashi">
 </p>
 <p>Country<br>
 <select name="country">

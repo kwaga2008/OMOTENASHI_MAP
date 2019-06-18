@@ -33,7 +33,7 @@ class ReviewsController extends Controller
   public function index($id)
   {
     $reviews = Review::where("place_id",$id)->get();
-    $reviews = Review::orderBy('id','DESC')->take(100)->get();
+    $reviews = Review::orderBy('id','DESC')->get();
     $spot = Place::find($id)->place_en;
     return view('reviews.index')->with(array("reviews" => $reviews,"spot" => $spot));
   }
