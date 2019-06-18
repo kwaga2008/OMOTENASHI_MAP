@@ -22,15 +22,15 @@
 <p>Feeling
 <div class="checkbox_01">
   <label>
-    <input type="checkbox" name="feeling" class="checkbox01-input" value=good>
+    <input type="radio" name="feeling" class="checkbox01-input" value=good>
     <span class="checkbox01-parts">Good👍</span>
   </label>
   <label>
-    <input type="checkbox" name="feeling" class="checkbox01-input" value=bad>
+    <input type="radio" name="feeling" class="checkbox01-input" value=bad>
     <span class="checkbox01-parts">Bad👎</span>
   </label>
   <label>
-    <input type="checkbox" name="feeling" class="checkbox01-input" value=omotenashi>
+    <input type="radio" name="feeling" class="checkbox01-input" value=omotenashi>
     <span class="checkbox01-parts">OMOTENASHI🙏</span>
   </label>
 </div>

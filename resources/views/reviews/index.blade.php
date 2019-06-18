@@ -40,15 +40,15 @@
 </div>
 <div class="checkbox_01">
   <label>
-    <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+    <input type="radio" name="checkbox01[]" class="checkbox01-input">
     <span class="checkbox01-parts">Good👍</span>
   </label>
   <label>
-    <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+    <input type="radio" name="checkbox01[]" class="checkbox01-input">
     <span class="checkbox01-parts">Bad👎</span>
   </label>
   <label>
-    <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
+    <input type="radio" name="checkbox01[]" class="checkbox01-input">
     <span class="checkbox01-parts">OMOTENASHI🙏</span>
   </label>
 </div>
