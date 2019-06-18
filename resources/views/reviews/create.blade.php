@@ -15,25 +15,26 @@
 <img src='{{ asset("assets/images/" . $spot->img_src) }}' width="600" height="300" alt=""><br><br>
 <div class="contents row">
 <div class="container">
-{{ Form::open(['url' => "places/$spot->id/reviews", 'method' => 'post']) }}
+{{ Form::open(['url' => "/areas/$spot->area_id/places/$spot->id/reviews", 'method' => 'post']) }}
 <form method="POST" action="<?php print($_SERVER['PHP_SELF']) ?>"></p>
 <p>Nick name
 <input type="text" name="nickname"></p>
 <p>Feeling
 <div class="checkbox_01">
   <label>
-    <input type="checkbox" name="feeling" class="checkbox01-input">
+    <input type="checkbox" name="feeling" class="checkbox01-input" value=good>
     <span class="checkbox01-parts">Good👍</span>
   </label>
   <label>
-    <input type="checkbox" name="feeling" class="checkbox01-input">
+    <input type="checkbox" name="feeling" class="checkbox01-input" value=bad>
     <span class="checkbox01-parts">Bad👎</span>
   </label>
   <label>
-    <input type="checkbox" name="feeling" class="checkbox01-input">
+    <input type="checkbox" name="feeling" class="checkbox01-input" value=omotenashi>
     <span class="checkbox01-parts">OMOTENASHI🙏</span>
   </label>
-</div></p>
+</div>
+</p>
 <p>Country<br>
 <select name="country">
 <option value="Japan">🇯🇵Japan</option>

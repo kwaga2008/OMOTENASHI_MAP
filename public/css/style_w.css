@@ -1062,3 +1062,12 @@ form textarea{
 .check_box_form{
   text-align : center
 }
+
+.spot_name{
+  font-size: 3em;
+  font-weight: 600;
+}
+
+.spot_name:first-letter{
+  color: #852e19;
+ }

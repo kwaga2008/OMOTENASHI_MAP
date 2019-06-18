@@ -24,7 +24,7 @@
 </div>
 
 <div td align="center">
-<p><h1>{{ $area->area_en }}</h1></p>
+<div class="spot_name">{{ $area->area_en }}</div>
 <div class="info">
 @if( $area->area_info != "")
 <p>{{ $area->area_info }}</p>

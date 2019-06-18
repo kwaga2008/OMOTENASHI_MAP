@@ -24,10 +24,11 @@ class ReviewsController extends Controller
         'text' => $request->text,
         'country' => $request->country,
         'feeling' => $request->feeling,
-        'place_id' => $id
+        'place_id' => $place_id,
+
       )
     );
-    $spot = Place::find($area_id,$place_id);
+    $spot = Place::find($place_id);
 
     return view('reviews.store')->with(array("spot" => $spot));
   }
