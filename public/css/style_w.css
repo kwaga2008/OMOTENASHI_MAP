@@ -1071,3 +1071,17 @@ form textarea{
 .spot_name:first-letter{
   color: #852e19;
  }
+
+.wrapper_footer{
+  display: flex;
+  flex-direction: column;
+  min-height: 15vh;
+}
+
+footer{
+    width: 100%;
+    margin-top: auto;
+    background-color: #95483f;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
