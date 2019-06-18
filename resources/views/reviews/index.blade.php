@@ -8,7 +8,10 @@
       </div>
     </header>
     <div class="box1">
-      {{ $spot }}
+      {{ $spot->place_en }}
+      <hr>
+      <img src='{{ asset("assets/images/" . $spot->img_src) }}' width="300" height="300" alt="">
+      <hr>
     </div>
       <div class="cp_ipselect cp_sl01">
 <select required>
@@ -85,5 +88,7 @@
         </div>
       </div>
     @endif
-    </div>
+    <a href="/areas/{{ $spot->area->id }}/places/{{ $spot->id }}">Spot Page</a>
+    <a href="/">Top page</a>
+</div>
 @endsection
