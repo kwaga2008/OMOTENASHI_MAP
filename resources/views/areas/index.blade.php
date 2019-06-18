@@ -27,7 +27,7 @@
 
 <div class="info">
 <p><!---おもてなしマップは、地図と観光情報と、地域のマナーや慣習をまとめた非常に便利なサービスです。ユーザーがレビューを書き込む機能があり、その地域の最新情報を手に入れることができます。また、ユーザーは国や感情によってレビューを絞り込むことができます。さあ、おもてなしマップを使って日本旅行を楽しみましょう！-->
-The OMOTENASHI MAP is a very useful service that maps, tourist information, and manners and customs in the area. You have the ability to write reviews and get updates on their area. You can also narrow their reviews by country and sentiment. Now, let's enjoy the trip to Japan using the OMOTENASHI MAP!
+The OMOTENASHI MAP is a very useful service that maps, tourist information, and manners and customs in the area. You have the ability to write reviews and get updates on their area. You can also narrow their reviews by country and sentiment. Now, let's enjoy the trip to Japan using the OMOTENASHI MAP!!!
 </p>
 </div>
 <div td align="center">
@@ -44,7 +44,7 @@ The OMOTENASHI MAP is a very useful service that maps, tourist information, and 
 </ul>
 </div>
 <br><br>
-<a href="/areas/0/places/0">The others</a>
+<a href="/areas/0/places/0">Other place</a>
 <br>
 <br>
 </div>

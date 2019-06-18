@@ -35,7 +35,7 @@
 <br>
 <h1>Select Area</h1>
 <div class="area_selects">
-<ul>
+<ul class="area_selects_images">
 @foreach($top_places as $place)
 {{-- */$i = 1/* --}}
 @if($place->img_src !="")
