@@ -10,6 +10,9 @@
         <script src="{{ asset('assets/javascripts/get_content.js') }}"></script>
         {{Form::close()}}
         <hr>
+        <label>Search Results</label>
+        
+        <hr>
         <h2>{{ $place->area->area_en }} sites</h2>
         @foreach($places as $a_place)
         <a href='/places/{{ $a_place->id }}'>{{ $a_place->place_en }}</a><br>
