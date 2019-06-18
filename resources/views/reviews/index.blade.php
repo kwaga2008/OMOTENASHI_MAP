@@ -9,10 +9,8 @@
     </header>
     <div class="box1">
       {{ $spot->place_en }}
-      <hr>
-      <img src='{{ asset("assets/images/" . $spot->img_src) }}' width="300" height="300" alt="">
-      <hr>
     </div>
+          <center><img src='{{ asset("assets/images/" . $spot->img_src) }}' width="600" height="300" alt=""></center>
       <div class="cp_ipselect cp_sl01">
 <select required>
   <option value="" hidden>Country</option>
@@ -40,7 +38,7 @@
   <option value="Other">Other</option>
 </select>
 </div>
-    <div class="checkbox_01">
+<div class="checkbox_01">
   <label>
     <input type="checkbox" name="checkbox01[]" class="checkbox01-input">
     <span class="checkbox01-parts">Good👍</span>
@@ -54,6 +52,7 @@
     <span class="checkbox01-parts">OMOTENASHI🙏</span>
   </label>
 </div>
+<br>
 <div class="container">
 <a href="#" class="btn-gradation">narrow down</a>
 </div>
@@ -75,7 +74,6 @@
           <p class="text_show">
             <b>Text:</b> {{ $review->text }}
           </p>
-
         </div>
       </div>
     @endforeach
@@ -88,7 +86,8 @@
         </div>
       </div>
     @endif
-    <a href="/areas/{{ $spot->area->id }}/places/{{ $spot->id }}">Spot Page</a>
-    <a href="/">Top page</a>
+    <br>
+    <center><a href="/areas/{{ $spot->area->id }}/places/{{ $spot->id }}">Back</a><br>
+    <a href="/">Top page</a></center>
 </div>
 @endsection
