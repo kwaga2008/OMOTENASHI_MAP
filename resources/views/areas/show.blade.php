@@ -39,9 +39,9 @@
 @foreach($top_places as $place)
 {{-- */$i = 1/* --}}
 @if($place->img_src !="")
-<li><a href="/places/{{ $place->id }}"><img src='{{ asset("assets/images/" . $place->img_src) }}' width="300" height="300" alt="" ><p>{{ $place->place_en }}</p></a></li>
+<li><a href="{{ $place->area->id }}/places/{{ $place->id }}"><img src='{{ asset("assets/images/" . $place->img_src) }}' width="300" height="300" alt="" ><p>{{ $place->place_en }}</p></a></li>
 @else
-<li><a href="/places/{{ $place->id }}"><img src='{{ asset("assets/images/no_image.png") }}' width="300" height="300" alt="" ><p>{{ $place->place_en }}</p></a></li>
+<li><a href="{{ $place->area->id }}/places/{{ $place->id }}"><img src='{{ asset("assets/images/no_image.png") }}' width="300" height="300" alt="" ><p>{{ $place->place_en }}</p></a></li>
 @endif
 @if( $i == 3 )
 <br><br>
@@ -50,7 +50,7 @@
 @endforeach
 </ul>
 </div>
-<a href="/places/0">Find other place</a>
+<a href="{{ $area->id }}/places/0">Find other place</a>
 <br>
 <a href="/">Top Page</a>
 </body>

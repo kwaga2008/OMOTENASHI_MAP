@@ -16,8 +16,8 @@
 });*/
 
 Route::group(['middleware' => ['web']], function () {
-    Route::resource('places.reviews', 'ReviewsController', ['only' => ['index','create','store']]);
-    Route::resource('places','PlacesController', ['only' => ['index','show']]);
+    Route::resource('areas.places.reviews', 'ReviewsController', ['only' => ['index','create','store']]);
+    Route::resource('areas.places','PlacesController', ['only' => ['index','show']]);
     Route::auth();
     Route::resource('areas', 'AreasController', ['only' => ['index','show']]);
     Route::get("/","AreasController@index");
