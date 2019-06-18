@@ -37,7 +37,7 @@
 </ul>
 </div>
 <br><br>
-<a href="/places/0">The others</a>
+<a href="/areas/0/places/0">The others</a>
 <br>
 <br>
 </div>
