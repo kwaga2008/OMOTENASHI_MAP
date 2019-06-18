@@ -135,7 +135,7 @@
     line-height: 1.57;
     letter-spacing: 0.15em;
     font-size: 16px;
-    color: #666;
+    color: #2b2b2b;
     font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
     margin: 0;
   }
@@ -410,24 +410,24 @@
   }
   form input, form textarea {
     width: 100%;
-    margin: 5px 0 15px;
+    margin: 5px 0 5px;
     padding: 10px;
     border: 1px solid #d8d8d8;
     border-radius: 5px;
     font-family: "游ゴシック", "YuGothic";
   }
   form input[type="submit"] {
-    background-color: #57c3e9;
+    background-color: #95483f;
     border-radius: 20px;
     color: #fff;
     border: 0;
     font-size: 18px;
   }
   form input[type="submit"]:hover {
-    background-color: #84d3ef;
+    background-color: #f0908d;
   }
   .container {
-    margin: auto 0px auto;
+    margin: -30px 30px 0px;
     text-align: center;
     padding: 30px;
     background-color: f5f5f3;
@@ -950,7 +950,7 @@ h1{
   height: 46px;
   line-height: 46px;
   font-size: 30px;
-  color: black;
+  color: #2b2b2b;
   text-align: center;
 }
 
@@ -1051,4 +1051,14 @@ form textarea{
 
 .img_show{
   text-align: center;
+}
+
+.review_title{
+  color: #fdeff2;
+  margin: 14px;
+  font-size: 2.4em;
+}
+
+.check_box_form{
+  text-align : center
 }
