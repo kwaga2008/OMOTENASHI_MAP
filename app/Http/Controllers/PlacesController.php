@@ -30,4 +30,11 @@ class PlacesController extends Controller
     public function index(){
         return view("places.index");
     }
+
+    public function getSearchResults($query)
+    {
+        $results = Place::where('place_ja',"LIKE", "%$query%")->orWhere('place_en',"LIKE", "%$query%")->get();
+
+        return response()->json($results);
+    }
 }

@@ -1,7 +1,7 @@
 var MyLatLng = new google.maps.LatLng(latitude,longitude);
 var infoWindow;
 var Options = {
-  zoom: 13, //地図の縮尺値
+  zoom: 12, //地図の縮尺値
   center: MyLatLng, //地図の中心座標
   mapTypeId: 'roadmap' //地図の種類
 };
