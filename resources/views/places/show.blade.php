@@ -6,12 +6,14 @@
     <div class="left_content">
         <label>Search sites</label>
         {{Form::open()}}
-        <input type="text" id="query">
+        <input type="text" id="query" placeholder="Fill place">
         <select name="area" id="area_option">
-        <option value="{{ $area_id }}" selected>This area</option>
+        @if($area != NULL)
+        <option value="{{ $area_id }}" selected>{{ $area->area_en }} area</option>
+        @endif
         <option value="all" >All area</option>
         </select>
-        <input type="button" value="search" id="search">
+        <input type="button" class="btn-gradation" value="search" id="search">
         <script src="{{ asset('assets/javascripts/get_content.js') }}"></script>
         {{Form::close()}}
         <hr>
@@ -57,15 +59,18 @@
             <script src="{{ asset('assets/javascripts/create_marker.js') }}"></script>
             @endif
         @endif
-        <a class="btn" href="/">Top page</a>
+        <input type="button" class="btn-gradation" onclick='location.href="/"' value="Top page">
         
     </div>
     
     <div class="right_content">
         <div class="information">
-            <h1>CONTENTS</h1>
+            <header class="header_review">
+                <div class="review_title">
+                    CONTENTS
+                </div>
+            </header>
         @if($place !=NULL)
-            <hr>
             <div class="img_show">
             @if($place != NULL)
                 @if($place->img_src !="")
@@ -86,7 +91,7 @@
             <hr>
             @endif
             
-            <h2>Infomation</h2>
+            <h2>Information</h2>
             @if(!empty($info))
             <div class="scroll">
             <p>{{ $info->information }}</p>
@@ -101,12 +106,21 @@
             
             @if(count($reviews) > 0 && $place_id != 0)
             <div class="scroll">
+            {{-- */$i = 1/* --}}
             @foreach($reviews as $review)
-                <p>User: {{ $review->nickname }}</p>
-                <p>From: {{ $review->country }}</p>
-                <p>Feel: {{ $review->feeling }}</p>
-                <p>{{ $review->text }}</p>
+            
+            @if($i <= 3)
+                <p><b>User:</b> {{ $review->nickname }}</p>
+                <p><b>From:</b> {{ $review->country }}</p>
+                <p><b>Feel:</b> {{ $review->feeling }}</p>
+                <p><b>Text:</b> {{ $review->text }}</p>
                 <hr>
+            @endif
+            @if($i == 4)
+                <p>More Review Exists</p>
+                <hr>
+            @endif
+            {{-- */$i++/* --}}
             @endforeach
             </div>
             @else
@@ -115,12 +129,13 @@
             </div>
             <hr>
             @if(count($reviews) > 1)
-            <a class="btn" href="/areas/{{ $place->area->id }}/places/{{ $place_id }}/reviews">Read More Review</a>
+            <input type="button" class="btn-gradation" onclick='location.href="/areas/{{ $place->area->id }}/places/{{ $place_id }}/reviews"' value="Read More Review">
             @endif
             @if($place_id != 0)
-            <a class="btn" href="/areas/{{ $place->area->id }}/places/{{ $place_id }}/reviews/create">Write New Review</a>
+            <input type="button" class="btn-gradation" onclick='location.href="/areas/{{ $place->area->id }}/places/{{ $place_id }}/reviews/create"' value="Write New Review">
             @endif
         @endif
+        </div>
     </div>
 </div>
 

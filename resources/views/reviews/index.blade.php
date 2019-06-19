@@ -100,7 +100,9 @@
         @endif
       </div>
     <br>
-    <center><a href="/areas/{{ $spot->area->id }}/places/{{ $spot->id }}">Back</a><br>
-    <a href="/">Top page</a></center>
+    <center>
+    <input type="button" class="btn-gradation" onclick='location.href="/areas/{{ $spot->area->id }}/places/{{ $spot->id }}"' id="Back" value="Back">
+    <input type="button" class="btn-gradation" onclick='location.href="/"' value="Top Page">
+    </center>
 </div>
 @endsection

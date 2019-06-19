@@ -34,7 +34,11 @@ class PlacesController extends Controller
     public function getSearchResults(Request $request)
     {
         $keyword = $request["query"];
-        if ($request["area"] != "all") {
+        $area = $request["area"];
+        if($area == 0){
+            $area = "all";
+        }
+        if ($area != "all") {
             $results = Place::where("area_id", $request["area"])
             ->where(function($query1) use($keyword){
                 $query1->where('place_ja', 'LIKE', "%$keyword%")->orWhere('place_en', 'LIKE', "%$keyword%");

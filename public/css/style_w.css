@@ -443,12 +443,12 @@
     text-decoration: none;
   }
   footer {
-    margin: 30px auto;
+    margin: 50px auto 0;
     padding: 10px;
     color: #d8d8d8;
   }
   footer p {
-    text-align: center;
+    text-align: center; font-size: 8pt; color:black; font-family: "Noto Sans CJK JP","Noto Sans Japanese",'Lucida Grande','Hiragino Kaku Gothic ProN',Meiryo,sans-serif;
   }
   /*! normalize.css v2.1.3 | MIT License | git.io/normalize *//* ==========================================================================
    * HTML5 display definitions
@@ -779,7 +779,7 @@
     margin-right: auto;
     margin-top: 0;
     margin-bottom: 0;
-    max-width: 660px;
+    max-width: 100%;
     *zoom: 1;
   }
   .row .grid-1, .row .grid-2, .row .grid-3, .row .grid-4, .row .grid-5, .row .grid-6, .row .grid-7, .row .grid-8, .row .grid-9, .row .grid-10, .row .grid-11, .row .grid-12 {
@@ -895,26 +895,26 @@
   .content {
     width: 1400px;
     height: 1000px;
-    margin: 40px auto 0;
+    margin: 20px auto 0;
     display: flex;
   }
 
   .left_content {
     width: 200px;
-    padding: 5px;
+    padding: 5px; margin: 20px 0 0 0;
 
   }
   .center_content {
-    width: 750px; text-align: center;
+    width: 750px; text-align: center; margin: 20px 0 0 0;
   }
 
   .right_content {
     width: 550px;
-    padding: 5px;
+    
   }
 
   #map {
-    margin: 0 auto 0;
+    margin: 0 auto 20px;
     height: 600px; 
     width: 600px;
     }
@@ -1050,7 +1050,7 @@ form textarea{
 }
 
 .img_show{
-  text-align: center;
+  text-align: center; margin: 10px 0 0 0;
 }
 
 .review_title{
