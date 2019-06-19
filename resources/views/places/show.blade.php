@@ -57,15 +57,18 @@
             <script src="{{ asset('assets/javascripts/create_marker.js') }}"></script>
             @endif
         @endif
-        <a class="btn" href="/">Top page</a>
+        <input type="button" class="btn-gradation" onclick='location.href="/"' value="Top page">
         
     </div>
     
     <div class="right_content">
         <div class="information">
-            <h1>CONTENTS</h1>
+            <header class="header_review">
+            <div class="review_title">
+                CONTENTS
+            </div>
+    </header>
         @if($place !=NULL)
-            <hr>
             <div class="img_show">
             @if($place != NULL)
                 @if($place->img_src !="")
@@ -86,7 +89,7 @@
             <hr>
             @endif
             
-            <h2>Infomation</h2>
+            <h2>Information</h2>
             @if(!empty($info))
             <div class="scroll">
             <p>{{ $info->information }}</p>
@@ -115,10 +118,10 @@
             </div>
             <hr>
             @if(count($reviews) > 1)
-            <a class="btn" href="/areas/{{ $place->area->id }}/places/{{ $place_id }}/reviews">Read More Review</a>
+            <input type="button" class="btn-gradation" onclick='location.href="/areas/{{ $place->area->id }}/places/{{ $place_id }}/reviews"' value="Read More Review">
             @endif
             @if($place_id != 0)
-            <a class="btn" href="/areas/{{ $place->area->id }}/places/{{ $place_id }}/reviews/create">Write New Review</a>
+            <input type="button" class="btn-gradation" onclick='location.href="/areas/{{ $place->area->id }}/places/{{ $place_id }}/reviews/create"' value="Write New Review">
             @endif
         @endif
     </div>
