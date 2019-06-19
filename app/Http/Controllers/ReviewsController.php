@@ -37,4 +37,19 @@ class ReviewsController extends Controller
     $spot = Place::find($place_id);
     return view('reviews.index')->with(array("reviews" => $reviews,"spot" => $spot));
   }
+
+  public function getReviews(Request $request)
+    {
+        $country = $request["country"];
+        $id = $request["place_id"];
+        
+        if($country == "all"){
+          $review_results = Review::where("place_id",$id)->get();
+        }else{
+          $review_results = Review::where("place_id",$id)->where("country",$country)->get();
+        }
+        
+        return response()->json($review_results);
+    }
+
 }
