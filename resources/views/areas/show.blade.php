@@ -24,7 +24,7 @@
 </div>
 
 <div td align="center">
-<p><h1>{{ $area->area_en }}</h1></p>
+<div class="spot_name">{{ $area->area_en }}</div>
 <div class="info">
 @if( $area->area_info != "")
 <p>{{ $area->area_info }}</p>
@@ -35,7 +35,7 @@
 <br>
 <h1>Select Area</h1>
 <div class="area_selects">
-<ul>
+<ul class="area_selects_images">
 @foreach($top_places as $place)
 {{-- */$i = 1/* --}}
 @if($place->img_src !="")

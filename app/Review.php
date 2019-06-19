@@ -10,5 +10,5 @@ class Review extends Model
       return $this->belongsTo(Place::class);
     }
 
-    protected $fillable = array('nickname', 'text', 'country', 'feeling');
+    protected $fillable = array('nickname', 'text', 'country', 'feeling','place_id');
 }

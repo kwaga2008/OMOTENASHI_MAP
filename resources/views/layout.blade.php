@@ -14,6 +14,11 @@
       </div>
     </header>
     @yield('content')
+<div class="wrapper_footer">
+  <footer>
+    <p>(c)Group 4</p>
+  </footer>
+</div>
   </body>
 </html>
 
