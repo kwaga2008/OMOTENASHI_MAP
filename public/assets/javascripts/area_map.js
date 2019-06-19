@@ -19,7 +19,13 @@ var infoWindow1 = new google.maps.InfoWindow({ // 吹き出しの追加
     content: contents1 // 吹き出しに表示する内容
   });
 
-  infoWindow1.open(map,marker); // 吹き出しの表示
+infoWindow1.open(map, marker); // 吹き出しの表示
+  
+google.maps.event.addListener(marker, 'click', function (event) {
+  new google.maps.InfoWindow({
+      content: contents1
+  }).open(marker.getMap(), marker);
+});
 
 map.addListener("click", function (e) {
   // コンソールで経度を表示

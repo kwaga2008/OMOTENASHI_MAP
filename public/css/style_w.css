@@ -962,15 +962,15 @@ h2{
 }
 
 .contents{
-  height: 100%;
+  height: auto;
   width: 600px;
-  margin: 5px auto 0;
+  margin: 5px auto 5px;
   background-color: white;
 }
 
 form{
   width: center;
-  background-color: white;
+  background-color: #f5f5f3;
   padding: 5px 0 0;
 }
 
@@ -1009,11 +1009,11 @@ form textarea{
 
 .message{
   min-height: 100px;
-  width: 628px;
+  width: 600px;
   margin: 0 auto;
   background-color: #fff;
   border: 1px solid #bbb;
-  border-bottom: none;
+  
 }
 
 .message img{
@@ -1027,7 +1027,7 @@ form textarea{
 .message_box{
   float: auto;
   height: auto;
-  margin-left: 35px;
+  margin: 0 auto 0;
   width: 570px;
   padding: 9px 0 10px;
 }
@@ -1063,25 +1063,12 @@ form textarea{
   text-align : center
 }
 
-.spot_name{
-  font-size: 3em;
-  font-weight: 600;
+.reviews{
+  border: #000;
+  width: 600px;
 }
 
-.spot_name:first-letter{
-  color: #852e19;
- }
-
-.wrapper_footer{
-  display: flex;
-  flex-direction: column;
-  min-height: 15vh;
+.bar_center{
+  text-align: center;
 }
 
-footer{
-    width: 100%;
-    margin-top: auto;
-    background-color: #95483f;
-    color: white;
-    text-align: center;
-    padding: 15px 0;

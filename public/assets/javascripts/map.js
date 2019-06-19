@@ -13,13 +13,19 @@ var marker = new google.maps.Marker({
   animation: google.maps.Animation.DROP // マーカーを立つときのアニメーション
 });
 
-var contents1 = '<h2>' + place_en + '</h2><a href="/places/' + place_id + '/reviews/create">Write New Review</a><br><a href="/places/'+ place_id +'/reviews/">Get Information</a>';
+var contents1 = '<h2>' + place_en + '</h2><a href="/places/' + place_id + '/reviews/create">Write New Review</a>';
 
 var infoWindow1 = new google.maps.InfoWindow({ // 吹き出しの追加
     content: contents1 // 吹き出しに表示する内容
   });
 
-  infoWindow1.open(map,marker); // 吹き出しの表示
+infoWindow1.open(map, marker); // 吹き出しの表示
+  
+google.maps.event.addListener(marker, 'click', function (event) {
+  new google.maps.InfoWindow({
+      content: contents1
+  }).open(marker.getMap(), marker);
+});
 
 map.addListener("click", function (e) {
   // コンソールで経度を表示
@@ -31,12 +37,14 @@ map.addListener("click", function (e) {
   // this.setCenter(e.latLng); // クリックする場所をMapの中心にする(画面の移動速度が速い)
   this.panTo(e.latLng); //クリックする場所をMapの中心にする(画面の移動速度がゆっくり)
   // クリックする場所をマーカーを立てる
-  var click_marker = new google.maps.Marker({
+  /*
+   var click_marker = new google.maps.Marker({
     position: e.latLng,
     map: map,
     title: e.latLng.toString(),
     animation: google.maps.Animation.DROP // マーカーを立つときのアニメーション
   });
+  */
 
    // var contents = '<h2>' + place_en + '</h2><a href="/places/' + place_id + '/reviews/create">Write New Review</a><br><a href="/places/'+ place_id +'/reviews/">Get Information</a>';
 
@@ -47,8 +55,9 @@ map.addListener("click", function (e) {
  // infoWindow.open(map, click_marker); // 吹き出しの表示
 
   // 上で立てたマーカーをもう一度クリックするとマーカーを削除
-  click_marker.addListener("click", function () {
+  /* click_marker.addListener("click", function () {
     this.setMap(null);
   });
+  */
 
 });
