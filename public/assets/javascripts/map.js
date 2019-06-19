@@ -1,7 +1,7 @@
 var MyLatLng = new google.maps.LatLng(latitude,longitude);
 var infoWindow;
 var Options = {
-  zoom: 15, //地図の縮尺値
+  zoom: 16, //地図の縮尺値
   center: MyLatLng, //地図の中心座標
   mapTypeId: 'roadmap' //地図の種類
 };
@@ -55,9 +55,11 @@ map.addListener("click", function (e) {
  // infoWindow.open(map, click_marker); // 吹き出しの表示
 
   // 上で立てたマーカーをもう一度クリックするとマーカーを削除
-  /* click_marker.addListener("click", function () {
-    this.setMap(null);
+  marker.addListener("click", function () {
+    new google.maps.InfoWindow({
+      content: contents1
+    }).open(marker.getMap(), marker);
   });
-  */
+  
 
 });
