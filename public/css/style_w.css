@@ -396,11 +396,11 @@
   div.contents.row .success h3 {
     margin: 10px auto;
   }
-    div.area_selects{width:64%;margin:0 auto;}
-    div.area_selects ul,div.area_selects ul li{list-style-type:none;}
-    div.area_selects ul{align: center;}
-    div.area_selects ul{text-align:center;text-align:justify;}
-    div.area_selects ul li{display:inline-block;text-align:left;}
+    div.area_selects{
+      max-width:1000px; margin:0 auto;}
+    div.area_selects ul li{
+      display:inline-block;text-align:left;}
+
   form h3 {
     margin: 0 0 20px;
     text-align: center;
@@ -687,7 +687,7 @@
     box-sizing: border-box;
   }
   .info {
-    width: 1100px;
+    max-width: 1100px;
   }
   img, object, embed {
     max-width: 100%;
@@ -1072,3 +1072,11 @@ form textarea{
   text-align: center;
 }
 
+.spot_name{
+  font-size: 50px;
+  font-weight: bold;
+}
+
+.spot_name:first-letter {
+ color: #95483f;
+}

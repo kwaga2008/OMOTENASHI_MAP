@@ -44,7 +44,7 @@ The OMOTENASHI MAP is a very useful service that maps, tourist information, and 
 </ul>
 </div>
 <br><br>
-<a href="/areas/0/places/0">Other place</a>
+<a href="/areas/0/places/0">Other area</a>
 <br>
 <br>
 </div>
