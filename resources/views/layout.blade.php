@@ -15,8 +15,8 @@
     </header>
     @yield('content')
 <div class="wrapper_footer">
-  <footer>
-    <p>(c)Group 4</p>
+  <footer font-size="8px" color="black">
+    <p>Copyright© 2019 ZENRIN DataCom CO., LTD. Group4 All Rights Reserved.</p>
   </footer>
 </div>
   </body>

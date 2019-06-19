@@ -1,7 +1,14 @@
 var MyLatLng = new google.maps.LatLng(latitude,longitude);
 var infoWindow;
+var zoom = 12;
+if (area_en == "Hokkaido") {
+  zoom = 7;
+}
+if (area_en == "Okinawa") {
+  zoom = 9;
+}
 var Options = {
-  zoom: 12, //地図の縮尺値
+  zoom: zoom, //地図の縮尺値
   center: MyLatLng, //地図の中心座標
   mapTypeId: 'roadmap' //地図の種類
 };
