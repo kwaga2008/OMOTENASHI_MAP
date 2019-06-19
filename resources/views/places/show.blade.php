@@ -7,16 +7,17 @@
         <label>Search sites</label>
         {{Form::open()}}
         <input type="text" id="query">
-        <select name="area">
-        <option value="1" selected>This area</option>
-        <option value="2" >All area</option>
+        <select name="area" id="area_option">
+        <option value="{{ $area_id }}" selected>This area</option>
+        <option value="all" >All area</option>
         </select>
         <input type="button" value="search" id="search">
         <script src="{{ asset('assets/javascripts/get_content.js') }}"></script>
         {{Form::close()}}
         <hr>
-        <label>Search Results</label>
+        <h2>Search Results</h2>
         <div class="search_results">
+
         </div>
         <hr>
         @if($area != NULL)
@@ -45,6 +46,7 @@
                 var place_id = {{ $place->id }};
             </script>
             <script src="{{ asset('assets/javascripts/map.js') }}"></script>
+            <script src="{{ asset('assets/javascripts/create_marker.js') }}"></script>
             @else
             <script>
                 var latitude = {{ $area->area_latitude }};
@@ -52,6 +54,7 @@
                 var area_en = "{{ $area->area_en }}";
             </script>
             <script src="{{ asset('assets/javascripts/area_map.js') }}"></script>
+            <script src="{{ asset('assets/javascripts/create_marker.js') }}"></script>
             @endif
         @endif
         <a class="btn" href="/">Top page</a>
