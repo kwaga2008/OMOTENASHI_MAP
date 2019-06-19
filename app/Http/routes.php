@@ -22,5 +22,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::resource('areas', 'AreasController', ['only' => ['index','show']]);
     Route::get("/","AreasController@index");
     Route::get('/areas/places/get', 'PlacesController@getSearchResults');
+    Route::get('/areas/places/marker', 'PlacesController@getMarkers');
 });
 

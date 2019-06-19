@@ -45,4 +45,10 @@ class PlacesController extends Controller
         }
         return response()->json($results);
     }
+    
+    public function getMarkers(Request $request)
+    {
+        $marker_results = Place::all();
+        return response()->json($marker_results);
+    }
 }

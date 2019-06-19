@@ -46,6 +46,7 @@
                 var place_id = {{ $place->id }};
             </script>
             <script src="{{ asset('assets/javascripts/map.js') }}"></script>
+            <script src="{{ asset('assets/javascripts/create_marker.js') }}"></script>
             @else
             <script>
                 var latitude = {{ $area->area_latitude }};
@@ -53,6 +54,7 @@
                 var area_en = "{{ $area->area_en }}";
             </script>
             <script src="{{ asset('assets/javascripts/area_map.js') }}"></script>
+            <script src="{{ asset('assets/javascripts/create_marker.js') }}"></script>
             @endif
         @endif
         <a class="btn" href="/">Top page</a>
