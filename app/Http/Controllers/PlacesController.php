@@ -24,17 +24,25 @@ class PlacesController extends Controller
 
 
         return view("places.show")->with(array("place" => $place,"places" => $places,"info" => $info,
-        "area" => $area, "reviews" => $reviews,"place_id" => $place_id,"areas" => $areas));
+        "area" => $area, "reviews" => $reviews,"place_id" => $place_id,"areas" => $areas,"area_id" => $area_id));
     }
 
     public function index(){
         return view("places.index");
     }
 
-    public function getSearchResults($query)
+    public function getSearchResults(Request $request)
     {
-        $results = Place::where('place_ja',"LIKE", "%$query%")->orWhere('place_en',"LIKE", "%$query%")->get();
-
+        $keyword = $request["query"];
+        if ($request["area"] != "all") {
+            $results = Place::where("area_id", $request["area"])
+            ->where(function($query1) use($keyword){
+                $query1->where('place_ja', 'LIKE', "%$keyword%")->orWhere('place_en', 'LIKE', "%$keyword%");
+            })->get();
+            
+        }else{  
+            $results = Place::where('place_ja', "LIKE", "%$keyword%")->orWhere('place_en', "LIKE", "%$keyword%")->get();
+        }
         return response()->json($results);
     }
 }
