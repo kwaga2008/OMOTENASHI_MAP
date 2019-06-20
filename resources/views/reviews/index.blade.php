@@ -15,7 +15,7 @@
 <select required id="country">
   <option value="all" hidden>Country</option>
   <option value="Japan">🇯🇵Japan</option>
-  <option value="Chine">🇨🇳China</option>
+  <option value="China">🇨🇳China</option>
   <option value="Korea">🇰🇷Korea</option>
   <option value="Taiwan">🇨🇳Taiwan</option>
   <option value="Hongkong">🇨🇳Hongkong</option>
@@ -41,15 +41,15 @@
 <div class="checkbox_01">
   <form class="form_feeling">
   <label>
-    <input type="checkbox" name="checkbox01[]" class="checkbox01-input" id="good">
+    <input type="checkbox" name="checkbox01" class="checkbox01-input" value="good">
     <span class="checkbox01-parts">Good👍</span>
   </label>
   <label>
-    <input type="checkbox" name="checkbox01[]" class="checkbox01-input" id="bad">
+    <input type="checkbox" name="checkbox02" class="checkbox01-input" value="bad">
     <span class="checkbox01-parts">Bad👎</span>
   </label>
   <label>
-    <input type="checkbox" name="checkbox01[]" class="checkbox01-input" id="omotenashi">
+    <input type="checkbox" name="checkbox03" class="checkbox01-input" value="omotenashi">
     <span class="checkbox01-parts">OMOTENASHI🙏</span>
   </label>
   </form>

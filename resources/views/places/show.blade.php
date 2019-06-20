@@ -6,7 +6,7 @@
     <div class="left_content">
         <label>Search sites</label>
         {{Form::open()}}
-        <input type="text" id="query" placeholder="Fill place">
+        <input type="text" id="query" placeholder="Search places">
         <select name="area" id="area_option">
         @if($area != NULL)
         <option value="{{ $area_id }}" selected>{{ $area->area_en }} area</option>
@@ -19,7 +19,7 @@
         <hr>
         <h2>Search Results</h2>
         <div class="search_results">
-
+        <p>No Result</p>
         </div>
         <hr>
         @if($area != NULL)
