@@ -1116,3 +1116,7 @@ form textarea{
 span:hover + p.arrow_box {
   display: block;
 }
+
+.languages{
+  height: 100px;
+}
