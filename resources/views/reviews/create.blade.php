@@ -32,6 +32,7 @@
   <label>
     <input type="radio" name="feeling" class="checkbox01-input" value=omotenashi>
     <span class="checkbox01-parts">OMOTENASHI🙏</span>
+    <p class="arrow_box">About Japanese custom and manner.</p>
   </label>
 </div>
 </p>

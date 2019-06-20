@@ -15,7 +15,7 @@
 <select required id="country">
   <option value="all" hidden>Country</option>
   <option value="Japan">🇯🇵Japan</option>
-  <option value="Chine">🇨🇳China</option>
+  <option value="China">🇨🇳China</option>
   <option value="Korea">🇰🇷Korea</option>
   <option value="Taiwan">🇨🇳Taiwan</option>
   <option value="Hongkong">🇨🇳Hongkong</option>
@@ -51,6 +51,7 @@
   <label>
     <input type="checkbox" name="checkbox01[]" class="checkbox01-input" id="omotenashi">
     <span class="checkbox01-parts">OMOTENASHI🙏</span>
+    <p class="arrow_box">About Japanese custom and manner.</p>
   </label>
   </form>
 </div>
@@ -101,8 +102,8 @@
       </div>
     <br>
     <center>
-    <input type="button" class="btn-gradation" onclick='location.href="/areas/{{ $spot->area->id }}/places/{{ $spot->id }}"' id="Back" value="Back">
-    <input type="button" class="btn-gradation" onclick='location.href="/"' value="Top Page">
+    <input type="button" class="btn-dakyou" onclick='location.href="/areas/{{ $spot->area->id }}/places/{{ $spot->id }}"' id="Back" value="Back">
+    <input type="button" class="btn-dakyou" onclick='location.href="/"' value="Top Page">
     </center>
 </div>
 @endsection
