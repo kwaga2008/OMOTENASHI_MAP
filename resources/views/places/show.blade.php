@@ -59,6 +59,7 @@
             <script src="{{ asset('assets/javascripts/create_marker.js') }}"></script>
             @endif
         @endif
+        <input type="button" class="btn-gradation" id="cp" value="Current Position" onclick="currentPosition()">
         <input type="button" class="btn-gradation" onclick='location.href="/"' value="Top page">
         
     </div>
