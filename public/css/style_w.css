@@ -12,7 +12,7 @@
     padding-top: 60px;
   }
   .box1 {
-  width: 300px;
+  width: 600px;
   height: 50px;
   margin: 50px auto;
   background-color: white;
@@ -122,13 +122,12 @@
   font-weight: bold;
   padding: 12px 24px;
   border-radius: 4px;
-  background-image: linear-gradient(-90deg, #FF006E, #95483f);
-  transition: .5s;
+  background-color: #95483f;
   background-size: 200%;
 }
 
 .btn-gradation:hover {
-  background-position: right center;
+  background-color: #f0908d;
 }
 
   h1, h2, h3, h4, h5, h6, body {
@@ -685,6 +684,7 @@
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
     box-sizing: border-box;
+    height: bottom;
   }
   .info {
     max-width: 1100px;
@@ -894,7 +894,6 @@
 
   .content {
     width: 1400px;
-    height: 1000px;
     margin: 20px auto 0;
     display: flex;
   }
@@ -919,11 +918,14 @@
     width: 600px;
     }
     div.scroll {
-        padding: 5px;
+        padding: 20px;
         width: 500px;
         max-height: 200px;
-        background-color: #f5f5f3;
+        background-color: #f5f5f5;
         overflow: scroll;
+        border: solid 1px #696969;/*線*/
+        border-radius: 5px;/*角の丸み*/
+
       }
 
 
@@ -965,12 +967,10 @@ h2{
   height: auto;
   width: 600px;
   margin: 5px auto 5px;
-  background-color: white;
 }
 
 form{
   width: center;
-  background-color: #f5f5f3;
   padding: 5px 0 0;
 }
 
@@ -998,7 +998,6 @@ form img{
 }
 
 form textarea{
-  width: 500px;
   border: 1px solid #ccc;
 }
 
@@ -1079,4 +1078,41 @@ form textarea{
 
 .spot_name:first-letter {
  color: #95483f;
+}
+
+#menu label {
+  position: relative;
+}
+
+.arrow_box {
+  display: none;
+  position: absolute;
+  left: 48%;
+  padding: 7px;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 5px;
+  background: #333;
+  color: #fff;
+  font-size: 0.6em;
+  filter: drop-shadow(5px 5px 5px rgba(0,0,0,0.6));
+}
+
+.arrow_box:after {
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  margin-left: -10px;
+  border: solid transparent;
+  border-color: rgba(51, 51, 51, 0);
+  border-bottom-color: #333;
+  border-width: 10px;
+  pointer-events: none;
+  content: " ";
+}
+
+span:hover + p.arrow_box {
+  display: block;
 }

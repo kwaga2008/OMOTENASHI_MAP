@@ -74,7 +74,7 @@
             <div class="img_show">
             @if($place != NULL)
                 @if($place->img_src !="")
-                <img src='{{ asset("assets/images/" . $place->img_src) }}' width="300" height="300" alt="" >
+                <img src='{{ asset("assets/images/" . $place->img_src) }}' width="515" height="300" alt="" >
                 @else
                 <img src='{{ asset("assets/images/no_image.png") }}' width="300" height="300" alt="" >
                 @endif
@@ -83,7 +83,7 @@
             <hr>
             <h2>Place</h2>
             @if($place != NULL)
-            <p>{{ $place->place_ja }}</p>
+            <p><h3>{{ $place->place_ja }}<h3></p>
             <p>{{ $place->place_en }}</p>
             <hr>
             @else
@@ -135,6 +135,8 @@
             <input type="button" class="btn-gradation" onclick='location.href="/areas/{{ $place->area->id }}/places/{{ $place_id }}/reviews/create"' value="Write New Review">
             @endif
         @endif
+        <br>
+        <br>
         </div>
     </div>
 </div>

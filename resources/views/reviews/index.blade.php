@@ -51,6 +51,7 @@
   <label>
     <input type="checkbox" name="checkbox03" class="checkbox01-input" value="omotenashi">
     <span class="checkbox01-parts">OMOTENASHI🙏</span>
+    <p class="arrow_box">About Japanese custom and manner.</p>
   </label>
   </form>
 </div>
@@ -101,8 +102,8 @@
       </div>
     <br>
     <center>
-    <input type="button" class="btn-gradation" onclick='location.href="/areas/{{ $spot->area->id }}/places/{{ $spot->id }}"' id="Back" value="Back">
-    <input type="button" class="btn-gradation" onclick='location.href="/"' value="Top Page">
+    <input type="button" class="btn-dakyou" onclick='location.href="/areas/{{ $spot->area->id }}/places/{{ $spot->id }}"' id="Back" value="Back">
+    <input type="button" class="btn-dakyou" onclick='location.href="/"' value="Top Page">
     </center>
 </div>
 @endsection
