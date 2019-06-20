@@ -6,7 +6,7 @@
     <div class="left_content">
         <label>Search sites</label>
         {{Form::open()}}
-        <input type="text" id="query" placeholder="Search places">
+        <input type="text" id="query" placeholder="Fill place">
         <select name="area" id="area_option">
         @if($area != NULL)
         <option value="{{ $area_id }}" selected>{{ $area->area_en }} area</option>
@@ -19,7 +19,7 @@
         <hr>
         <h2>Search Results</h2>
         <div class="search_results">
-        <p>No Result</p>
+
         </div>
         <hr>
         @if($area != NULL)
@@ -74,7 +74,9 @@
             <div class="img_show">
             @if($place != NULL)
                 @if($place->img_src !="")
+                <a href='{{ asset("assets/images/" . $place->img_src) }}' data-lightbox="abc" data-title="{{ $place->place_en }}">
                 <img src='{{ asset("assets/images/" . $place->img_src) }}' width="515" height="300" alt="" >
+                </a>
                 @else
                 <img src='{{ asset("assets/images/no_image.png") }}' width="300" height="300" alt="" >
                 @endif
@@ -90,16 +92,25 @@
             <p>No Place data</p>
             <hr>
             @endif
-            
+
+            <h2>Web site</h2>
+            @if($place != NULL)
+            <a href='{{ $place->link }}'> {{ $place->link }}</a>
+            <hr>
+            @else
+            <p>No URL data</p>
+            <hr>
+            @endif
+
             <h2>Information</h2>
             @if(!empty($info))
             <div class="scroll">
             <p>{{ $info->information }}</p>
             </div>
-            <hr>
+            <br>
             @else
             <p>No information</p>
-            <hr>
+            <br>
             @endif
             
             <h2>Latest Review</h2>
@@ -128,14 +139,15 @@
             @endif
             </div>
             <hr>
+            <center>
             @if(count($reviews) > 1)
             <input type="button" class="btn-gradation" onclick='location.href="/areas/{{ $place->area->id }}/places/{{ $place_id }}/reviews"' value="Read More Review">
             @endif
             @if($place_id != 0)
             <input type="button" class="btn-gradation" onclick='location.href="/areas/{{ $place->area->id }}/places/{{ $place_id }}/reviews/create"' value="Write New Review">
+            </center>
             @endif
         @endif
-        <br>
         <br>
         </div>
     </div>

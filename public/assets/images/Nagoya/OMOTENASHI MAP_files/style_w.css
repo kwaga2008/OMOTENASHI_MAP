@@ -945,7 +945,7 @@
   background-color: #95483f;
   margin: 0px auto 0;
   padding: 15px 30px 80px;
-  border-bottom: 10px solid #bbb;
+  /*border-bottom: 2px solid #bbb;*/
 }
 
 h1{
