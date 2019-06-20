@@ -1,4 +1,8 @@
-function createMarker(data){
+var currentWindow = null;
+var i = 0;
+var open = 0;
+var window;
+function createMarker(data) {
     //        マーカの作成
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(data["latitude"], data["longitude"]),
@@ -12,13 +16,15 @@ function markerInfo(marker, data) {
 
     var content = '<h2>' + data["place_en"] + '</h2><br><br><a href="/areas/' + data["area_id"] + '/places/'+ data["id"] + '">Get Information</a>';
     google.maps.event.addListener(marker, 'click', function (event) {
-         new google.maps.InfoWindow({
+        console.log("window_open");
+        window = new google.maps.InfoWindow({
             content: content
         }).open(marker.getMap(), marker);
+        
     });
 }
     
-var currentInfoWindow = null;
+
 jQuery(function ($) {
     var request = $.ajax({
         type: 'GET',
