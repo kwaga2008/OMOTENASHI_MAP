@@ -1,10 +1,14 @@
 $('#narrow_down').on('click', function(){
     var country = $('#country').val();
-    // var good = document.form_feeling.good.checked;
-    // var bad = document.form_feeling.bad.checked;
-    // var good = document.form_feeling.bad.checked;
-
+    var good = $("[name=checkbox01]:checked").val();
+    var bad = $("[name=checkbox02]:checked").val();
+    var omotenashi = $("[name=checkbox03]:checked").val();
+    
     console.log(country);
+    console.log(good);
+    console.log(bad);
+    console.log(omotenashi);
+
     var request = $.ajax({
         type: 'GET',
         url: "/areas/places/reviews",
@@ -13,9 +17,9 @@ $('#narrow_down').on('click', function(){
         data: {
             "country": country,
             "place_id": place_id,
-            // "good_flag": good,
-            // "bad_flag": bad,
-            // "omotenashi_flag": omotenashi,
+            "good": good,
+            "bad": bad,
+            "omotenashi": omotenashi,
         },
         timeout: 3000
     });

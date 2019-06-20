@@ -9,15 +9,16 @@ function createMarker(data){
 }
 
 function markerInfo(marker, data) {
+
     var content = '<h2>' + data["place_en"] + '</h2><br><br><a href="/areas/' + data["area_id"] + '/places/'+ data["id"] + '">Get Information</a>';
     google.maps.event.addListener(marker, 'click', function (event) {
-        new google.maps.InfoWindow({
+         new google.maps.InfoWindow({
             content: content
         }).open(marker.getMap(), marker);
     });
 }
     
-
+var currentInfoWindow = null;
 jQuery(function ($) {
     var request = $.ajax({
         type: 'GET',
