@@ -45,24 +45,24 @@ class ReviewsController extends Controller
         $country = $request["country"];
         $id = $request["place_id"];
         $requirement = array($request["good"],$request["bad"],$request["omotenashi"]);
+        $choice = false;
+        for($i = 0;$i < 3; $i++){
+          if(is_string($requirement[$i])){
+              $choice = true;
+          }
+        }
 
         
-        if($country == "all"){
-          $review_results = Review::where("place_id",$id);
+        if ($country == "all") {
+            $review_results = Review::where("place_id", $id);
         }else{
           $review_results = Review::where("place_id",$id)->where("country",$country);
         }
-        $first_flag = true;
-        for($i = 0 ;$i < 3; $i++){
-          if(is_string($requirement[$i])){
-            if($first_flag = true){
-              $review_results = $review_results->where("feeling",$requirement[$i]);
-              $first_flag = false;
-            }else{
-              $review_results = $review_results->orWhere("feeling",$requirement[$i]);
-            }
-          }
+        if ($choice) {
+            $review_results = $review_results->whereIn("feeling", $requirement);
         }
+        
+
         $review_results = $review_results->orderBy("id","DESC")->get();
 
         return response()->json($review_results);

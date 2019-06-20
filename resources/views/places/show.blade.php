@@ -59,6 +59,7 @@
             <script src="{{ asset('assets/javascripts/create_marker.js') }}"></script>
             @endif
         @endif
+        <input type="button" class="btn-gradation" id="cp" value="Current Position" onclick="currentPosition()">
         <input type="button" class="btn-gradation" onclick='location.href="/"' value="Top page">
         
     </div>
@@ -85,7 +86,7 @@
             @if($place != NULL)
             <p><h3>{{ $place->place_ja }}<h3></p>
             <p>{{ $place->place_en }}</p>
-            <hr>
+            
             @else
             <p>No Place data</p>
             <hr>
@@ -96,7 +97,7 @@
             <div class="scroll">
             <p>{{ $info->information }}</p>
             </div>
-            <hr>
+            
             @else
             <p>No information</p>
             <hr>
@@ -118,7 +119,7 @@
             @endif
             @if($i == 4)
                 <p>More Review Exists</p>
-                <hr>
+                
             @endif
             {{-- */$i++/* --}}
             @endforeach
@@ -126,14 +127,16 @@
             @else
             <p>No Review</p>
             @endif
-            </div>
+            
             <hr>
+            <center>
             @if(count($reviews) > 1)
             <input type="button" class="btn-gradation" onclick='location.href="/areas/{{ $place->area->id }}/places/{{ $place_id }}/reviews"' value="Read More Review">
             @endif
             @if($place_id != 0)
             <input type="button" class="btn-gradation" onclick='location.href="/areas/{{ $place->area->id }}/places/{{ $place_id }}/reviews/create"' value="Write New Review">
             @endif
+            </center>
         @endif
         <br>
         <br>
