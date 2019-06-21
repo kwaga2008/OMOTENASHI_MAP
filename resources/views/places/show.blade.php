@@ -60,14 +60,14 @@
             @endif
         @endif
         <input type="button" class="btn-gradation" id="cp" value="Current Position" onclick="currentPosition()">
-        <input type="button" class="btn-gradation" onclick='location.href="/"' value="Top page">
         <br>
         <br>
         <h2>Instagram</h2>
         <!-- InstaWidget -->
         <a href="https://instawidget.net/v/tag/{{ $place->place_en }}" id={{ $place->insta1 }}>#"{{ $place->place_en }}"</a>
         <script src="https://instawidget.net/js/instawidget.js?{{ $place->insta2 }}&width=600px"></script>
-        
+        <br>
+        <input type="button" class="btn-gradation" onclick='location.href="/"' value="Top page">
     </div>
     
     <div class="right_content">
