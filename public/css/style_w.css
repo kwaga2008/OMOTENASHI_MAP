@@ -132,10 +132,10 @@
 
   h1, h2, h3, h4, h5, h6, body {
     line-height: 1.57;
-    letter-spacing: 0.15em;
+    letter-spacing: 0.1em;
     font-size: 16px;
     color: #2b2b2b;
-    font-family: 'Unica One', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
+    font-family: 'Arial', "Avenir", "游ゴシック", "YuGothic", "ヒラギノ角ゴ Pro W6", "HIragino Kaku Gothic Pro W6", "HIragino Kaku Gothic Pro", Osaka, Meiryo, "メイリオ", "ＭＳ Ｐゴシック", "MS P Gothic", sans-serif;
     margin: 0;
   }
   a {
@@ -1119,4 +1119,19 @@ span:hover + p.arrow_box {
 
 .languages{
   height: 100px;
+}
+.ranking{
+  max-width: 1200px;
+  margin: 0 auto 0;
+}
+.rankingbox_wrapper{
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto 0;
+  justify-content: center;
+}
+.rankingbox img{
+  height: 134px;
+  width: 200px;
+  margin: 0 2px 0;
 }

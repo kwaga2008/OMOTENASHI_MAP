@@ -37,7 +37,7 @@ The OMOTENASHI MAP is a very useful service that maps, tourist information, and 
 <li><a href="/areas/1"><img src="{{ asset('assets/images/toppage/tokyo_menu.jpg') }}" width="300" height="300" alt="" align=""><p>Tokyo</p></a></li>
 <li><a href="/areas/2"><img src="{{ asset('assets/images/toppage/kyoto_menu.jpg') }}" width="300" height="300" alt=""><p>Kyoto</p></a></li>
 <li><a href="/areas/3"><img src="{{ asset('assets/images/toppage/osaka_menu.jpg') }}" width="300" height="300" alt=""><p>Osaka</p></a></li>
-<br><br>
+
 <li><a href="/areas/4"><img src="{{ asset('assets/images/toppage/hokkaido_menu.jpg') }}" width="300" height="300" alt=""><p>Hokkaido</p></a></li>
 <li><a href="/areas/5"><img src="{{ asset('assets/images/toppage/okinawa_menu.jpg') }}" width="300" height="300" alt=""><p>Okinawa</p></a></li>
 <li><a href="/areas/6"><img src="{{ asset('assets/images/toppage/nagoya_menu.png') }}" width="300" height="300" alt=""><p>Nagoya</p></a></li>

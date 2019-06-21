@@ -46,6 +46,7 @@
                 var longitude = {{ $place->longitude }};
                 var place_en = "{{ $place->place_en }}";
                 var place_id = {{ $place->id }};
+                var area_id = {{ $place->area_id }};
             </script>
             <script src="{{ asset('assets/javascripts/map.js') }}"></script>
             <script src="{{ asset('assets/javascripts/create_marker.js') }}"></script>
@@ -105,9 +106,24 @@
 
             <h2>Information</h2>
             @if(!empty($info))
-            <div class="scroll">
+            <div class="scroll" id="infobox">
             <p>{{ $info->information }}</p>
             </div>
+            <script>
+                // var info = {{ $info->information }}.replace(/./g, '\\.');
+            </script>
+            <center>
+            <input type="button" class="btn-gradation" value="Show raw Info" onclick="infoshow()">
+            <p>Translate into...</p>
+            <select name="area" id="translate_option">
+            <option value="Japanese" selected>Japanese</option>
+            <option value="English" >English</option>
+            <option value="Korean" >Korean</option>
+            <option value="Chinese" >Chinese</option>
+            </select>
+            <input type="button" class="btn-gradation" value="Transrate Info" id="translate">
+            <script src="{{ asset('assets/javascripts/translate.js') }}"></script>
+            </center>
             <br>
             @else
             <p>No information</p>

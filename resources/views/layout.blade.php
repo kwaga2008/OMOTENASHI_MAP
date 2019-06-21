@@ -18,6 +18,21 @@
 
     </header>
     @yield('content')
+<hr>
+<div class="ranking">
+  {{-- */$i = 1/* --}}
+  <h1>Popular Spot</h1>
+  <div class="rankingbox_wrapper">
+    @foreach($ranking as $rank)
+    <div class="rankingbox">
+      <h2>Rank {{$i}}</h2> 
+      <a href="/areas/{{ $rank->area->id }}/places/{{ $rank->id }}"><img src='{{ asset("assets/images/" . $rank->img_src) }}' width="300" height="300" alt="" ><p>{{ $rank->place_en }}</p></a>
+      {{-- */$i++/* --}}
+    </div>
+    @endforeach
+</div>
+</div>
+<hr>
 <div class="wrapper_footer">
   <footer font-size="8px" color="black">
     <p>Copyright© 2019 ZENRIN DataCom CO., LTD. Group4 All Rights Reserved.</p>

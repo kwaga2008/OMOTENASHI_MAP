@@ -13,7 +13,7 @@ var marker = new google.maps.Marker({
   animation: google.maps.Animation.DROP // マーカーを立つときのアニメーション
 });
 
-var contents1 = '<h2>' + place_en + '</h2><a href="/places/' + place_id + '/reviews/create">Write New Review</a>';
+var contents1 = '<h2>' + place_en + '</h2><a href="/areas/'+ area_id +'/places/' + place_id + '/reviews/create">Write New Review</a>';
 
 var infoWindow1 = new google.maps.InfoWindow({ // 吹き出しの追加
     content: contents1 // 吹き出しに表示する内容

@@ -3,7 +3,7 @@
 @section('content')
     <header class="header_review">
       <div class="review_title">
-        Form
+        Write New Review
       </div>
     </header>
 <body><center>
