@@ -77,6 +77,7 @@
         <p>No exist.</p>
         @endif
         <input type="button" class="btn-gradation" onclick='location.href="/"' value="Top page">
+        <br><br>
     </div>
     
     <div class="right_content">
