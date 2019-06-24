@@ -15,8 +15,8 @@
     <header class="header">
       <div class="header__bar row">
         <a href="/"><img src="{{ asset('assets/images/logo/logo.jpg') }}" width="300" height="300" alt=""></a>
+        <img src="{{ asset('assets/images/nashio.png') }}" width="70" height="100" alt="" class="disappear">
     </div>
-
     </header>
     @yield('content')
 <hr>
