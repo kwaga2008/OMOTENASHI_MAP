@@ -35,6 +35,7 @@
 <br>
 <h1>Select Area</h1>
 <div class="area_selects">
+<div class="fadein">
 <ul>
 @foreach($top_places as $place)
 {{-- */$i = 1/* --}}
@@ -49,6 +50,7 @@
 {{-- */$i++/* --}}
 @endforeach
 </ul>
+</div>
 </div>
 <a href="{{ $area->id }}/places/0">Find other place</a>
 <br>
