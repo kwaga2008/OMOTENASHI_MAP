@@ -708,7 +708,7 @@
   .clearfix:after {
     content: "\0020";
     display: block;
-    height: 0;
+    height: 10px;
     clear: both;
     overflow: hidden;
     visibility: hidden;
@@ -1173,3 +1173,8 @@ span:hover + p.arrow_box {
     -o-transition-delay:400ms;
     -ms-transition-delay:400ms;
     }
+
+.thankyou {
+  font-size: 2em;
+  font-family: HanziPen TC;
+}

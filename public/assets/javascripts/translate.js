@@ -1,6 +1,6 @@
 function translate(str,translate_into) {
     AWS.config.region = 'ap-northeast-1'; // Region
-    AWS.config.credentials = new AWS.Credentials("AKIA53LPTATPYIEBZOML", "3wom/07H//P1Z+JRxGpUKD+pvtEBAARtUA+mWPhd");
+    AWS.config.credentials = new AWS.Credentials();
     var translate = new AWS.Translate({
         region: AWS.config.region,
         credentials: AWS.config.credentials,

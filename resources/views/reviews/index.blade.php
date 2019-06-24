@@ -76,17 +76,17 @@
                 <b>Country:</b> {{ $review->country }}
               </p>
               <p class="feeling_show">
-                <b>Feeling:</b> {{$review->feeling}}
+                <b>Feeling:</b>{{ $review->feeling }}
               </p>
               <div class="bar_center">
               <p>
-                -------------------------------------------------------
+                --------------------------------------------------------------------------------
               </p>
               </div>
               <p class="text_show">
                 <b>Text:</b> {{ $review->text }}
               </p>
-            </div>   
+            </div>
           </div>
         @endforeach
     
