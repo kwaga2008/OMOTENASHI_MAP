@@ -25,6 +25,7 @@
 <img src="{{ asset('assets/images/toppage/kyoto.jpg') }}" width="0" height="0" alt="">
 <img src="{{ asset('assets/images/toppage/tokyo.jpg') }}" width="0" height="0" alt="">
 <img src="{{ asset('assets/images/toppage/okinawa_sea.jpg') }}" width="0" height="0" alt="">
+<img src="{{ asset('assets/images/toppage/shibuya.jpg') }}" width="0" height="0" alt="">
 </div>
 <div td align="center">
 <p><h1>About OMOTENASHI MAP</h1></p>
