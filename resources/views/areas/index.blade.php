@@ -5,6 +5,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.css">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
+<script src="{{ asset('assets/javascripts/scroll.js') }}"></script>
 
 <script type="text/javascript">
         $(document).ready(function(){
@@ -24,6 +25,7 @@
 <img src="{{ asset('assets/images/toppage/kyoto.jpg') }}" width="0" height="0" alt="">
 <img src="{{ asset('assets/images/toppage/tokyo.jpg') }}" width="0" height="0" alt="">
 <img src="{{ asset('assets/images/toppage/okinawa_sea.jpg') }}" width="0" height="0" alt="">
+<img src="{{ asset('assets/images/toppage/shibuya.jpg') }}" width="0" height="0" alt="">
 </div>
 <div td align="center">
 <p><h1>About OMOTENASHI MAP</h1></p>
@@ -36,6 +38,7 @@ The OMOTENASHI MAP is a very useful service that maps, tourist information, and 
 <div td align="center">
 <h1>Select Area</h1>
 <div class="area_selects">
+<div class="fadein">
 <ul>
 <li><a href="/areas/1"><img src="{{ asset('assets/images/toppage/tokyo_menu.jpg') }}" width="300" height="300" alt="" align=""><p>Tokyo</p></a></li>
 <li><a href="/areas/2"><img src="{{ asset('assets/images/toppage/kyoto_menu.jpg') }}" width="300" height="300" alt=""><p>Kyoto</p></a></li>
@@ -46,6 +49,8 @@ The OMOTENASHI MAP is a very useful service that maps, tourist information, and 
 <li><a href="/areas/6"><img src="{{ asset('assets/images/toppage/nagoya_menu.png') }}" width="300" height="300" alt=""><p>Nagoya</p></a></li>
 </ul>
 </div>
+</div>
+
 <br><br>
 <a href="/areas/0/places/0">Other area</a>
 <br>

@@ -74,20 +74,74 @@
                 <b>Name:</b> {{ $review->nickname }}
               </p>
               <p class="country_show">
-                <b>Country:</b> {{ $review->country }}
+                <b>Country:</b>
+                @if($review->conutry== "Japan")
+                🇯🇵Japan
+                @elseif($review->country== "China")
+                🇨🇳China
+                @elseif($review->country== "Korea")
+                🇰🇷Korea
+                @elseif($review->country== "Taiwan")
+                🇨🇳Taiwan
+                @elseif($review->country== "Hongkog")
+                🇨🇳Hongkong
+                @elseif($review->country== "America")
+                🇺🇸America
+                @elseif($review->country== "Thailand")
+                🇹🇭Thailand
+                @elseif($review->country== "Australia")
+                🇦🇺Australia
+                @elseif($review->country== "Philippines")
+                🇵🇭Philippines
+                @elseif($review->country== "Malaysia")
+                🇲🇾Malaysia
+                @elseif($review->country== "Singapore")
+                🇸🇬Singapore
+                @elseif($review->country== "Indonesia")
+                🇮🇩Indonesia
+                @elseif($review->country== "Vietnam")
+                🇻🇳Vietnam
+                @elseif($review->country== "England")
+                🇬🇧England
+                @elseif($review->country== "Canada")
+                🇨🇦Canada
+                @elseif($review->country== "France")
+                🇫🇷France
+                @elseif($review->country== "Germany")
+                🇩🇪Germany
+                @elseif($review->country== "India")
+                🇮🇳India
+                @elseif($review->country== "Italy")
+                🇮🇹Italy
+                @elseif($review->country== "Spain")
+                🇪🇸Spain
+                @elseif($review->country== "Rossiya")
+                🇷🇺Rossiya
+                @elseif($review->country== "other")
+                Other
+                @else
+                🇯🇵Japan
+                @endif
               </p>
               <p class="feeling_show">
-                <b>Feeling:</b> {{$review->feeling}}
+                <b>Feeling:</b>
+                @if($review->feeling== "good")
+                Good!👍
+                @elseif($review->feeling=="bad")
+                Bad!👍
+                @else
+                OMOTENASHI🙏
+                @endif
               </p>
               <div class="bar_center">
               <p>
-                -------------------------------------------------------
+                --------------------------------------------------------------------------------
               </p>
               </div>
               <p class="text_show">
                 <b>Text:</b> {{ $review->text }}
               </p>
-            </div>   
+            </div>
           </div>
         @endforeach
     
