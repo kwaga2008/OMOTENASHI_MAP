@@ -112,20 +112,18 @@
 
             <h2>Information</h2>
             @if(!empty($info))
+            <script src="https://sdk.amazonaws.com/js/aws-sdk-2.479.0.min.js"></script>
             <div class="scroll" id="infobox">
             <p>{{ $info->information }}</p>
             </div>
-            <script>
-                // var info = {{ $info->information }}.replace(/./g, '\\.');
-            </script>
             <center>
             <input type="button" class="btn-gradation" value="Show raw Info" onclick="infoshow()">
             <p>Translate into...</p>
             <select name="area" id="translate_option">
-            <option value="Japanese" selected>Japanese</option>
-            <option value="English" >English</option>
-            <option value="Korean" >Korean</option>
-            <option value="Chinese" >Chinese</option>
+            <option value="ja" selected>Japanese</option>
+            <option value="en" >English</option>
+            <option value="ko" >Korean</option>
+            <option value="zh" >Chinese</option>
             </select>
             <input type="button" class="btn-gradation" value="Transrate Info" id="translate">
             <script src="{{ asset('assets/javascripts/translate.js') }}"></script>
