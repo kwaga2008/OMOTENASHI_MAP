@@ -63,12 +63,21 @@
         <input type="button" class="btn-gradation" id="cp" value="Current Position" onclick="currentPosition()">
         <br>
         <br>
-        <h2>Instagram</h2>
+        <a class="instalogo">
+        <h2><img src="{{ asset('assets/images/logo/insta.png') }}" alt=""> Instagram</h2></a>
         <!-- InstaWidget -->
         <a href="https://instawidget.net/v/tag/{{ $place->place_en }}" id={{ $place->insta1 }}>#"{{ $place->place_en }}"</a>
         <script src="https://instawidget.net/js/instawidget.js?{{ $place->insta2 }}&width=600px"></script>
-        <br>
+        <br><br>
+        <a class="instalogo">
+        <h2><img src="{{ asset('assets/images/logo/youtube.png') }}" alt=""> Youtube</h2></a>
+        @if($place->youtube != "")
+        <iframe width="600" height="330" src="{{ $place->youtube }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        @else
+        <p>No exist.</p>
+        @endif
         <input type="button" class="btn-gradation" onclick='location.href="/"' value="Top page">
+        <br><br>
     </div>
     
     <div class="right_content">
