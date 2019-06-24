@@ -29,7 +29,7 @@ $('#narrow_down').on('click', function(){
         $('.reviews').empty();
         if (Object.keys(data).length != 0) {
             data.forEach(d => {
-                var content = '<div class="message clearfix"><div class="message_box"><p class="user_name_show"><b>Name:</b>' + d["nickname"]+ '</p><p class="country_show"><b>Country:</b>'+d["country"]+'</p><p class="feeling_show"><b>Feeling:</b>'+d["feeling"]+'</p><div class="bar_center"><p>-------------------------------------------------------------------------</p></div><p class="text_show"><b>Text:</b>'+d["text"]+'</p></div></div>';
+                var content = '<div class="message clearfix"><div class="message_box"><p class="user_name_show"><b>Name: </b>' + d["nickname"]+ '</p><p class="country_show"><b>Country: </b>'+d["country"]+'</p><p class="feeling_show"><b>Feeling: </b>'+d["feeling"]+'</p><div class="bar_center"><p>-------------------------------------------------------</p></div><p class="text_show"><b>Text: </b>'+d["text"]+'</p></div></div>';
                 $('.reviews').append(content);
             });
         } else {

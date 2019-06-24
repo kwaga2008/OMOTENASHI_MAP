@@ -1,5 +1,8 @@
 var MyLatLng = new google.maps.LatLng(36.723185159717005,137.85103713265494);
 var infoWindow;
+var cpinfoWindow;
+var cplatlng;
+var cpmarker;
 var Options = {
   zoom: 5, //地図の縮尺値
   center: MyLatLng, //地図の中心座標
@@ -38,6 +41,9 @@ function currentPosition(){
   if( navigator.geolocation )
 {
 	// 現在地を取得
+	if (cpmarker) {
+		cpmarker.setMap(null);
+	  }
 	navigator.geolocation.getCurrentPosition(
 		// [第1引数] 取得に成功した場合の関数
 		function( position )
@@ -49,9 +55,9 @@ function currentPosition(){
 			var lng = data.longitude ;
 			// アラート表示
       // alert("あなたの現在位置は、\n[" + lat + "," + lng + "]\nです。");
-      var cplatlng = new google.maps.LatLng(lat, lng);
+      cplatlng = new google.maps.LatLng(lat, lng);
       map.panTo(cplatlng);
-      var cpmarker = new google.maps.Marker({
+      cpmarker = new google.maps.Marker({
         position: cplatlng,
         map: map,
         icon: {
@@ -59,10 +65,13 @@ function currentPosition(){
         },
         animation: google.maps.Animation.DROP // マーカーを立つときのアニメーション
       });
-      var cpinfoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
-        content: "<h2>Current Position</h2>" // 吹き出しに表示する内容
-      });
-      cpinfoWindow.open(map, cpmarker); // 吹き出しの表示
+      cpinfoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
+		content: "<h2>Current Position</h2></p><a onclick=jpmap_getaddress()>get address</a>" // 吹き出しに表示する内容
+	});
+			cpinfoWindow.open(map, cpmarker); // 吹き出しの表示
+			cpmarker.addListener("click", function () {
+				cpinfoWindow.open(cpmarker.getMap(), cpmarker);
+			  });
 		},
 
 		// [第2引数] 取得に失敗した場合の関数
@@ -106,4 +115,22 @@ else
 	// アラート表示
 	alert( errorMessage ) ;
  }
+}
+
+function jpmap_getaddress() {
+	var geocoder = new google.maps.Geocoder();
+	geocoder.geocode({
+		// 緯度経度を指定
+		latLng: cplatlng
+	}, function (results, status) {
+		// 成功
+		if (status == google.maps.GeocoderStatus.OK && results[0].geometry) {
+			// 住所フル
+			address = results[0].formatted_address.replace(/^日本、 /, '');
+			var contents2 = '<h2>Current Position</h2>' + address;
+			cpinfoWindow.setContent(contents2) ;
+			console.log(address);
+		}
+	});
+	
 }

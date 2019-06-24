@@ -1,5 +1,8 @@
 var MyLatLng = new google.maps.LatLng(latitude,longitude);
 var infoWindow;
+var cpinfoWindow;
+var cplatlng;
+var cpmarker;
 var Options = {
   zoom: 16, //地図の縮尺値
   center: MyLatLng, //地図の中心座標
@@ -22,9 +25,7 @@ var infoWindow1 = new google.maps.InfoWindow({ // 吹き出しの追加
 infoWindow1.open(map, marker); // 吹き出しの表示
   
 google.maps.event.addListener(marker, 'click', function (event) {
-  new google.maps.InfoWindow({
-      content: contents1
-  }).open(marker.getMap(), marker);
+  cpinfoWindow.open(cpmarker.getMap(), cpmarker);
 });
 
 map.addListener("click", function (e) {
@@ -66,7 +67,10 @@ map.addListener("click", function (e) {
 function currentPosition(){
   if( navigator.geolocation )
 {
-	// 現在地を取得
+  // 現在地を取得
+    if (cpmarker) {
+      cpmarker.setMap(null);
+    }
 	navigator.geolocation.getCurrentPosition(
 		// [第1引数] 取得に成功した場合の関数
 		function( position )
@@ -78,9 +82,9 @@ function currentPosition(){
 			var lng = data.longitude ;
 			// アラート表示
       // alert("あなたの現在位置は、\n[" + lat + "," + lng + "]\nです。");
-      var cplatlng = new google.maps.LatLng(lat, lng);
+      cplatlng = new google.maps.LatLng(lat, lng);
       map.panTo(cplatlng);
-      var cpmarker = new google.maps.Marker({
+      cpmarker = new google.maps.Marker({
         position: cplatlng,
         map: map,
         icon: {
@@ -88,10 +92,13 @@ function currentPosition(){
         },
         animation: google.maps.Animation.DROP // マーカーを立つときのアニメーション
       });
-      var cpinfoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
-        content: "<h2>Current Position</h2>" // 吹き出しに表示する内容
+      cpinfoWindow = new google.maps.InfoWindow({ // 吹き出しの追加
+        content: "<h2>Current Position</h2></p><a onclick=map_getaddress()>get address</a>" // 吹き出しに表示する内容
       });
-      cpinfoWindow.open(map, cpmarker); // 吹き出しの表示
+      cpinfoWindow.open(map, cpmarker);
+      cpmarker.addListener("click", function () {
+				cpinfoWindow.open(cpmarker.getMap(), cpmarker);
+			  }); // 吹き出しの表示
 		},
 
 		// [第2引数] 取得に失敗した場合の関数
@@ -135,4 +142,22 @@ else
 	// アラート表示
 	alert( errorMessage ) ;
  }
+}
+
+function map_getaddress() {
+	var geocoder = new google.maps.Geocoder();
+	geocoder.geocode({
+		// 緯度経度を指定
+		latLng: cplatlng
+	}, function (results, status) {
+		// 成功
+		if (status == google.maps.GeocoderStatus.OK && results[0].geometry) {
+			// 住所フル
+			address = results[0].formatted_address.replace(/^日本、 /, '');
+			var contents2 = '<h2>Current Position</h2>' + address;
+			cpinfoWindow.setContent(contents2) ;
+			console.log(address);
+		}
+	});
+	
 }

@@ -51,7 +51,6 @@ class ReviewsController extends Controller
               $choice = true;
           }
         }
-
         
         if ($country == "all") {
             $review_results = Review::where("place_id", $id);
