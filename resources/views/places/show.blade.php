@@ -4,14 +4,14 @@
 
 <div class="content">
     <div class="left_content">
-        <label>Search sites</label>
+        <label>Search Place</label>
         {{Form::open()}}
         <input type="text" id="query" placeholder="Fill place">
         <select name="area" id="area_option">
         @if($area != NULL)
-        <option value="{{ $area_id }}" selected>{{ $area->area_en }} area</option>
+        <option value="{{ $area_id }}" selected>{{ $area->area_en }} Place</option>
         @endif
-        <option value="all" >All area</option>
+        <option value="all" >Search All Place</option>
         </select>
         <input type="button" class="btn-gradation" value="search" id="search">
         <script src="{{ asset('assets/javascripts/get_content.js') }}"></script>
@@ -63,10 +63,11 @@
         <input type="button" class="btn-gradation" id="cp" value="Current Position" onclick="currentPosition()">
         <br>
         <br>
+        @if($place_id != 0)
         <a class="instalogo">
         <h2><img src="{{ asset('assets/images/logo/insta.png') }}" alt=""> Instagram</h2></a>
         <!-- InstaWidget -->
-        <a href="https://instawidget.net/v/tag/{{ $place->place_en }}" id={{ $place->insta1 }}>#"{{ $place->place_en }}"</a>
+        <a href="https://instawidget.net/v/tag/{{ $place->place_en }}"id={{ $place->insta1 }}>#"{{ $place->place_en }}"</a>
         <script src="https://instawidget.net/js/instawidget.js?{{ $place->insta2 }}&width=600px"></script>
         <br><br>
         <a class="instalogo">
@@ -76,6 +77,8 @@
         @else
         <p>No exist.</p>
         @endif
+        @endif
+        <input type="button" class="btn-gradation" onclick='location.href="/areas/0/places/0"' value="Select Area">
         <input type="button" class="btn-gradation" onclick='location.href="/"' value="Top page">
         <br><br>
     </div>
@@ -112,7 +115,7 @@
 
             <h2>Web site</h2>
             @if($place != NULL)
-            <a href='{{ $place->link }}'> {{ $place->link }}</a>
+            <a href='{{ $place->link }}' target="_blank"> {{ $place->link }}</a>
             <hr>
             @else
             <p>No URL data</p>
@@ -121,23 +124,9 @@
 
             <h2>Information</h2>
             @if(!empty($info))
-            <script src="https://sdk.amazonaws.com/js/aws-sdk-2.479.0.min.js"></script>
             <div class="scroll" id="infobox">
             <p>{{ $info->information }}</p>
             </div>
-            <center>
-            <input type="button" class="btn-gradation" value="Show raw Info" onclick="infoshow()">
-            <p>Translate into...</p>
-            <select name="area" id="translate_option">
-            <option value="ja" selected>Japanese</option>
-            <option value="en" >English</option>
-            <option value="ko" >Korean</option>
-            <option value="zh" >Chinese</option>
-            </select>
-            <input type="button" class="btn-gradation" value="Transrate Info" id="translate">
-            <script src="{{ asset('assets/javascripts/translate.js') }}"></script>
-            </center>
-            <br>
             @else
             <p>No information</p>
             <br>

@@ -25,5 +25,6 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/areas/places/marker', 'PlacesController@getMarkers');
     Route::get('/areas/places/reviews', 'ReviewsController@getReviews');
     Route::get('/areas/places/infos', 'InfosController@getInfo');
+    Route::get('/areas/get', 'AreasController@getResults');
 });
 

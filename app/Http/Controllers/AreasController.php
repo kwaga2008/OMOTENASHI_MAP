@@ -20,4 +20,11 @@ class AreasController extends Controller
     public function index(){
         return view("areas.index");
     }
+    
+    public function getResults(Request $request)
+    {
+        $keyword = $request["query"]; 
+        $results = Area::where('area', "LIKE", "%$keyword%")->orWhere('area_en', "LIKE", "%$keyword%")->get();
+        return response()->json($results);
+    }
 }

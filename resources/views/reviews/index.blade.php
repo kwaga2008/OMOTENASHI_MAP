@@ -12,8 +12,9 @@
     </div>
           <center><img src='{{ asset("assets/images/" . $spot->img_src) }}' width="600" height="300" alt=""></center>
       <div class="cp_ipselect cp_sl01">
-<select required id="country">
-  <option value="all" hidden>Country</option>
+  <select required id="country">
+  <option value="all" hidden>Select Country</option>
+  <option value="all" >All</option>
   <option value="Japan">🇯🇵Japan</option>
   <option value="China">🇨🇳China</option>
   <option value="Korea">🇰🇷Korea</option>
@@ -57,7 +58,7 @@
 </div>
 <br>
 <div class="container">
-<input type="button" class="btn-gradation" id="narrow_down" value="narrow down">
+<input type="button" class="btn-gradation" id="narrow_down" value="Filter">
 <script>
   var place_id = {{ $spot->id }};
 </script>
