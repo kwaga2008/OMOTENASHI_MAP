@@ -14,12 +14,12 @@ function createMarker(data) {
 
 function markerInfo(marker, data) {
 
-    var content = '<h2>' + data["place_en"] + '</h2><br><br><a href="/areas/' + data["area_id"] + '/places/'+ data["id"] + '">Get Information</a>';
+    var content = '<h2>' + data["place_en"] + '</h2><a href="/areas/' + data["area_id"] + '/places/'+ data["id"] + '">Get Information</a>';
     google.maps.event.addListener(marker, 'click', function (event) {
-        console.log("window_open");
         window = new google.maps.InfoWindow({
             content: content
         }).open(marker.getMap(), marker);
+        console.log(window);
         
     });
 }
@@ -37,7 +37,7 @@ jQuery(function ($) {
 
 /* 成功時 */
     request.done(function (response) {
-        console.log(response);
+        //console.log(response);
         var data = response;
         if (Object.keys(data).length != 0) {
             data.forEach(d => {
