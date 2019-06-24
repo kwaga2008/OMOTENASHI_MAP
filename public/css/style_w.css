@@ -741,6 +741,7 @@
   }
   select {
     width: 100%;
+    height: 30px;
   }
   i {
     font-style: normal;
@@ -1130,8 +1131,19 @@ span:hover + p.arrow_box {
   margin: 0 auto 0;
   justify-content: center;
 }
-.rankingbox img{
+.rankingimg {
   height: 134px;
   width: 200px;
   margin: 0 2px 0;
+}
+
+.instalogo img{
+  height: 20px;
+  width: 20px;
+}
+
+.kinglogo{
+  height: 20px;
+  width: 30px;
+  margin-bottom: 10px;
 }

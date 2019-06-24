@@ -22,11 +22,21 @@
 <div class="ranking">
   {{-- */$i = 1/* --}}
   <h1>Popular Spot</h1>
+  <center><p>Ranking of many reviews</p></center>
   <div class="rankingbox_wrapper">
     @foreach($ranking as $rank)
     <div class="rankingbox">
-      <h2>Rank {{$i}}</h2> 
-      <a href="/areas/{{ $rank->area->id }}/places/{{ $rank->id }}"><img src='{{ asset("assets/images/" . $rank->img_src) }}' width="300" height="300" alt="" ><p>{{ $rank->place_en }}</p></a>
+      @if($i==1)
+      <h2><img src="{{ asset('assets/images/logo/king1.png') }}" alt="" class="kinglogo">  Rank {{$i}}</h2>
+      @elseif($i==2)
+      <h2><img src="{{ asset('assets/images/logo/king2.png') }}" alt="" class="kinglogo">  Rank {{$i}}</h2>
+      @elseif($i==3)
+      <h2><img src="{{ asset('assets/images/logo/king3.png') }}" alt="" class="kinglogo">  Rank {{$i}}</h2>
+      @else
+      <h2>Rank {{$i}}</h2>
+      @endif
+      <a href="/areas/{{ $rank->area->id }}/places/{{ $rank->id }}"><img src='{{ asset("assets/images/" . $rank->img_src) }}' width="300" height="300" alt="" class="rankingimg" ><p>{{ $rank->place_en }}</p></a>
+      <p>Reviews:{{ count($rank->reviews) }}</p>
       {{-- */$i++/* --}}
     </div>
     @endforeach
