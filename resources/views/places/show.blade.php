@@ -71,12 +71,12 @@
         <script src="https://instawidget.net/js/instawidget.js?{{ $place->insta2 }}&width=600px"></script>
         <br><br>
         <a class="instalogo">
-        <h2><img src="{{ asset('assets/images/logo/youtube.png') }}" alt=""> Youtube</h2></a>
+        <!-- <h2><img src="{{ asset('assets/images/logo/youtube.png') }}" alt=""> Youtube</h2></a>
         @if($place->youtube != "")
         <iframe width="600" height="330" src="{{ $place->youtube }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         @else
         <p>No exist.</p>
-        @endif
+        @endif -->
         @endif
         <input type="button" class="btn-gradation" onclick='location.href="/areas/0/places/0"' value="Select Area">
         <input type="button" class="btn-gradation" onclick='location.href="/"' value="Top page">
