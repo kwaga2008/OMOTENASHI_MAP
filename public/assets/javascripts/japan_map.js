@@ -13,7 +13,10 @@ var map = new google.maps.Map(document.getElementById('map'), Options);
 var markerLatLng = new google.maps.LatLng(35.84646737625077, 137.898415672694);
 var marker = new google.maps.Marker({
   position: markerLatLng,
-  map: map,
+	map: map,
+	icon: {
+		url: "/assets/images/area_pin.png"
+	  },
   animation: google.maps.Animation.DROP // マーカーを立つときのアニメーション
 });
 
@@ -61,7 +64,7 @@ function currentPosition(){
         position: cplatlng,
         map: map,
         icon: {
-          url: "/assets/images/pin.png"
+          url: "/assets/images/area_pin.png"
         },
         animation: google.maps.Animation.DROP // マーカーを立つときのアニメーション
       });

@@ -19,7 +19,10 @@ var map = new google.maps.Map(document.getElementById('map'), Options);
 
 var marker = new google.maps.Marker({
   position: MyLatLng,
-  map: map,
+	map: map,
+	icon: {
+		url: "/assets/images/area_pin.png"
+	  },
   animation: google.maps.Animation.DROP // マーカーを立つときのアニメーション
 });
 

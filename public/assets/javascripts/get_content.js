@@ -18,6 +18,7 @@ $('#search').on('click', function(){
         request.done(function (data) {
             $('.search_results').empty();
             if (Object.keys(data).length != 0) {
+                console.log(data);
                 data.forEach(d => {
                     var content = '<a href="/areas/' + d["id"] + '/places/0' + '">' + d["area_en"] + '</a><br>'
                     $('.search_results').append(content);

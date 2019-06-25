@@ -1,7 +1,8 @@
 var currentWindow = null;
 var i = 0;
 var open = 0;
-var window;
+var windowList = [];
+var markerList = [];
 function createMarker(data) {
     //        マーカの作成
     var marker = new google.maps.Marker({
@@ -9,16 +10,23 @@ function createMarker(data) {
         map: map,
         animation: google.maps.Animation.DROP 
     });
+    markerList.push(marker);
     markerInfo(marker, data);
 }
 
 function markerInfo(marker, data) {
 
-    var content = '<h2>' + data["place_en"] + '</h2><a href="/areas/' + data["area_id"] + '/places/'+ data["id"] + '">Get Information</a>';
+    var content = '<h2>' + data["place_en"] + '</h2><img src="/assets/images/'+ data["img_src"]+'"/ width=150px><br><br><a href="/areas/' + data["area_id"] + '/places/' + data["id"] + '">Get Information</a>';
+    var infowindow = new google.maps.InfoWindow({
+        content: content,
+        maxWidth: "250px"
+    })
+    windowList.push(infowindow);
     google.maps.event.addListener(marker, 'click', function (event) {
-        window = new google.maps.InfoWindow({
-            content: content
-        }).open(marker.getMap(), marker);
+        for (var j=0; j<windowList.length; j++) {
+            windowList[j].close();
+          }
+        infowindow.open(marker.getMap(), marker);
         console.log(window);
         
     });
@@ -40,8 +48,10 @@ jQuery(function ($) {
         //console.log(response);
         var data = response;
         if (Object.keys(data).length != 0) {
+            i = 0;
             data.forEach(d => {
                 createMarker(d);
+                i++;
             });
         } 
     });

@@ -23,7 +23,7 @@
 <div class="ranking">
   {{-- */$i = 1/* --}}
   <h1>Popular Spot</h1>
-  <center><p>Ranking of many reviews</p></center>
+  <center><p>Number Of Reviews</p></center>
   <div class="rankingbox_wrapper">
     @foreach($ranking as $rank)
     <div class="rankingbox">
