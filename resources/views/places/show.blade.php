@@ -5,7 +5,6 @@
 <div class="content">
     <div class="left_content">
         <label>Search Place</label>
-        {{Form::open()}}
         <input type="text" id="query" placeholder="Fill place">
         <select name="area" id="area_option">
         @if($area != NULL)
@@ -15,7 +14,6 @@
         </select>
         <input type="button" class="btn-gradation" value="search" id="search">
         <script src="{{ asset('assets/javascripts/get_content.js') }}"></script>
-        {{Form::close()}}
         <hr>
         <h2>Search Results</h2>
         <div class="search_results">
