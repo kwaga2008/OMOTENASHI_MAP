@@ -52,9 +52,11 @@
 </ul>
 </div>
 </div>
-<a href="{{ $area->id }}/places/0">Find other place</a>
+<br>
+<a href="{{ $area->id }}/places/0" id=link_>Find other place</a>
 <br>
 <a href="/">Top Page</a>
+<br>
 </body>
 
 @endsection

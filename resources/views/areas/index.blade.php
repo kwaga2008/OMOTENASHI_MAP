@@ -52,7 +52,7 @@ The OMOTENASHI MAP is a very useful service that maps, tourist information, and 
 </div>
 
 <br><br>
-<a href="/areas/0/places/0">Other area</a>
+<a href="/areas/0/places/0" id=link_>Other area</a>
 <br>
 <br>
 </div>

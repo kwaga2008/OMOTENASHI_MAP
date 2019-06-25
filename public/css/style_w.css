@@ -1187,7 +1187,8 @@ span:hover + p.arrow_box {
   left: 0;
   top: 0;
   opacity: 0;
-  transition: 0.2s; // ゆっくり
+  transition: 0.2s;  
+  /* ゆっくり */
 }
 .img-box:hover .active {
   opacity: 1;
@@ -1208,4 +1209,8 @@ span:hover + p.arrow_box {
 
 .nashio{
   margin-left: 94%;
+}
+
+#link_ {
+  font-size: 2em;
 }
