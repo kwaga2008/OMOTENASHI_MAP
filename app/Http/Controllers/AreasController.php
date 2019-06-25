@@ -13,7 +13,7 @@ class AreasController extends Controller
     //
     public function show($id){
         $area = Area::find($id);
-        $top_places = Place::where("area_id",$id)->take(6)->get();
+        $top_places = Place::where("area_id",$id)->take(9)->get();
         return view("areas.show")->with(array("area" => $area, "top_places" => $top_places));
     }
 
