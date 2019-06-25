@@ -25,6 +25,7 @@ var infoWindow1 = new google.maps.InfoWindow({ // 吹き出しの追加
 infoWindow1.open(map, marker); // 吹き出しの表示
   
 google.maps.event.addListener(marker, 'click', function (event) {
+	infoWindow1.close();
   cpinfoWindow.open(cpmarker.getMap(), cpmarker);
 });
 
@@ -57,9 +58,7 @@ map.addListener("click", function (e) {
 
   // 上で立てたマーカーをもう一度クリックするとマーカーを削除
   marker.addListener("click", function () {
-    new google.maps.InfoWindow({
-      content: contents1
-    }).open(marker.getMap(), marker);
+	  infoWindow1.close();
   });
 
 });
