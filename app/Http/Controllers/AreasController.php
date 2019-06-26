@@ -18,7 +18,8 @@ class AreasController extends Controller
     }
 
     public function index(){
-        return view("areas.index");
+        $areas = Area::orderBy("id","ASC")->take(6)->get();
+        return view("areas.index")->with(array("areas" => $areas));
     }
     
     public function getResults(Request $request)
