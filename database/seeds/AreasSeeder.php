@@ -29,6 +29,7 @@ class DatabaseSeeder extends Seeder
               'area_longitude' => $data[2],
               'area_latitude' => $data[3],
               'area_info' => $data[6],
+              'area_en' => $data[7],
               
             )
           );
