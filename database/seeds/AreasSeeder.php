@@ -28,8 +28,6 @@ class DatabaseSeeder extends Seeder
               'area' => $data[1],
               'area_longitude' => $data[2],
               'area_latitude' => $data[3],
-              'created_at' => $data[4],
-              'updated_at' => $data[5],
               'area_info' => $data[6],
               
             )
