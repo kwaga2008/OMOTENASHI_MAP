@@ -8,8 +8,8 @@
             </h3>
               <p class="thankyou">\ありがとう💕/</p>
               <div class="img-box">
-                <img src='{{ asset("assets/images/nashiko.png") }}' width="600" height="300" alt="" >
-                <img src='{{ asset("assets/images/nashiko2.png") }}' width="600" height="300" alt="" class="active">
+                <img src='{{ secure_asset("assets/images/nashiko.png") }}' width="600" height="300" alt="" >
+                <img src='{{ secure_asset("assets/images/nashiko2.png") }}' width="600" height="300" alt="" class="active">
               </div>
               <p>おもてなし子</p>
             <br>

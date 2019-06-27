@@ -12,7 +12,7 @@
 @if($spot->id == 1)
 @endif
 </div>
-<img src='{{ asset("assets/images/" . $spot->img_src) }}' width="600" height="300" alt=""><br><br>
+<img src='{{ secure_asset("assets/images/" . $spot->img_src) }}' width="600" height="300" alt=""><br><br>
 <div class="contents row">
 <div class="container">
 {{ Form::open(['url' => "/areas/$spot->area_id/places/$spot->id/reviews", 'method' => 'post']) }}

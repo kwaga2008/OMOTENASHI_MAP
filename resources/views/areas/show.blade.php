@@ -19,7 +19,7 @@
 <body>
 <div class="slider">
 @for($n = 1; $n < 4; $n++)
-<img src='{{ asset("assets/images/" . $area->area_en . "/slide" . $n . ".jpg") }}' width="0" height="0" alt="">
+<img src='{{ secure_asset("assets/images/" . $area->area_en . "/slide" . $n . ".jpg") }}' width="0" height="0" alt="">
 @endfor
 </div>
 
@@ -40,9 +40,9 @@
 @foreach($top_places as $place)
 {{-- */$i = 1/* --}}
 @if($place->img_src !="")
-<li><a href="{{ $place->area->id }}/places/{{ $place->id }}"><img src='{{ asset("assets/images/" . $place->img_src) }}' width="300" height="300" alt="" ><p>{{ $place->place_en }}</p></a></li>
+<li><a href="{{ $place->area->id }}/places/{{ $place->id }}"><img src='{{ secure_asset("assets/images/" . $place->img_src) }}' width="300" height="300" alt="" ><p>{{ $place->place_en }}</p></a></li>
 @else
-<li><a href="{{ $place->area->id }}/places/{{ $place->id }}"><img src='{{ asset("assets/images/no_image.png") }}' width="300" height="300" alt="" ><p>{{ $place->place_en }}</p></a></li>
+<li><a href="{{ $place->area->id }}/places/{{ $place->id }}"><img src='{{ secure_asset("assets/images/no_image.png") }}' width="300" height="300" alt="" ><p>{{ $place->place_en }}</p></a></li>
 @endif
 @if( $i == 3 )
 <br><br>
