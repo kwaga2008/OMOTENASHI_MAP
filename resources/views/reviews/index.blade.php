@@ -62,7 +62,7 @@
 <script>
   var place_id = {{ $spot->id }};
 </script>
-<script src="{{ asset('assets/javascripts/reviews_show.js') }}"></script>
+<script src="{{ secure_asset('assets/javascripts/reviews_show.js') }}"></script>
 </div>
 <div class="contents">
       <div class="reviews">
