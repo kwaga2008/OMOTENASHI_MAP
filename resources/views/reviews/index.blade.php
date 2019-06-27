@@ -10,7 +10,7 @@
     <div class="box1">
       {{ $spot->place_en }}
     </div>
-          <center><img src='{{ secure_asset("assets/images/" . $spot->img_src) }}' width="600" height="300" alt=""></center>
+          <center><img src='{{ asset("assets/images/" . $spot->img_src,config("app.asset-secure")) }}' width="600" height="300" alt=""></center>
       <div class="cp_ipselect cp_sl01">
   <select required id="country">
   <option value="all" hidden>Select Country</option>
@@ -62,7 +62,7 @@
 <script>
   var place_id = {{ $spot->id }};
 </script>
-<script src="{{ secure_asset('assets/javascripts/reviews_show.js') }}"></script>
+<script src="{{ asset('assets/javascripts/reviews_show.js',config('app.asset-secure')) }}"></script>
 </div>
 <div class="contents">
       <div class="reviews">

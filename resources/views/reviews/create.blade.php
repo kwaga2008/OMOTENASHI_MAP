@@ -12,7 +12,7 @@
 @if($spot->id == 1)
 @endif
 </div>
-<img src='{{ secure_asset("assets/images/" . $spot->img_src) }}' width="600" height="300" alt=""><br><br>
+<img src='{{ asset("assets/images/" . $spot->img_src,config("app.asset-secure")) }}' width="600" height="300" alt=""><br><br>
 @if ($errors->any())
 	    <div class="alert alert-danger">
 	        <ul>
