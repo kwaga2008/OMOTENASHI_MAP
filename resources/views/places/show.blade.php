@@ -89,6 +89,9 @@
                     CONTENTS
                 </div>
             </header>
+        @if($place == NULL)
+        <h2>Select spot</h2>
+        @endif
         @if($place !=NULL)
             <div class="img_show">
             @if($place != NULL)
