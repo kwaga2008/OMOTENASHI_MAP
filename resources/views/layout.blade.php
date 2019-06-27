@@ -37,7 +37,7 @@
       @else
       <h2>Rank {{$i}}</h2>
       @endif
-      <a href="/areas/{{ $rank->area->id }}/places/{{ $rank->id }}"><img src='{{ asset("assets/images/" . $rank->img_src) }}' width="300" height="300" alt="" class="rankingimg" ><p>{{ $rank->place_en }}</p></a>
+      <a href="/areas/{{ $rank->area->id }}/places/{{ $rank->id }}"><img src='{{ secure_asset("assets/images/" . $rank->img_src) }}' width="300" height="300" alt="" class="rankingimg" ><p>{{ $rank->place_en }}</p></a>
       <p>Reviews:{{ count($rank->reviews) }}</p>
       {{-- */$i++/* --}}
     </div>
