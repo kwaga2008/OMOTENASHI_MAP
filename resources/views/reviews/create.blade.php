@@ -13,6 +13,15 @@
 @endif
 </div>
 <img src='{{ secure_asset("assets/images/" . $spot->img_src) }}' width="600" height="300" alt=""><br><br>
+@if ($errors->any())
+	    <div class="alert alert-danger">
+	        <ul>
+	            @foreach ($errors->all() as $error)
+	                <li>{{ $error }}</li>
+	            @endforeach
+	        </ul>
+	    </div>
+	@endif
 <div class="contents row">
 <div class="container">
 {{ Form::open(['url' => URL::secure("/areas/$spot->area_id/places/$spot->id/reviews", array()), 'method' => 'post']) }}
