@@ -158,6 +158,7 @@
     <br>
     <center>
     <input type="button" class="btn-gradation" onclick='location.href="/areas/{{ $spot->area->id }}/places/{{ $spot->id }}"' id="Back" value="Back">
+    <input type="button" class="btn-gradation" onclick='location.href="/areas/{{ $spot->area->id }}/places/{{ $spot->id }}/reviews/create"' value="Write New Review">
     <input type="button" class="btn-gradation" onclick='location.href="/"' value="Top Page">
     </center>
 </div>

@@ -18,7 +18,7 @@ class PlacesController extends Controller
         $place = Place::find($place_id);
         $places = Place::where("area_id",$area_id)->get();
         $info = Info::find($place_id);
-        $reviews = Review::where("place_id",$place_id)->get();
+        $reviews = Review::where("place_id",$place_id)->orderBy("id","DESC")->take(5)->get();
         $area = Area::find($area_id);
         $areas = Area::all();
 
