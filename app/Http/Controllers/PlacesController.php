@@ -52,7 +52,7 @@ class PlacesController extends Controller
     
     public function getMarkers(Request $request)
     {
-        if($request["area"]){
+        if($request["area"] == "true"){
             $marker_results = Area::all();
         }else{
             $marker_results = Place::all();

@@ -34,7 +34,7 @@ function markerInfo(marker, data) {
     
 
 jQuery(function ($) {
-    var area_flag = false;
+    var area_flag = "false";
     var request = $.ajax({
         type: 'GET',
         url: "/areas/places/marker",
