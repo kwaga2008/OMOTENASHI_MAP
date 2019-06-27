@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         foreach($ary as $data) {
           Review::create(
             array(
+              'id' => $data[0],
               'nickname' => $data[1],
               'text' => $data[2],
               'country' => $data[3],

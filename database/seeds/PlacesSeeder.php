@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         foreach($ary as $data) {
           Place::create(
             array(
+              'id' => $data[0],
               'place_ja' => $data[1],
               'place_en' => $data[2],
               'longitude' => $data[3],
@@ -35,6 +36,7 @@ class DatabaseSeeder extends Seeder
               'insta1' => $data[10],
               'insta2' => $data[11],
               'instaname' => $data[12],
+              'youtube' => $data[13],
             )
           );
         }

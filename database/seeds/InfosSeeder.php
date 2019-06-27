@@ -25,6 +25,7 @@ class DatabaseSeeder extends Seeder
         foreach($ary as $data) {
           Info::create(
             array(
+              'id' => $data[0],
               'place_id' => $data[1],
               'information' => $data[2],
               
