@@ -48,7 +48,7 @@
 <hr>
 <div class="wrapper_footer">
   <footer font-size="8px" color="black">
-    <p>Copyright© 2019 ZENRIN DataCom CO., LTD. Group4 All Rights Reserved. </p>
+    <p>Copyright© 2019 ZENRIN DataCom CO., LTD. Group4 All Rights Reserved.</p>
   </footer>
 </div>
 
