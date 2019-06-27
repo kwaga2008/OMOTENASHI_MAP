@@ -90,7 +90,7 @@
                 </div>
             </header>
         @if($place == NULL)
-        <h2>Select spot</h2>
+        <h1>Select spot</h1>
         @endif
         @if($place !=NULL)
             <div class="img_show">
