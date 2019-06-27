@@ -53,6 +53,7 @@ jQuery(function ($) {
         var data = response;
         if (Object.keys(data).length != 0) {
             i = 0;
+            console.log(data);
             data.forEach(d => {
                 createMarker(d);
                 i++;
