@@ -8,12 +8,12 @@
 <script src="{{ asset('assets/javascripts/scroll.js',config('app.asset-secure')) }}"></script>
 
 <script type="text/javascript">
-        $(document).ready(function(){
+         window.onload = function(){
             $('.slider').bxSlider({
                 auto: true,
                 pause: 5000,
             });
-        });
+        }
 </script>
 
 </head>
