@@ -13,7 +13,7 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         // $this->call(UsersTableSeeder::class);
-        $file = new SplFileObject('database/seeds/areas.csv');
+        $file = new SplFileObject('database/seeds/places.csv');
         $file->setFlags(SplFileObject::READ_CSV);
 
         $ary = array();
