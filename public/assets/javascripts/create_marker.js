@@ -49,11 +49,11 @@ jQuery(function ($) {
 
 /* 成功時 */
     request.done(function (response) {
-        //console.log(response);
+        console.log(response);
         var data = response;
         if (Object.keys(data).length != 0) {
             i = 0;
-            console.log(data);
+            //console.log(data);
             data.forEach(d => {
                 createMarker(d);
                 i++;
