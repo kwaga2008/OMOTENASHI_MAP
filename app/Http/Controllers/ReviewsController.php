@@ -18,10 +18,6 @@ class ReviewsController extends Controller
 
   public function store(Request $request,$area_id,$place_id)
   {
-    $request->validate([
-      'nickname' => 'required',
-      'text' => 'required',
-　　　　]);
     Review::create(
       array(
         'nickname' => $request->nickname,

@@ -13,21 +13,12 @@
 @endif
 </div>
 <img src='{{ asset("assets/images/" . $spot->img_src,config("app.asset-secure")) }}' width="600" height="300" alt=""><br><br>
-@if ($errors->any())
-	    <div class="alert alert-danger">
-	        <ul>
-	            @foreach ($errors->all() as $error)
-	                <li>{{ $error }}</li>
-	            @endforeach
-	        </ul>
-	    </div>
-	@endif
 <div class="contents row">
 <div class="container">
 {{ Form::open(['url' => URL::secure("/areas/$spot->area_id/places/$spot->id/reviews", array()), 'method' => 'post']) }}
 <form method="POST" action="<?php print($_SERVER['PHP_SELF']) ?>"></p>
 <p>Nick name
-<input type="text" name="nickname"></p>
+<input type="text" name="nickname" required></p>
 <p>Feeling
 <div class="checkbox_01">
   <label>
@@ -72,7 +63,7 @@
 </select>
 </p>
 <p>Review</p>
-<textarea cols="100" name="text" placeholder="text" rows="10"></textarea><br>
+<textarea cols="100" name="text" placeholder="text" rows="10" required></textarea><br>
 <input type="submit" value="SENT">
 {{ Form::close() }}
 </div>
