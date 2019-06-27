@@ -31,7 +31,7 @@
 <p>Feeling
 <div class="checkbox_01">
   <label>
-    <input type="radio" name="feeling" class="checkbox01-input" value=good>
+    <input type="radio" name="feeling" class="checkbox01-input" value=good required>
     <span class="checkbox01-parts">Good👍</span>
   </label>
   <label>

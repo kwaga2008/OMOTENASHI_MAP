@@ -21,7 +21,6 @@ class ReviewsController extends Controller
     $request->validate([
       'nickname' => 'required',
       'text' => 'required',
-      'feeling' => 'required',
 　　　　]);
     Review::create(
       array(
