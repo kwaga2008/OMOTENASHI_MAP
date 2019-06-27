@@ -7,7 +7,7 @@
 <script src="https://cdn.jsdelivr.net/bxslider/4.2.12/jquery.bxslider.min.js"></script>
 
 <script type="text/javascript">
-        $(document).ready(function(){
+         $(function(){
             $('.slider').bxSlider({
                 auto: true,
                 pause: 5000,
