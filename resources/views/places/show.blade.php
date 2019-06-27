@@ -37,6 +37,8 @@
         <div id="map"></div>
         @if($area == NULL)
         <script src="{{ asset('assets/javascripts/japan_map.js',config('app.asset-secure')) }}"></script>
+        <script src="{{ asset('assets/javascripts/create_area_marker.js',config('app.asset-secure')) }}"></script>
+            @else
         @else
             @if($place_id != 0)
             <script>
