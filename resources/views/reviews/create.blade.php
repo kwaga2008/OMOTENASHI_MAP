@@ -15,7 +15,7 @@
 <img src='{{ asset("assets/images/" . $spot->img_src,config("app.asset-secure")) }}' width="600" height="300" alt=""><br><br>
 <div class="contents row">
 <div class="container">
-{{ Form::open(['url' => URL::secure("/areas/$spot->area_id/places/$spot->id/reviews", array()), 'method' => 'post']) }}
+{{ Form::open(['url' => URL::to("/areas/$spot->area_id/places/$spot->id/reviews", array(),config("app.asset-secure")), 'method' => 'post']) }}
 <form method="POST" action="<?php print($_SERVER['PHP_SELF']) ?>"></p>
 <p>Nick name
 <input type="text" name="nickname" required></p>
