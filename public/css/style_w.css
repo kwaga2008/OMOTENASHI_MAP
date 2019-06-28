@@ -1131,6 +1131,7 @@ span:hover + p.arrow_box {
   flex-wrap: wrap;
   margin: 0 auto 0;
   justify-content: center;
+  text-align: center;
 }
 .rankingimg {
   height: 134px;
