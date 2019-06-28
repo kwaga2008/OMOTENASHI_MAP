@@ -16,7 +16,7 @@ function createMarker(data) {
 
 function markerInfo(marker, data) {
 
-    var content = '<h2>' + data["area_en"] + '</h2><br><br><a href="/areas/' + data["area_id"] + '/places/0">Spot List</a>';
+    var content = '<h2>' + data["area_en"] + '</h2><br><a href="/areas/' + data["area_id"] + '/places/0">Spot List</a>';
     var infowindow = new google.maps.InfoWindow({
         content: content,
         maxWidth: "250px"
