@@ -18,8 +18,8 @@
   <option value="Japan">🇯🇵Japan</option>
   <option value="China">🇨🇳China</option>
   <option value="Korea">🇰🇷Korea</option>
-  <option value="Taiwan">🇨🇳Taiwan</option>
-  <option value="Hongkong">🇨🇳Hongkong</option>
+  <option value="Taiwan">🇹🇼Taiwan</option>
+  <option value="Hongkong">🇭🇰Hongkong</option>
   <option value="America">🇺🇸America</option>
   <option value="Thailand">🇹🇭Thailand</option>
   <option value="Australia">🇦🇺Australia</option>
@@ -82,9 +82,9 @@
                 @elseif($review->country== "Korea")
                 🇰🇷Korea
                 @elseif($review->country== "Taiwan")
-                🇨🇳Taiwan
+                🇹🇼Taiwan
                 @elseif($review->country== "Hongkog")
-                🇨🇳Hongkong
+                🇭🇰Hongkong
                 @elseif($review->country== "America")
                 🇺🇸America
                 @elseif($review->country== "Thailand")

@@ -41,8 +41,8 @@
 <option value="Japan">🇯🇵Japan</option>
 <option value="China">🇨🇳China</option>
 <option value="Korea">🇰🇷Korea</option>
-<option value="Taiwan">🇨🇳Taiwan</option>
-<option value="Hongkong">🇨🇳Hongkong</option>
+<option value="Taiwan">🇹🇼Taiwan</option>
+<option value="Hongkong">🇭🇰Hongkong</option>
 <option value="America">🇺🇸America</option>
 <option value="Thailand">🇹🇭Thailand</option>
 <option value="Australia">🇦🇺Australia</option>
