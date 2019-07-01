@@ -57,9 +57,9 @@ map.addListener("click", function (e) {
  // infoWindow.open(map, click_marker); // 吹き出しの表示
 
   // 上で立てたマーカーをもう一度クリックするとマーカーを削除
-  marker.addListener("click", function () {
-	  infoWindow1.close();
-  });
+//   marker.addListener("click", function () {
+// 	  infoWindow1.close();
+//   });
 
 });
 
