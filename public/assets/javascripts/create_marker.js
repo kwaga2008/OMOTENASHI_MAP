@@ -16,7 +16,7 @@ function createMarker(data) {
 
 function markerInfo(marker, data) {
 
-    var content = '<h2>' + data["place_en"] + '</h2><img src="/assets/images/'+ data["img_src"]+'"/ width=150px><br><br><a href="/areas/' + data["area_id"] + '/places/' + data["id"] + '">Get Information</a>';
+    var content = '<h2>' + data["place_en"] + '</h2><img src="/assets/images/'+ data["img_src"]+'"/ width=150px><br><br><a href="/areas/' + data["area_id"] + '/places/' + data["id"] + '">Get Information</a>'+'</h2><a href="/areas/'+ data["area_id"] +'/places/' + data["id"] + '/reviews/create">Write New Review</a>';
     var infowindow = new google.maps.InfoWindow({
         content: content,
         maxWidth: "250px"
