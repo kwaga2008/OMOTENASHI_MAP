@@ -54,6 +54,7 @@
                 var latitude = {{ $area->area_latitude }};
                 var longitude = {{ $area->area_longitude }};
                 var area_en = "{{ $area->area_en }}";
+                var place_id = 0;
             </script>
             <script src="{{ asset('assets/javascripts/area_map.js',config('app.asset-secure')) }}"></script>
             <script src="{{ asset('assets/javascripts/create_marker.js',config('app.asset-secure')) }}"></script>
