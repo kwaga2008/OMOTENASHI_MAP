@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <title>OMOTENASHI MAP</title>
     <link rel="stylesheet" href="/css/style_w.css">
+    <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.ico',config('app.asset-secure')) }}">
     <script src="https://maps.google.com/maps/api/js?key=AIzaSyCh0c7Qd5PE6KkiO5TKpcyhNfR3nnwxdjQ&language=ja"></script>
     <script src="{{ asset('assets/javascripts/jquery-3.4.1.js',config('app.asset-secure')) }}"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
@@ -40,7 +41,7 @@
       <a href="/areas/{{ $rank->area->id }}/places/{{ $rank->id }}"><img src='{{ asset("assets/images/" . $rank->img_src,config("app.asset-secure")) }}' width="300" height="300" alt="" class="rankingimg" ><p>{{ $rank->place_en }}</p></a>
       <p>Reviews:{{ count($rank->reviews) }}</p>
       {{-- */$i++/* --}}
-    </div>
+     </div>
     </div>
     @endforeach
 </div>
