@@ -5,7 +5,7 @@
     <title>OMOTENASHI MAP</title>
     <link rel="stylesheet" href="/css/style_w.css">
     <link rel="shortcut icon" href="{{ asset('assets/images/logo/favicon.ico',config('app.asset-secure')) }}">
-    <script src="https://maps.google.com/maps/api/js?key=config('app.api-key')&language=en"></script>
+    <script src="'https://maps.google.com/maps/api/js?key=' . config('app.api-key') . '&language=en'"></script>
     <script src="{{ asset('assets/javascripts/jquery-3.4.1.js',config('app.asset-secure')) }}"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.7.1/css/lightbox.css" rel="stylesheet">
     <script src="https://code.jquery.com/jquery-1.12.4.min.js" type="text/javascript"></script>
