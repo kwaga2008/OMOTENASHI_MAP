@@ -1226,9 +1226,9 @@ span:hover + p.arrow_box {
     font-family: "游ゴシック", "YuGothic";
 }
 
-.gm-style-iw {
+.gm-style-iw-d {
   background-color: #fff;
   border-radius: 5px;
   padding: 2px;
-  border: 1px solid #95483f;
+  border: 5px solid #95483f;
 }
