@@ -16,12 +16,15 @@ function createMarker(data) {
 
 function markerInfo(marker, data) {
 
-    var content = '<h2>' + data["place_en"] + '</h2><img src="/assets/images/'+ data["img_src"]+'"/ width=150px><br><br><a href="/areas/' + data["area_id"] + '/places/' + data["id"] + '">Get Information</a><a href="/areas/'+ data["area_id"] +'/places/' + data["id"] + '/reviews/create">Write New Review</a>';
+    var content = '<h2>' + data["place_en"] + '</h2><img src="/assets/images/'+ data["img_src"]+'"/ width=150px><br><br><a href="/areas/' + data["area_id"] + '/places/' + data["id"] + '">Get Information</a><br><a href="/areas/'+ data["area_id"] +'/places/' + data["id"] + '/reviews/create">Write New Review</a>';
     var infowindow = new google.maps.InfoWindow({
         content: content,
         maxWidth: "250px"
     })
     windowList.push(infowindow);
+    if (place_id == data["id"]) {
+        infowindow.open(marker.getMap(), marker);
+    }
     google.maps.event.addListener(marker, 'click', function (event) {
         for (var j=0; j<windowList.length; j++) {
             windowList[j].close();
