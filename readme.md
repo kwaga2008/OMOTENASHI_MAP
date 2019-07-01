@@ -25,3 +25,11 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](http://opensource.org/licenses/MIT).
+
+## About OMOTENASHI MAP
+
+The [OMOTENASHI MAP](https://omotenashimap.herokuapp.com/) is a very useful service that maps, tourist information, and manners and customs in the area. You have the ability to write reviews and get updates on their area. You can also narrow their reviews by country and sentiment. Now, let's enjoy the trip to Japan using the [OMOTENASHI MAP](https://omotenashimap.herokuapp.com/)!!!
+
+## Special thanks
+
+Member of Group 4, colleagues.
