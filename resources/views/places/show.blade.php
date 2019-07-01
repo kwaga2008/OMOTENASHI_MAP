@@ -5,7 +5,7 @@
 <div class="content">
     <div class="left_content">
         <label>Search Place</label>
-        <input type="text" id="query" placeholder="Place name">
+        <input type="text" id="query" placeholder="Place:">
         <select name="area" id="area_option">
         @if($area != NULL)
         <option value="{{ $area_id }}" selected>{{ $area->area_en }} Place</option>
