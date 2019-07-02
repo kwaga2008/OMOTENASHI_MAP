@@ -41,11 +41,11 @@ class PlacesController extends Controller
         if ($area != "all") {
             $results = Place::where("area_id", $request["area"])
             ->where(function($query1) use($keyword){
-                $query1->where('place_ja', 'LIKE', "%$keyword%")->orWhere('place_en', 'LIKE', "%$keyword%");
+                $query1->where('place_ja', 'iLIKE', "%$keyword%")->orWhere('place_en', 'iLIKE', "%$keyword%");
             })->get();
             
         }else{  
-            $results = Place::where('place_ja', "LIKE", "%$keyword%")->orWhere('place_en', "LIKE", "%$keyword%")->get();
+            $results = Place::where('place_ja', "iLIKE", "%$keyword%")->orWhere('place_en', "iLIKE", "%$keyword%")->get();
         }
         return response()->json($results);
     }
