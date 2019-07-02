@@ -3,12 +3,13 @@ var i = 0;
 var open = 0;
 var windowList = [];
 var markerList = [];
+
 function createMarker(data) {
     //        マーカの作成
     var marker = new google.maps.Marker({
         position: new google.maps.LatLng(data["latitude"], data["longitude"]),
         map: map,
-        animation: google.maps.Animation.DROP 
+        animation: google.maps.Animation.DROP
     });
     markerList.push(marker);
     markerInfo(marker, data);
@@ -16,7 +17,7 @@ function createMarker(data) {
 
 function markerInfo(marker, data) {
 
-     var content = '<h2>' + data["place_en"] + '</h2><img src="/assets/images/' + data["img_src"] + '"/ width=150px><br><br><a href="/areas/' + data["area_id"] + '/places/' + data["id"] + '">Get Information</a><br><a href="/areas/' + data["area_id"] + '/places/' + data["id"] + '/reviews/create">Write New Review</a>';
+    var content = '<h2>' + data["place_en"] + '</h2><img src="/assets/images/' + data["img_src"] + '"/ width=150px><br><br><a href="/areas/' + data["area_id"] + '/places/' + data["id"] + '">Get Information</a><br><a href="/areas/' + data["area_id"] + '/places/' + data["id"] + '/reviews/create">Write New Review</a>';
     // var content = '<h2>' + data["place_en"] + '</h2><a href="/areas/' + data["area_id"] + '/places/' + data["id"] + '">Get Information</a><br><a href="/areas/'+ data["area_id"] +'/places/' + data["id"] + '/reviews/create">Write New Review</a>';
     var infowindow = new google.maps.InfoWindow({
         content: content,
@@ -27,14 +28,14 @@ function markerInfo(marker, data) {
         infowindow.open(marker.getMap(), marker);
     }
     google.maps.event.addListener(marker, 'click', function (event) {
-        for (var j=0; j<windowList.length; j++) {
+        for (var j = 0; j < windowList.length; j++) {
             windowList[j].close();
-          }
+        }
         infowindow.open(marker.getMap(), marker);
-        
+
     });
 }
-    
+
 
 jQuery(function ($) {
     var area_flag = "false";
@@ -50,7 +51,7 @@ jQuery(function ($) {
     });
 
 
-/* 成功時 */
+    /* 成功時 */
     request.done(function (response) {
         console.log(response);
         var data = response;
@@ -61,11 +62,11 @@ jQuery(function ($) {
                 createMarker(d);
                 i++;
             });
-        } 
+        }
     });
 
-/* 失敗時 */
-    request.fail(function(){
+    /* 失敗時 */
+    request.fail(function () {
         alert("通信に失敗しました");
     });
 

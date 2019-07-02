@@ -14,11 +14,12 @@ use App\Area;
 class PlacesController extends Controller
 {
     //
-    public function show($area_id,$place_id){
+    public function show($area_id, $place_id)
+    {
         $place = Place::find($place_id);
-        $places = Place::where("area_id",$area_id)->get();
+        $places = Place::where("area_id", $area_id)->get();
         $info = Info::find($place_id);
-        $reviews = Review::where("place_id",$place_id)->orderBy("id","DESC")->take(5)->get();
+        $reviews = Review::where("place_id", $place_id)->orderBy("id", "DESC")->take(5)->get();
         $area = Area::find($area_id);
         $areas = Area::all();
 
@@ -27,7 +28,8 @@ class PlacesController extends Controller
         "area" => $area, "reviews" => $reviews,"place_id" => $place_id,"areas" => $areas,"area_id" => $area_id));
     }
 
-    public function index(){
+    public function index()
+    {
         return view("places.index");
     }
 
@@ -35,16 +37,15 @@ class PlacesController extends Controller
     {
         $keyword = $request["query"];
         $area = $request["area"];
-        if($area == 0){
+        if ($area == 0) {
             $area = "all";
         }
         if ($area != "all") {
             $results = Place::where("area_id", $request["area"])
-            ->where(function($query1) use($keyword){
+            ->where(function ($query1) use ($keyword) {
                 $query1->where('place_ja', 'iLIKE', "%$keyword%")->orWhere('place_en', 'iLIKE', "%$keyword%");
             })->get();
-            
-        }else{  
+        } else {
             $results = Place::where('place_ja', "iLIKE", "%$keyword%")->orWhere('place_en', "iLIKE", "%$keyword%")->get();
         }
         return response()->json($results);
@@ -52,9 +53,9 @@ class PlacesController extends Controller
     
     public function getMarkers(Request $request)
     {
-        if($request["area"] == "true"){
+        if ($request["area"] == "true") {
             $marker_results = Area::all();
-        }else{
+        } else {
             $marker_results = Place::all();
         }
         

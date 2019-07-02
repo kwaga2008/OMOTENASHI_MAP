@@ -1,4 +1,4 @@
-$('#search').on('click', function(){
+$('#search').on('click', function () {
     var query = $('#query').val();
     var area = $('#area_option').val();
     console.log(query);
@@ -27,7 +27,7 @@ $('#search').on('click', function(){
                 var content = 'no area';
                 $('.search_results').append(content);
             }
-       
+
         });
 
         /* 失敗時 */
@@ -58,7 +58,7 @@ $('#search').on('click', function(){
                 var content = 'no place';
                 $('.search_results').append(content);
             }
-       
+
         });
 
         /* 失敗時 */
