@@ -16,7 +16,7 @@
     <header class="header">
       <div class="header__bar row">
         <a href="/"><img src="{{ asset('assets/images/logo/logo.jpg',config('app.asset-secure')) }}" width="300" height="300" alt=""></a>
-        <img src="{{ asset('assets/images/nashio.png',config('app.asset-secure')) }}" width="70" height="100" alt="" class="disappear" href="https://twitter.com/Pakuri_ja_nai">
+        <a href="https://twitter.com/Pakuri_ja_nai"><img src="{{ asset('assets/images/nashio.png',config('app.asset-secure')) }}" width="70" height="100" alt="" class="disappear"></a>
     </div>
     </header>
     @yield('content')
