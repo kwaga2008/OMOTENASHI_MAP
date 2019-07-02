@@ -212,4 +212,7 @@ return [
 
     ],
 
+    'asset-secure' => env('ASSET_SECURE'),
+    'api-key' => env('API_KEY'),
+
 ];

@@ -10,24 +10,24 @@ var Options = {
 };
 var map = new google.maps.Map(document.getElementById('map'), Options);
 
-var marker = new google.maps.Marker({
-  position: MyLatLng,
-  map: map,
-  animation: google.maps.Animation.DROP // マーカーを立つときのアニメーション
-});
+// var marker = new google.maps.Marker({
+//   position: MyLatLng,
+//   map: map,
+//   animation: google.maps.Animation.DROP // マーカーを立つときのアニメーション
+// });
 
-var contents1 = '<h2>' + place_en + '</h2><a href="/areas/'+ area_id +'/places/' + place_id + '/reviews/create">Write New Review</a>';
+// var contents1 = '<h2>' + place_en + '</h2><a href="/areas/'+ area_id +'/places/' + place_id + '/reviews/create">Write New Review</a>';
 
-var infoWindow1 = new google.maps.InfoWindow({ // 吹き出しの追加
-    content: contents1 // 吹き出しに表示する内容
-  });
+// var infoWindow1 = new google.maps.InfoWindow({ // 吹き出しの追加
+//     content: contents1 // 吹き出しに表示する内容
+//   });
 
-infoWindow1.open(map, marker); // 吹き出しの表示
+// infoWindow1.open(map, marker); // 吹き出しの表示
   
-google.maps.event.addListener(marker, 'click', function (event) {
-	infoWindow1.close();
-  cpinfoWindow.open(cpmarker.getMap(), cpmarker);
-});
+// google.maps.event.addListener(marker, 'click', function (event) {
+// 	infoWindow1.close();
+//   cpinfoWindow.open(cpmarker.getMap(), cpmarker);
+// });
 
 map.addListener("click", function (e) {
   // コンソールで経度を表示
@@ -57,9 +57,9 @@ map.addListener("click", function (e) {
  // infoWindow.open(map, click_marker); // 吹き出しの表示
 
   // 上で立てたマーカーをもう一度クリックするとマーカーを削除
-  marker.addListener("click", function () {
-	  infoWindow1.close();
-  });
+//   marker.addListener("click", function () {
+// 	  infoWindow1.close();
+//   });
 
 });
 

@@ -12,17 +12,17 @@
 @if($spot->id == 1)
 @endif
 </div>
-<img src='{{ asset("assets/images/" . $spot->img_src) }}' width="600" height="300" alt=""><br><br>
+<img src='{{ asset("assets/images/" . $spot->img_src,config("app.asset-secure")) }}' width="600" height="300" alt=""><br><br>
 <div class="contents row">
 <div class="container">
-{{ Form::open(['url' => "/areas/$spot->area_id/places/$spot->id/reviews", 'method' => 'post']) }}
+{{ Form::open(['url' => URL::to("/areas/$spot->area_id/places/$spot->id/reviews", array(),config("app.asset-secure")), 'method' => 'post']) }}
 <form method="POST" action="<?php print($_SERVER['PHP_SELF']) ?>"></p>
 <p>Nick name
-<input type="text" name="nickname"></p>
+<input type="text" name="nickname" required></p>
 <p>Feeling
 <div class="checkbox_01">
   <label>
-    <input type="radio" name="feeling" class="checkbox01-input" value=good>
+    <input type="radio" name="feeling" class="checkbox01-input" value=good required>
     <span class="checkbox01-parts">Good👍</span>
   </label>
   <label>
@@ -41,8 +41,8 @@
 <option value="Japan">🇯🇵Japan</option>
 <option value="China">🇨🇳China</option>
 <option value="Korea">🇰🇷Korea</option>
-<option value="Taiwan">🇨🇳Taiwan</option>
-<option value="Hongkong">🇨🇳Hongkong</option>
+<option value="Taiwan">🇹🇼Taiwan</option>
+<option value="Hongkong">🇭🇰Hongkong</option>
 <option value="America">🇺🇸America</option>
 <option value="Thailand">🇹🇭Thailand</option>
 <option value="Australia">🇦🇺Australia</option>
@@ -63,7 +63,7 @@
 </select>
 </p>
 <p>Review</p>
-<textarea cols="100" name="text" placeholder="text" rows="10"></textarea><br>
+<textarea cols="100" name="text" placeholder="text" rows="10" required></textarea><br>
 <input type="submit" value="SENT">
 {{ Form::close() }}
 </div>

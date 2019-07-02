@@ -5,7 +5,7 @@
 <div class="content">
     <div class="left_content">
         <label>Search Place</label>
-        <input type="text" id="query" placeholder="Fill place">
+        <input type="text" id="query" placeholder="Place:">
         <select name="area" id="area_option">
         @if($area != NULL)
         <option value="{{ $area_id }}" selected>{{ $area->area_en }} Place</option>
@@ -13,7 +13,7 @@
         <option value="all" >Search All Place</option>
         </select>
         <input type="button" class="btn-gradation" value="search" id="search">
-        <script src="{{ asset('assets/javascripts/get_content.js') }}"></script>
+        <script src="{{ asset('assets/javascripts/get_content.js',config('app.asset-secure')) }}"></script>
         <hr>
         <h2>Search Results</h2>
         <div class="search_results">
@@ -36,7 +36,8 @@
     <div class="center_content">
         <div id="map"></div>
         @if($area == NULL)
-        <script src="{{ asset('assets/javascripts/japan_map.js') }}"></script>
+        <script src="{{ asset('assets/javascripts/japan_map.js',config('app.asset-secure')) }}"></script>
+        <script src="{{ asset('assets/javascripts/create_area_marker.js',config('app.asset-secure')) }}"></script>
         @else
             @if($place_id != 0)
             <script>
@@ -46,16 +47,17 @@
                 var place_id = {{ $place->id }};
                 var area_id = {{ $place->area_id }};
             </script>
-            <script src="{{ asset('assets/javascripts/map.js') }}"></script>
-            <script src="{{ asset('assets/javascripts/create_marker.js') }}"></script>
+            <script src="{{ asset('assets/javascripts/map.js',config('app.asset-secure')) }}"></script>
+            <script src="{{ asset('assets/javascripts/create_marker.js',config('app.asset-secure')) }}"></script>
             @else
             <script>
                 var latitude = {{ $area->area_latitude }};
                 var longitude = {{ $area->area_longitude }};
                 var area_en = "{{ $area->area_en }}";
+                var place_id = 0;
             </script>
-            <script src="{{ asset('assets/javascripts/area_map.js') }}"></script>
-            <script src="{{ asset('assets/javascripts/create_marker.js') }}"></script>
+            <script src="{{ asset('assets/javascripts/area_map.js',config('app.asset-secure')) }}"></script>
+            <script src="{{ asset('assets/javascripts/create_marker.js',config('app.asset-secure')) }}"></script>
             @endif
         @endif
         <input type="button" class="btn-gradation" id="cp" value="Current Position" onclick="currentPosition()">
@@ -63,7 +65,7 @@
         <br>
         @if($place_id != 0)
         <a class="instalogo">
-        <h2><img src="{{ asset('assets/images/logo/insta.png') }}" alt=""> Instagram</h2></a>
+        <h2><img src="{{ asset('assets/images/logo/insta.png',config('app.asset-secure')) }}" alt=""> Instagram</h2></a>
         <!-- InstaWidget -->
         <a href="https://instawidget.net/v/tag/{{ $place->place_en }}"id={{ $place->insta1 }}>#"{{ $place->place_en }}"</a>
         <script src="https://instawidget.net/js/instawidget.js?{{ $place->insta2 }}&width=600px"></script>
@@ -88,15 +90,18 @@
                     CONTENTS
                 </div>
             </header>
+        @if($place == NULL)
+        <h1>Select spot</h1>
+        @endif
         @if($place !=NULL)
             <div class="img_show">
             @if($place != NULL)
                 @if($place->img_src !="")
-                <a href='{{ asset("assets/images/" . $place->img_src) }}' data-lightbox="abc" data-title="{{ $place->place_en }}">
-                <img src='{{ asset("assets/images/" . $place->img_src) }}' width="515" height="300" alt="" >
+                <a href='{{ asset("assets/images/" . $place->img_src,config("app.asset-secure")) }}' data-lightbox="abc" data-title="{{ $place->place_en }}">
+                <img src='{{ asset("assets/images/" . $place->img_src,config("app.asset-secure")) }}' width="515" height="300" alt="" >
                 </a>
                 @else
-                <img src='{{ asset("assets/images/no_image.png") }}' width="300" height="300" alt="" >
+                <img src='{{asset("assets/images/no_image.png",config("app.asset-secure")) }}' width="300" height="300" alt="" >
                 @endif
             @endif
             </div>

@@ -10,6 +10,10 @@ if (area_en == "Hokkaido") {
 if (area_en == "Okinawa") {
   zoom = 9;
 }
+if (area_en == "Shikoku") {
+	zoom = 8;
+  }
+
 var Options = {
   zoom: zoom, //地図の縮尺値
   center: MyLatLng, //地図の中心座標

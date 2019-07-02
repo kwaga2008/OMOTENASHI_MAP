@@ -10,7 +10,7 @@
     <div class="box1">
       {{ $spot->place_en }}
     </div>
-          <center><img src='{{ asset("assets/images/" . $spot->img_src) }}' width="600" height="300" alt=""></center>
+          <center><img src='{{ asset("assets/images/" . $spot->img_src,config("app.asset-secure")) }}' width="600" height="300" alt=""></center>
       <div class="cp_ipselect cp_sl01">
   <select required id="country">
   <option value="all" hidden>Select Country</option>
@@ -18,8 +18,8 @@
   <option value="Japan">🇯🇵Japan</option>
   <option value="China">🇨🇳China</option>
   <option value="Korea">🇰🇷Korea</option>
-  <option value="Taiwan">🇨🇳Taiwan</option>
-  <option value="Hongkong">🇨🇳Hongkong</option>
+  <option value="Taiwan">🇹🇼Taiwan</option>
+  <option value="Hongkong">🇭🇰Hongkong</option>
   <option value="America">🇺🇸America</option>
   <option value="Thailand">🇹🇭Thailand</option>
   <option value="Australia">🇦🇺Australia</option>
@@ -62,7 +62,7 @@
 <script>
   var place_id = {{ $spot->id }};
 </script>
-<script src="{{ asset('assets/javascripts/reviews_show.js') }}"></script>
+<script src="{{ asset('assets/javascripts/reviews_show.js',config('app.asset-secure')) }}"></script>
 </div>
 <div class="contents">
       <div class="reviews">
@@ -82,9 +82,9 @@
                 @elseif($review->country== "Korea")
                 🇰🇷Korea
                 @elseif($review->country== "Taiwan")
-                🇨🇳Taiwan
+                🇹🇼Taiwan
                 @elseif($review->country== "Hongkog")
-                🇨🇳Hongkong
+                🇭🇰Hongkong
                 @elseif($review->country== "America")
                 🇺🇸America
                 @elseif($review->country== "Thailand")
@@ -158,6 +158,7 @@
     <br>
     <center>
     <input type="button" class="btn-gradation" onclick='location.href="/areas/{{ $spot->area->id }}/places/{{ $spot->id }}"' id="Back" value="Back">
+    <input type="button" class="btn-gradation" onclick='location.href="/areas/{{ $spot->area->id }}/places/{{ $spot->id }}/reviews/create"' value="Write New Review">
     <input type="button" class="btn-gradation" onclick='location.href="/"' value="Top Page">
     </center>
 </div>

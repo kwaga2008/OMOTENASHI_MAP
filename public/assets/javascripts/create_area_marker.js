@@ -1,42 +1,40 @@
-var currentWindow = null;
-var i = 0;
-var open = 0;
-var windowList = [];
-var markerList = [];
+var currentWindow_a = null;
+var i_a = 0;
+var open_a = 0;
+var windowList_a = [];
+var markerList_a = [];
 function createMarker(data) {
     //        マーカの作成
     var marker = new google.maps.Marker({
-        position: new google.maps.LatLng(data["latitude"], data["longitude"]),
+        position: new google.maps.LatLng(data["area_latitude"], data["area_longitude"]),
         map: map,
         animation: google.maps.Animation.DROP 
     });
-    markerList.push(marker);
+    markerList_a.push(marker);
     markerInfo(marker, data);
 }
 
 function markerInfo(marker, data) {
 
-    var content = '<h2>' + data["place_en"] + '</h2><img src="/assets/images/'+ data["img_src"]+'"/ width=150px><br><br><a href="/areas/' + data["area_id"] + '/places/' + data["id"] + '">Get Information</a><br><a href="/areas/'+ data["area_id"] +'/places/' + data["id"] + '/reviews/create">Write New Review</a>';
+    var content = '<h2>' + data["area_en"] + '</h2><a href="/areas/' + data["id"] + '/places/0">Spot List</a>';
     var infowindow = new google.maps.InfoWindow({
         content: content,
         maxWidth: "250px"
     })
-    windowList.push(infowindow);
-    if (place_id == data["id"]) {
-        infowindow.open(marker.getMap(), marker);
-    }
+    windowList_a.push(infowindow);
     google.maps.event.addListener(marker, 'click', function (event) {
-        for (var j=0; j<windowList.length; j++) {
-            windowList[j].close();
+        for (var j=0; j<windowList_a.length; j++) {
+            windowList_a[j].close();
           }
         infowindow.open(marker.getMap(), marker);
+        console.log(window);
         
     });
 }
     
 
 jQuery(function ($) {
-    var area_flag = "false";
+    var area_flag = "true";
     var request = $.ajax({
         type: 'GET',
         url: "/areas/places/marker",
@@ -51,11 +49,10 @@ jQuery(function ($) {
 
 /* 成功時 */
     request.done(function (response) {
-        console.log(response);
+        //console.log(response);
         var data = response;
         if (Object.keys(data).length != 0) {
             i = 0;
-            //console.log(data);
             data.forEach(d => {
                 createMarker(d);
                 i++;
