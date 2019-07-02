@@ -64,13 +64,13 @@
         <br>
         <br>
         @if($place_id != 0)
-        <!-- <a class="instalogo">
+        <a class="instalogo">
         <h2><img src="{{ asset('assets/images/logo/insta.png',config('app.asset-secure')) }}" alt=""> Instagram</h2></a> -->
         <!-- InstaWidget -->
-        <!-- <a href="https://instawidget.net/v/tag/{{ $place->place_en }}"id={{ $place->insta1 }}>#"{{ $place->place_en }}"</a>
+        <a href="https://instawidget.net/v/tag/{{ $place->place_en }}"id={{ $place->insta1 }}>#"{{ $place->place_en }}"</a>
         <script src="https://instawidget.net/js/instawidget.js?{{ $place->insta2 }}&width=600px"></script>
         <br><br>
-        <a class="instalogo"> -->
+        <a class="instalogo">
         <!-- <h2><img src="{{ asset('assets/images/logo/youtube.png') }}" alt=""> Youtube</h2></a>
         @if($place->youtube != "")
         <iframe width="600" height="330" src="{{ $place->youtube }}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
